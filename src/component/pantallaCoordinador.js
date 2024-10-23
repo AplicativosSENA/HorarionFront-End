@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./app.css";
+import "../assets/css/app.css";
 import { useNavigate } from "react-router-dom";
 
 export default function AsignacionFicha() {

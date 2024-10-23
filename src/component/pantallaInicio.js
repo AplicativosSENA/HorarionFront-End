@@ -1,5 +1,5 @@
 import React from "react";
-import "./app.css";
+import "../assets/css/app.css";
 import InicioAprendiz from "./inicioAprendiz";
 import InicioInstructor from "./inicioInstructor";
 import { useNavigate } from "react-router-dom";
@@ -29,14 +29,10 @@ export default function PantallaPrincipal() {
         />
       </div>
       <div className="secciones">
-        <div className="seccion-lateral" />
-
         <div className="seccion-central">
-          <img
-            src="https://blogger.googleusercontent.com/img/a/AVvXsEiw5MGouzWmAN1Kjq53tBqLqg0HIl2j6YCbqIeonkiYWrkXGP-zr4B9iOvG-suJT29_j08E9LZGe02oUP5rAqzk8ikPBv4cG-4yjf0TjFRie-dBgRUQS4qAbK26zWhbyKkVCVs4U2e8-2lNR17UyFFm5EW8xplZkAFA7hMTsBGOamE9T1pnw6iUP_jf=s960"
-            alt="Centro de Formación SENA"
-            className="imagen-central"
-          />
+        <div className="contenedor-imagen ">
+            <img className="imagen-central img-centralPanInicio" />
+          </div>
           <h1 className="titulo">Título</h1>
           <p className="texto-explicativo">Texto explicativo breve</p>
 
@@ -52,7 +48,6 @@ export default function PantallaPrincipal() {
             </button>
           </div>
         </div>
-        <div className="seccion-lateral"></div>
       </div>
     </div>
   );

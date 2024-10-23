@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./app.css";
+import "../assets/css/app.css";
 import pantallaInicio from "./pantallaInicio";
 import { useNavigate } from "react-router-dom";
 import { validateInputs } from "./validaciones";

@@ -1,6 +1,4 @@
-import React, { useState } from "react";
-import "./app.css";
-import { useNavigate } from "react-router-dom";
+import "../assets/css/app.css";
 
 export const validateInputs = (email, password, ficha) => {
   let emailError = "";
