@@ -1,0 +1,769 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+/* Cambiando la fuente global y el color del texto */
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* Negrita */
+    color: #333333; /* Cambia el color del texto a tu preferencia */
+    margin: 0;
+    padding: 0;
+  }
+  
+/* Estilo para el contenedor principal */
+.contenedor-principal {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.contenedor-sesion {
+    display: flex;
+    flex-direction: column;
+    height: 40vh;
+    width: auto;
+    border-radius: 30px;
+    border: 2px solid black; /* Añade un borde de 2px de color negro */
+    position: relative;
+    top: -2.5vh;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin-top: 25px;
+
+   
+
+}
+.contenedor-sesion::before {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%; /* Ocupa el 15% de la altura del contenedor */
+    background-color: green; /* Franja verde */
+    border-top-left-radius: 30px; /* Redondea la esquina superior izquierda */
+    border-top-right-radius: 30px; /* Redondea la esquina superior derecha */
+}
+
+.menu-desplegable {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  position: absolute; /* Asegúrate de que el menú esté posicionado correctamente */
+  z-index: 100; /* Para asegurarte de que esté encima de otros elementos */
+  
+}
+
+  
+  /* Franja verde con el degradado */
+  .franja-verde {
+    height: 5vh;
+    background-color: #00a86b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imagen-degradado {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .imagen-centralSesion {
+    height: 17.55vh; /* Ajusta el tamaño de la imagen según tus necesidades */
+    position: absolute;
+    top: 5vh; /* Mueve la imagen hacia arriba */
+    margin-bottom: -50px; /* Ajusta el margen para evitar espacio debajo */
+    left: 50%;
+    transform: translateX(-50%); /* Centrar la imagen horizontalmente */
+    z-index: 100;
+  }
+
+  .imagen-centralSesion2 {
+    height: 24.5vh; /* Ajusta el tamaño de la imagen según tus necesidades */
+    position: relative;
+    top: -50vh; /* Mueve la imagen hacia arriba */
+    margin-bottom: -25vh; /* Ajusta el margen para evitar espacio debajo */
+    left: 50%;
+    transform: translateX(-50%); /* Centrar la imagen horizontalmente */
+  }
+
+  .imagen-central {
+    height: auto; /* Ajusta el tamaño de la imagen según tus necesidades */
+    position: relative;
+    top: -26vh; /* Mueve la imagen hacia arriba */
+    margin-bottom: -30px; /* Ajusta el margen para evitar espacio debajo */
+    left: 50%;
+    transform: translateX(-50%); /* Centrar la imagen horizontalmente */
+  }
+
+  .imagen-calendario {
+    height: 19.7vh; /* Ajusta el tamaño de la imagen según tus necesidades */
+    position: absolute;
+    top: 5vh; /* Mueve la imagen hacia arriba */
+    margin-bottom: -30px; /* Ajusta el margen para evitar espacio debajo */
+    left: 50%;
+    transform: translateX(-50%); /* Centrar la imagen horizontalmente */
+  }
+
+  .imagen-calendario2 {
+    height: 27.5vh; /* Ajusta el tamaño de la imagen según tus necesidades */
+    position: relative;
+    top: -50vh; /* Mueve la imagen hacia arriba */
+    margin-bottom: -25vh; /* Ajusta el margen para evitar espacio debajo */
+    left: 50%;
+    transform: translateX(-50%); /* Centrar la imagen horizontalmente */
+  }
+  
+  /* Secciones con contenido principal */
+  .secciones {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  /* Estilo para las secciones laterales */
+  .seccion-lateral {
+    flex: 1;
+
+  }
+  
+  /* Estilo para la sección central */
+  .seccion-central {
+    flex: 2;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    margin: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tabla-calendario {
+    width: 95%;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  
+  .tabla-calendario th, .tabla-calendario td {
+    border: 3px solid black;
+    padding: 0px; /* Ajusta el tamaño de las celdas aquí */
+  }
+  
+  /* Título */
+  .titulo-Sesion {
+    position: relative;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    margin-top: 7vh;
+    top: 2vh;
+  }
+
+  
+
+  .titulo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    position: relative;
+    top: -80px;
+    
+  }
+
+    .titulo {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #333333; /* Puedes cambiar el color del título aquí */
+      }
+  
+  /* Texto explicativo */
+  .texto-explicativo {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    top: -70px;
+  }
+  
+  .texto-Sesion {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    position: relative;
+    top: 2vh;
+  }
+
+  .texto-Sesion2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    top: 3vh;
+    margin-top: 5px;
+  }
+
+  
+     /* Botones */
+  .boton-salida, .boton-volver, .boton-Selector {
+  position: fixed; /* Fijar el botón respecto a la ventana del navegador */
+  top: 90vh; /* Separación desde el borde superior */
+  right: 8vh; /* Separación desde el borde derecho */
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #00a86b, #8bc34a);
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  z-index: 10; /* Asegura que esté por encima de otros elementos */
+  width: 18vh; /* Ajusta este valor para hacer los botones más largos */
+  text-align: center; /* Centrar el texto dentro del botón */
+  display: inline-block; /* Para que el ancho afecte correctamente a cada botón */
+}
+      .boton-salida:hover {
+      background: linear-gradient(90deg, #8bc34a, #00a86b);
+    }
+
+  .boton {
+    font-weight: 700;
+    color: white; 
+  }  
+
+  /* Contenedor de botones */
+  .botones {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 80px; /* Espaciado entre los botones */
+  }
+  
+ 
+  .boton {
+    background: linear-gradient(90deg, #00a86b, #8bc34a);
+    width: 20vh;
+    height: 5vh;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    text-align: center; /* Centrar el texto dentro del botón */
+    margin: 10px 0;
+  }
+  
+  .boton:hover {
+    background: linear-gradient(90deg, #8bc34a, #00a86b);
+  }
+
+  .boton-Sesion {
+  position: relative; /* Fijar el botón respecto a la ventana del navegador */
+  top: 6vh; /* Separación desde el borde superior */
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #00a86b, #8bc34a);
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+  width: 20vh; /* Ajusta este valor para hacer los botones más largos */
+  text-align: center; /* Centrar el texto dentro del botón */
+  margin: 15px 75px;
+}
+      .boton-Sesion:hover {
+      background: linear-gradient(90deg, #8bc34a, #00a86b);
+    }
+        .botones-Sesion {
+          display: inline-block;
+          justify-content: space-around;
+          align-items: center;
+        }
+  
+  
+    .boton-calendario {
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      padding: 3.5vh;
+    }
+    
+    .boton-calendario:hover {
+      background-color: rgba(0, 255, 0, 0.1); /* Efecto al pasar el mouse */
+    }
+
+  /* Inputs */
+.inputs-Sesion {
+  display: flex;
+  justify-content: center; /* Centra el input en su contenedor */
+  align-items: center;
+  width: 100%;
+}
+
+.input-Sesion {
+  background: #43bd57;
+  width: 75%;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  text-align: center; /* Centra el texto ingresado por el usuario */
+  position: relative;
+  top: 3vh;
+  margin: 5px 0;
+}
+
+    .input-Sesion::placeholder {
+      text-align: left; /* Alinea el placeholder a la izquierda */
+      font-weight: bold; /* Opcional: estilo diferente para el placeholder */
+      color: rgba(0, 0, 0, 0.5); /* Color gris para el placeholder */
+    }
+
+    .input-Sesion:focus {
+      border: 2px solid #8bc34a;
+      outline: none;
+
+    }
+
+    .error {
+      color: #ff4d4d; /* Color de texto rojo claro para el mensaje de error */
+      background-color: rgba(255, 77, 77, 0.1); /* Fondo suave para el mensaje */
+      border: 1px solid #ff4d4d; /* Borde del mensaje de error */
+      border-radius: 4px; /* Bordes redondeados */
+      padding: 10px; /* Espaciado interno */
+      margin-top: 5px; /* Espaciado superior para separar del input */
+      transition: opacity 0.3s ease; /* Transición suave */
+      opacity: 0; /* Inicialmente invisible */
+      visibility: hidden; /* Inicialmente oculto */
+    }
+    
+    /* Clase para mostrar el mensaje de error */
+    .error.show {
+      opacity: 1; /* Hacerlo visible */
+      visibility: visible; /* Asegurarse de que sea visible */
+    }
+
+    .degradado-gris {
+      background-color: #d1d1d1;
+      padding: 30px;
+      width: 85vh;
+      height: 88.5vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+    }
+
+    .selector-coordinador {
+      width: 85%;
+      height: 7vh;
+      border: none;
+      padding: 10px;
+      color: black;
+      font-weight: bold;
+      font-size: 1.2rem;
+      position: relative;
+      top: -1vh;
+      margin: 10px 0;
+}
+    
+.titulo-Seleccion {
+    position: relative;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    margin-top: 7vh;
+    top: -8vh;
+}
+
+.titulo-calCoordinador {
+  font-size: 1.8rem;
+}
+
+.boton-Selector {
+  top: 8vh; /* Separación desde el borde superior */
+  right: 23vh; /* Separación desde el borde derecho */
+}
+        .botones-Selector {
+          transform: translateX(0%); /* Ajuste para que esté perfectamente centrado */
+        }
+
+  .boton-volver {
+     top: 84vh;
+  }
+
+  .boton-flecha {
+    background: linear-gradient(90deg, #00a86b, #8bc34a);
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado dentro del botón */
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    border-radius: 20%; /* Botón circular */
+    cursor: pointer; /* Manita al pasar el mouse */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    margin: -22px;
+  }
+      .boton-flecha:hover {
+        background: linear-gradient(90deg, #8bc34a, #00a86b);
+      }
+  
+  .boton-atrasInstructor {
+    position: relative;
+    left: 41vh; /* Posición al lado izquierdo */
+    top: 14.5vh;
+    transform: translateY(-50%);
+  }
+
+  .boton-atrasCoordinador {
+    position: relative;
+    left: 33vh; /* Posición al lado izquierdo */
+    top: 8vh;
+    transform: translateY(-50%);
+  }
+  
+  .boton-adelanteAprendiz, .boton-adelanteInstructor {
+    position: relative;
+    left: 49.5vh; /* Posición al lado derecho */
+    top: 14.5vh;
+    transform: translateY(-50%);
+  }
+
+  .boton-adelanteCoordinador {
+    position: relative;
+    left: 40.5vh; /* Posición al lado derecho */
+    top: 8vh;
+    transform: translateY(-50%);
+  }
+
+  .tabla-calCoordinador {
+    width: 90%;
+  }
+
+  /* Responsividad */
+
+@media (max-width: 980px) {
+    /* Ocultar las secciones laterales en pantallas pequeñas */
+    .seccion-lateral {
+      display: none;
+    }
+  
+    /* Ajustar la sección central para ocupar todo el espacio */
+    .seccion-central {
+      flex: 1;
+      margin: 0;
+      width: 100%; /* Hacer que la sección central ocupe todo el ancho */
+      margin: 0;
+      padding: 10px; /* Añadir un poco de espacio alrededor */
+    }
+
+    .degradado-gris {
+      flex: 1;
+      margin: 0;
+      width: 90%; /* Hacer que la sección central ocupe todo el ancho */
+      margin: 0;
+      padding: 10px; /* Añadir un poco de espacio alrededor */
+    }
+  
+    .contenedor-sesion {
+      top: -2vh;
+    }
+
+    /* Ajustar la imagen central en pantallas pequeñas */
+    .imagen-central {
+      width: 100%; /* Reduce el tamaño de la imagen */
+      top: -17vh; /* Ajusta la posición para que no suba demasiado */
+      height: auto;
+      
+    }
+
+    .imagen-centralSesion, .imagen-calendario {
+      width: 100%; /* Reduce el tamaño de la imagen */
+      top: 5vh; /* Ajusta la posición para que no suba demasiado */
+      height: auto; 
+    }
+
+    .imagen-centralSesion2, .imagen-calendario2 {
+      height: 1vh;
+      margin-bottom: 0vh;
+    }
+
+    
+  
+    /* Botones en columna */
+    .botones {
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      gap: 10px;
+    }
+  
+    .boton {
+      margin-bottom: 10px;
+      width: 80%; /* Los botones ocupan más espacio horizontal */
+
+    }
+
+    .boton-salida, .boton-volver {
+      position: absolute; /* Cambia de fixed a absolute en pantallas pequeñas */
+      transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
+      right: auto; /* Elimina el margen derecho */
+      width: 50%; /* El botón será más ancho en pantallas pequeñas */
+    }
+
+    .boton-Selector, .boton-salidaCoordinador {
+      position: absolute;
+      transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
+      right: auto;
+      width: 50vh;
+      top: 8vh;
+    }
+
+    .boton-salida{
+      top: 90vh; /* Ajusta la posición vertical */
+      left: 50%; /* Centra el botón horizontalmente */
+    }
+
+    .boton-volver {    
+      top: 84vh; /* Ajusta la posición vertical */
+      left: 50%; /* Centra el botón horizontalmente */
+    }
+
+    .boton-atrasInstructor {
+      position: absolute; /* Cambia de fixed a absolute en pantallas pequeñas */
+      top: 33.5vh; /* Ajusta la posición vertical */
+      left: 87%; /* Centra el botón horizontalmente */
+      transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
+      right: auto;
+    }
+
+    .boton-atrasCoordinador {
+      position: absolute; /* Cambia de fixed a absolute en pantallas pequeñas */
+      top: 29vh; /* Ajusta la posición vertical */
+      left: 88%; /* Centra el botón horizontalmente */
+      transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
+      right: auto;
+    }
+    
+    .boton-adelanteAprendiz, .boton-adelanteInstructor {
+      position: absolute;
+      top: 33.5vh; /* Ajusta la posición vertical */
+      left: 96%; /* Centra el botón horizontalmente */
+      transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
+      right: auto;
+    }
+
+    .boton-adelanteCoordinador {
+      position: absolute;
+      top: 29vh; /* Ajusta la posición vertical */
+      left: 96%; /* Centra el botón horizontalmente */
+      transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
+      right: auto;
+    }
+
+    .boton-calendario {
+      font-size: 0.6rem;
+    }
+
+    .input-Sesion {
+      width: 80%; /* Hacer el input más amplio en pantallas pequeñas */
+    }
+
+    .error {
+      font-size: 0.9rem;
+    }
+
+    .texto-calendario {
+      font-size: 0.9rem;
+    }
+
+    .titulo-calendario {
+      font-size: 1.6rem;
+    }
+    
+  }
+  
+  @media (max-width: 640px) {
+    .boton-calendario {
+      padding: 18px;
+      height: 9vh;
+    }
+
+  .boton-atrasCoordinador {
+    top: 22.5vh;
+    left: 96%;
+   }
+   
+   .boton-atrasInstructor {
+    top: 25.5vh;
+    left: 96%;
+   }
+
+   .boton-adelanteAprendiz, .boton-adelanteInstructor {
+    top: 31vh;
+   }
+
+   .boton-adelanteCoordinador {
+    top: 28vh;
+   }
+
+    .titulo-calendario {
+      font-size: 1.8rem;
+    }
+
+    .titulo-calCoordinador {
+      font-size: 1.5rem;
+    }
+
+    .texto-calCoordinador {
+      font-size: 0.6rem;
+    }
+  }
+
+  /* Responsividad para pantallas muy pequeñas (por ejemplo, móviles) */
+  @media (max-width: 500px) {
+
+    .contenedor-sesion {
+      height: 36vh;
+      width: 32vh;
+    }
+
+    .imagen-central {
+      width: 100%; /* Reduce aún más el tamaño de la imagen */
+      height: auto;
+      top: -17vh /* Ajusta la posición */
+    }
+  
+    .imagen-centralSesion, .imagen-calendario  {
+      width: 100%; /* Reduce aún más el tamaño de la imagen */
+      height: auto;
+      top: 5vh;
+      margin-bottom: -15vh;
+    }
+
+    .imagen-centralSesion2 {
+      margin-top: -15vh;
+    }
+
+    .imagen-calenCoordinador {
+      margin-top: -2vh;
+    }
+
+    .titulo {
+      position: relative;
+      font-size: 2rem; /* Reduce el tamaño del título */
+      top: -80px;
+      
+    }
+
+    .titulo-Secion {
+      position: relative;
+      font-size: 1rem; /* Reduce el tamaño del título */
+      top: -60px;
+    }
+
+    .titulo-calCoordinador {
+      font-size: 1.3rem;
+    }
+  
+    .texto-explicativo {
+      font-size: 1.2rem; /* Ajusta el tamaño del texto explicativo */
+    }
+
+    .texto-calendario {
+      font-size: 0.7rem;
+    }
+
+    .texto-Sesion {
+      font-size: 1rem;
+    }
+
+    .error {
+      font-size: 0.8rem;
+    }
+
+    .input-Sesion {
+      width: 70%; /* Hacer el input más amplio en pantallas pequeñas */
+      margin: 4px;
+      top: 2vh;
+    }
+
+    .boton-salida {
+      top: 90vh; /* Ajuste adicional para móviles */
+      width: 50%; /* Aumenta el ancho en pantallas muy pequeñas */
+    }
+
+    .boton-Selector, .boton-salidaCoordinador {
+      width: 30vh;
+    }
+
+    .boton-Sesion {
+      top: 3vh;
+    }
+
+    .boton-calendario {
+      padding: 14px;
+      height: 9vh;
+    }
+
+    .boton-calCoordinador {
+      padding: 20px;
+      height: 6vh;
+    }
+  
+     .boton-flecha {
+      font-size: 0.8rem;
+     }
+
+
+     
+  }
+  
+  @media (max-width: 420px) {
+    .boton-calendario {
+      padding: 2px;
+      height: 8vh;
+    }
+
+    .boton-calCoordinador {
+      padding: 15px;
+      height: 6vh;
+    }
+
+    .boton-atrasCoordinador, .boton-volver {
+      margin-top: -4vh;
+    }
+
+    .texto-calendario {
+      font-size: 0.5rem;
+    }
+
+    .texto-Sesion, .texto-Sesion2, .titulo-calCoordinador, .selector-coordinador {
+      font-size: 1rem;
+    }
+
+    .error {
+      font-size: 0.75rem;
+    }
+
+    h1, .titulo-Secion, .titulo-Seleccion {
+      font-size: 1.5rem;
+    }
+
+    .contenedor-sesion {
+      width: 30vh;
+      height: 35vh;
+      
+    }
+  }
