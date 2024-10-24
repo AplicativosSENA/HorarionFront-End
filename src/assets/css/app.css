@@ -21,30 +21,39 @@ body {
 .contenedor-sesion {
     display: flex;
     flex-direction: column;
-    height: 40vh;
-    width: auto;
     border-radius: 30px;
     border: 2px solid black; /* Añade un borde de 2px de color negro */
     position: relative;
-    top: -2.5vh;
     align-items: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    margin-top: 25px;
-
-   
-
+    
 }
+
 .contenedor-sesion::before {
     content: '';
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 15%; /* Ocupa el 15% de la altura del contenedor */
+    height: 30px; /* Ocupa el 15% de la altura del contenedor */
     background-color: green; /* Franja verde */
     border-top-left-radius: 30px; /* Redondea la esquina superior izquierda */
     border-top-right-radius: 30px; /* Redondea la esquina superior derecha */
 }
+
+    .contenedor-sesionCorTruc {
+      top: -2vh;
+      margin-top: 25px;
+      height: 40vh;
+      width: auto;
+    }
+
+    .Contenedor-sesionAprendiz {
+      top: -8vh;
+      margin-top: 25px;
+      height: 40vh;
+      width: auto;
+    }
 
 .menu-desplegable {
   background-color: white;
@@ -86,46 +95,33 @@ body {
     width: 90%;
   }
 
-  .imagen-centralSesion {
-    height: 17.55vh; /* Ajusta el tamaño de la imagen según tus necesidades */
-    position: absolute;
-    top: 5vh; /* Mueve la imagen hacia arriba */
-    margin-bottom: -50px; /* Ajusta el margen para evitar espacio debajo */
-    left: 50%;
-    transform: translateX(-50%); /* Centrar la imagen horizontalmente */
-    z-index: 10;
-  }
-
-  .imagen-centralSesion2 {
-    height: 24.5vh; /* Ajusta el tamaño de la imagen según tus necesidades */
-    position: relative;
-    top: -50vh; /* Mueve la imagen hacia arriba */
-    margin-bottom: -25vh; /* Ajusta el margen para evitar espacio debajo */
-    left: 50%;
-    transform: translateX(-50%); /* Centrar la imagen horizontalmente */
+  .degradado-grisPanCoordinador {
+    width: 50%;
   }
 
   .imagen-central { 
-      position: fixed;
-      width: 100%;
+      position: absolute;
       background-image: url('../../assets/img/Valoracion.jpg');
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
       z-index: 10;
-      border-bottom: 6px solid #000000;
+      border-bottom: 2px solid #000000;
+      align-items: center;
   }
 
-  .img-centralCalAprendiz {
+   .img-centralCalAprendiz, .img-centralCorTruc {
+    width: 100%;
     top: 4vh;
     left: 0;
     height: 18.5vh; /* Mantén la altura para pantallas más grandes */
   }
 
-  .img-centralPanInicio {
+  .img-central, .img-centralPanInicio, .img-centralAprendiz {
+    width: 100%;
     top: 3.5vh;
     left: 0;
-    height: 21vh; /* Mantén la altura para pantallas más grandes */
+    height: 24vh; /* Mantén la altura para pantallas más grandes */
   }
 
   .contenedor-imagen {
@@ -170,11 +166,19 @@ body {
   /* Título */
   .titulo-Sesion {
     position: relative;
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: bold;
     margin-bottom: 1.5rem;
-    margin-top: 7vh;
-    top: 2vh;
+    
+  }
+
+  .titulo-sesAprendiz {
+    margin-top: 15vh;
+    top: 1vh;
+  }
+
+  .titulo-SesionCorTruc {
+    top: 4vh;
   }
 
   .titulo-calendario {
@@ -206,15 +210,14 @@ body {
     font-size: 1.2rem;
     margin-bottom: 1rem;
     position: relative;
-    top: 2vh;
   }
 
-  .texto-Sesion2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    position: relative;
+  .texto-SesionAprendiz {
+    top: 4vh; 
+  }
+
+  .texto-SesionCorTruc {
     top: 3vh;
-    margin-top: 5px;
   }
 
   .numero-ficha {
@@ -224,7 +227,7 @@ body {
   }
   
      /* Botones */
-  .boton-salida, .boton-volver, .boton-Selector {
+  .boton-salida {
   position: fixed; /* Fijar el botón respecto a la ventana del navegador */
   top: 90vh; /* Separación desde el borde superior */
   right: 8vh; /* Separación desde el borde derecho */
@@ -247,19 +250,17 @@ body {
       background: linear-gradient(90deg, #8bc34a, #00a86b);
     }
 
-  .boton {
-    font-weight: 700;
-    color: white; 
-  }  
-
   /* Contenedor de botones */
   .botones {
     display: flex;
     position: relative;
     justify-content: space-around;
-    align-items: center;
+  }
+
+  .boton-inicio {
     gap: 80px; /* Espaciado entre los botones */
     top: 8vh;
+    align-items: center;
   }
   
  
@@ -275,17 +276,24 @@ body {
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s ease;
-    text-align: center; /* Centrar el texto dentro del botón */
-    margin: 10px 0;
   }
   
   .boton:hover {
     background: linear-gradient(90deg, #8bc34a, #00a86b);
   }
 
+  .boton-inicio {
+    text-align: center; /* Centrar el texto dentro del botón */
+    margin: 10px 0;
+  }
+
+  .botones-Siguiente1 {
+    top: 5vh;
+    right: 38vh;
+  }
+
   .boton-Sesion {
   position: relative; /* Fijar el botón respecto a la ventana del navegador */
-  top: 6vh; /* Separación desde el borde superior */
   padding: 10px 20px;
   background: linear-gradient(90deg, #00a86b, #8bc34a);
   color: #000000;
@@ -296,7 +304,7 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   font-weight: 700;
   transition: background-color 0.3s ease;
-  width: 20vh; /* Ajusta este valor para hacer los botones más largos */
+  width: 30vh; /* Ajusta este valor para hacer los botones más largos */
   text-align: center; /* Centrar el texto dentro del botón */
   margin: 15px 75px;
 }
@@ -308,6 +316,14 @@ body {
           justify-content: space-around;
           align-items: center;
         }
+
+  .boton-SesionCorTruc {
+    top: 2vh; /* Separación desde el borde superior */
+  }
+  
+  .boton-SesionAprendiz {
+    top: 9vh;
+  }
   
   
     .boton-calendario {
@@ -333,7 +349,6 @@ body {
 
 .input-Sesion {
   background: #43bd57;
-  width: 75%;
   border: none;
   border-radius: 5px;
   padding: 10px;
@@ -342,8 +357,8 @@ body {
   font-size: 1rem;
   text-align: center; /* Centra el texto ingresado por el usuario */
   position: relative;
-  top: 3vh;
   margin: 5px 0;
+  width: 70%;
 }
 
     .input-Sesion::placeholder {
@@ -355,16 +370,23 @@ body {
     .input-Sesion:focus {
       border: 2px solid #8bc34a;
       outline: none;
+    }
 
+    .input-SesionCorTruc {
+      top: 2vh;
+    }
+
+    .input-SesionAprendiz {
+      top: 6vh;
     }
 
     .error {
+      position: relative;
       color: #ff4d4d; /* Color de texto rojo claro para el mensaje de error */
       background-color: rgba(255, 77, 77, 0.1); /* Fondo suave para el mensaje */
       border: 1px solid #ff4d4d; /* Borde del mensaje de error */
       border-radius: 4px; /* Bordes redondeados */
       padding: 10px; /* Espaciado interno */
-      margin-top: 5px; /* Espaciado superior para separar del input */
       transition: opacity 0.3s ease; /* Transición suave */
       opacity: 0; /* Inicialmente invisible */
       visibility: hidden; /* Inicialmente oculto */
@@ -376,17 +398,30 @@ body {
       visibility: visible; /* Asegurarse de que sea visible */
     }
 
+    .error-aprendiz {
+        top: -3vh;
+    }
+
+    .error-CoordinadorTruc {
+      font-size: 0.8rem;
+      margin: 3px;
+      top: 0vh;
+    }
+
     .selector-coordinador {
-      width: 85%;
-      height: 7vh;
+      height: 8vh;
       border: none;
       padding: 10px;
       color: black;
       font-weight: bold;
-      font-size: 1.2rem;
+      font-size: 1rem;
       position: relative;
-      top: -1vh;
       margin: 10px 0;
+}
+
+.selector-Pan1Coordinador {
+  top: -1vh;
+  width: 50%;
 }
     
 .titulo-Seleccion {
@@ -489,9 +524,7 @@ body {
       padding: 10px; /* Añadir un poco de espacio alrededor */
     }
   
-    .contenedor-sesion {
-      top: -2vh;
-    }
+  
 
     /* Ajustar la imagen central en pantallas pequeñas */
     .imagen-central {

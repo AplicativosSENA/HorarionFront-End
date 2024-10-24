@@ -36,14 +36,14 @@ export default function PantallaPrincipal() {
           <h1 className="titulo">Título</h1>
           <p className="texto-explicativo">Texto explicativo breve</p>
 
-          <div className="botones">
-            <button className="boton" onClick={irAPaginaCoordinador}>
+          <div className="botones botones-inicio">
+            <button className="boton boton-inicio" onClick={irAPaginaCoordinador}>
               Coordinador
             </button>
-            <button className="boton" onClick={irAPaginaInstructor}>
+            <button className="boton boton-inicio" onClick={irAPaginaInstructor}>
               Instructor
             </button>
-            <button className="boton" onClick={irAPaginaAprendiz}>
+            <button className="boton boton-inicio" onClick={irAPaginaAprendiz}>
               Aprendiz
             </button>
           </div>
