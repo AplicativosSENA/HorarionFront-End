@@ -217,7 +217,7 @@ body {
   }
 
   .texto-SesionCorTruc {
-    top: 3vh;
+    top: -10vh;
   }
 
   .numero-ficha {
@@ -255,6 +255,7 @@ body {
     display: flex;
     position: relative;
     justify-content: space-around;
+    gap: 60px;
   }
 
   .boton-inicio {
@@ -267,7 +268,7 @@ body {
   .boton {
     background: linear-gradient(90deg, #00a86b, #8bc34a);
     width: 30vh;
-    height: 6vh;
+    height: 5vh;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -285,6 +286,7 @@ body {
   .boton-inicio {
     text-align: center; /* Centrar el texto dentro del botón */
     margin: 10px 0;
+    
   }
 
   .botones-Siguiente1 {
