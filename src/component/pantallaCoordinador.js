@@ -26,10 +26,10 @@ export default function AsignacionFicha() {
       </div>
       <div className="secciones">
         <div className="seccion-central">
-        <div className="contenedor-imagen ">
+          <div className="contenedor-imagen ">
             <img className="imagen-central img-central" />
           </div>
-          <div className="degradado-gris degradado-grisPanCoordinador" /> 
+          <div className="degradado-gris degradado-grisPanCoordinador" />
           <h1 className="titulo-Seleccion">Asignación de ficha</h1>
           <select
             value={sede}
@@ -59,7 +59,6 @@ export default function AsignacionFicha() {
             </button>
           </div>
         </div>
-        <div className="seccion-lateral"></div>
       </div>
       <button
         className="boton-salida boton-salidaCoordinador"

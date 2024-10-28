@@ -69,8 +69,8 @@ export default function CalendarioMensual() {
       </div>
       <div className="secciones">
         <div className="seccion-central">
-        <div className="contenedor-imagen ">
-            <img className="imagen-central img-centralPanInicio" />
+          <div className="contenedor-imagen ">
+            <img className="imagen-central img-centralCalCor" />
           </div>
           <button
             className="boton-flecha boton-adelanteCoordinador"
@@ -124,7 +124,7 @@ export default function CalendarioMensual() {
               )}
             </tbody>
           </table>
-          <button className="boton boton-volver" onClick={irAPaginaAnterior}>
+          <button className="boton-volver" onClick={irAPaginaAnterior}>
             Volver
           </button>
           <button className="boton-salida" onClick={irAPaginaInicio}>

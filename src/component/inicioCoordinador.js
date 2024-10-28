@@ -44,18 +44,31 @@ export default function InicioCoordinador() {
       </div>
       <div className="secciones">
         <div className="seccion-central">
-        <div className="contenedor-imagen ">
+          <div className="contenedor-imagen ">
             <img className="imagen-central img-centralCorTruc" />
           </div>
-          <h1 className="titulo-Sesion titulo-SesionCorTruc">Bienvenido Coordinador</h1>
-          <p className={`error error-CoordinadorTruc ${errors.email ? "show" : ""}`}>
+          <h1 className="titulo-Sesion titulo-SesionCorTruc">
+            Bienvenido Coordinador
+          </h1>
+          <p
+            className={`error error-CoordinadorTruc ${
+              errors.email ? "show" : ""
+            }`}
+          >
             {errors.email}
           </p>
-          <p className={`error error-CoordinadorTruc ${errors.password ? "show" : ""}`}>
+          <p
+            className={`error error-CoordinadorTruc ${
+              errors.password ? "show" : ""
+            }`}
+          >
             {errors.password}
           </p>
-          <form className="contenedor-sesion contenedor-sesionCorTruc" onSubmit={handleLogin}>
-            <p className="texto-Sesion SesionCorTruc">Inicio Sesión</p>
+          <form
+            className="contenedor-sesion contenedor-sesionCorTruc"
+            onSubmit={handleLogin}
+          >
+            <p className="texto-Sesion texto-SesionCorTruc">Inicio Sesión</p>
             <div className="inputs-Sesion">
               <input
                 className="input-Sesion"
@@ -75,7 +88,10 @@ export default function InicioCoordinador() {
               required
             />
             <div className="botones-Sesion">
-              <button className="boton-Sesion boton-SesionCorTruc" type="submit">
+              <button
+                className="boton-Sesion boton-SesionCorTruc"
+                type="submit"
+              >
                 Ingresar
               </button>
             </div>

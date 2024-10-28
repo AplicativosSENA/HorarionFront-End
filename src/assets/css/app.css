@@ -110,7 +110,7 @@ body {
       align-items: center;
   }
 
-   .img-centralCalAprendiz, .img-centralCorTruc {
+   .img-centralCalAprendiz, .img-centralCorTruc, .img-centralCalCor {
     width: 100%;
     top: 4vh;
     left: 0;
@@ -217,7 +217,7 @@ body {
   }
 
   .texto-SesionCorTruc {
-    top: -10vh;
+    top: 2.5vh;
   }
 
   .numero-ficha {
@@ -227,11 +227,11 @@ body {
   }
   
      /* Botones */
-  .boton-salida {
+  .boton-salida, .boton-volver {
   position: fixed; /* Fijar el botón respecto a la ventana del navegador */
   top: 90vh; /* Separación desde el borde superior */
   right: 8vh; /* Separación desde el borde derecho */
-  padding: 10px 20px;
+  padding: 10px;
   background: linear-gradient(90deg, #00a86b, #8bc34a);
   color: #000000;
   border: none;
@@ -291,7 +291,7 @@ body {
 
   .botones-Siguiente1 {
     top: 5vh;
-    right: 38vh;
+    right: 34vh;
   }
 
   .boton-Sesion {
@@ -436,7 +436,9 @@ body {
 }
 
 .titulo-calCoordinador {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
+  margin: 50px;
+  top: 2vh;
 }
 
 .boton-Selector {
@@ -448,7 +450,7 @@ body {
         }
 
   .boton-volver {
-     top: 84vh;
+     top: 83vh;
   }
 
   .boton-flecha {
@@ -456,7 +458,7 @@ body {
     color: white; /* Color del texto */
     border: none; /* Sin borde */
     padding: 10px 20px; /* Espaciado dentro del botón */
-    font-size: 18px; /* Tamaño del texto */
+    font-size: 13px; /* Tamaño del texto */
     font-weight: bold; /* Negrita */
     border-radius: 20%; /* Botón circular */
     cursor: pointer; /* Manita al pasar el mouse */
@@ -469,36 +471,33 @@ body {
   
   .boton-atrasInstructor {
     position: relative;
-    left: 65vh; /* Posición al lado izquierdo */
-    top: 18.5vh;
+    left: 61vh; /* Posición al lado izquierdo */
+    top: 18vh;
     transform: translateY(-50%);
   }
 
   .boton-atrasCoordinador {
     position: relative;
-    left: 33vh; /* Posición al lado izquierdo */
-    top: 8vh;
+    left: 60vh; /* Posición al lado izquierdo */
+    top: 20vh;
     transform: translateY(-50%);
   }
   
   .boton-adelanteAprendiz, .boton-adelanteInstructor {
     position: relative;
-    left: 38%; /* Posición al lado derecho */
-    top: 18.5vh;
+    left: 36.5%; /* Posición al lado derecho */
+    top: 16.9vh;
     transform: translateY(-50%);
   }
 
   .boton-adelanteCoordinador {
     position: relative;
-    left: 40.5vh; /* Posición al lado derecho */
-    top: 8vh;
+    left: 71vh; /* Posición al lado derecho */
+    top: 19vh;
     transform: translateY(-50%);
   }
 
-  .tabla-calCoordinador {
-    width: 90%;
-  }
-
+ 
   /* Responsividad */
 
   @media (max-width: 1080px) {}
