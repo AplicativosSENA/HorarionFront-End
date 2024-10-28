@@ -99,31 +99,6 @@ body {
     width: 50%;
   }
 
-  .imagen-central { 
-      position: absolute;
-      background-image: url('../../assets/img/Valoracion.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      z-index: 10;
-      border-bottom: 2px solid #000000;
-      align-items: center;
-  }
-
-   .img-centralCalAprendiz, .img-centralCorTruc, .img-centralCalCor {
-    width: 100%;
-    top: 4vh;
-    left: 0;
-    height: 18.5vh; /* Mantén la altura para pantallas más grandes */
-  }
-
-  .img-central, .img-centralPanInicio, .img-centralAprendiz {
-    width: 100%;
-    top: 3.5vh;
-    left: 0;
-    height: 24vh; /* Mantén la altura para pantallas más grandes */
-  }
-
   .contenedor-imagen {
     display: flex;
     justify-content: space-between; /* Distribuye los elementos */
@@ -132,6 +107,32 @@ body {
     max-width: 1500px; /* Limita el ancho máximo */
     margin: 0 auto; /* Centra el contenedor */
     }
+
+  .imagen-central { 
+    position: absolute;
+    background-image: url('/resources/img/Valoracion.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 10;
+    border-bottom: 2px solid #000000;
+    align-items: center;
+    width: 100%;
+}
+
+   .img-centralCalAprendiz, .img-centralCorTruc, .img-centralCalCor {
+    top: 4vh;
+    left: 0;
+    height: 18.5vh; /* Mantén la altura para pantallas más grandes */
+  }
+
+  .img-central { 
+    top: 3.5vh;
+    left: 0;
+    height: 24vh; /* Mantén la altura para pantallas más grandes */
+  }
+
+  
   
   /* Secciones con contenido principal */
   .secciones {

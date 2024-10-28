@@ -1,5 +1,4 @@
-import "../assets/css/app.css";
-
+// Validaciones.js
 export const validateInputs = (email, password, ficha) => {
   let emailError = "";
   let passwordError = "";
@@ -15,6 +14,7 @@ export const validateInputs = (email, password, ficha) => {
     passwordError = "La contraseña debe tener al menos 6 caracteres.";
   }
 
+  // Validar que la ficha tenga al menos 7 caracteres
   if (ficha.length < 7) {
     fichaError = "La Ficha debe tener al menos 7 caracteres.";
   }
