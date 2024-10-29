@@ -9,10 +9,6 @@
         let sede = '';
         let programa = '';
 
-        function irAPantallaInicio() {
-            window.location.href = '../pantallaInicio.php'; // Navegar al inicio
-        }
-
         function irCalendarioCoordinador() {
             // Validar que se haya seleccionado una sede y un programa
             if (!sede || !programa) {
@@ -75,10 +71,7 @@
             </div>
         </div>
         <button
-            class="boton-salida boton-salidaCoordinador"
-            onclick="irAPantallaInicio()"
-        >
-            Salir
+            class="boton-salida boton-salidaCoordinador" onclick="window.location.href = 'inicioCoordinador.php'"> Salir
         </button>
     </div>
 </body>

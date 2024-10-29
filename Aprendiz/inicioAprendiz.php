@@ -1,36 +1,29 @@
-<?php
-
-
-
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../resources/css/app.css">
-    <link rel="stylesheet" href="../resources/css/inicioAprendiz.css">
+    <link rel="stylesheet" href="../resources/css/Aprendiz.css">
     <title>Inicio Aprendiz</title>
     <script>
-        function handleLogin(event) {
-            event.preventDefault();
+        function validarFicha(event) {
+            const fichaInput = document.getElementById("ficha");
+            const errorFicha = document.getElementById("error-ficha");
+            const fichaValue = fichaInput.value.trim();
 
-            const ficha = document.getElementById('ficha').value;
-            let fichaError = '';
+            if (fichaValue === "" || fichaValue.length < 8) {
+                event.preventDefault(); // Evita el envío del formulario
+                errorFicha.textContent = "La Ficha debe tener al menos 7 caracteres.";
+                errorFicha.classList.add("show"); // Muestra el mensaje de error
+            } 
+        }
 
-            // Validación de ficha
-            if (!ficha || isNaN(ficha)) {
-                fichaError = 'El número de ficha debe ser un valor numérico y no puede estar vacío';
-            }
-
-            document.getElementById('error-ficha').innerText = fichaError;
-
-            if (!fichaError) {
-                // Redirigir a la página de calendario si no hay errores
-                window.location.href = '/calendario-aprendiz';
-            } else {
-                console.log('Errores en la validación');
+        function handleSubmit(event) {
+            const fichaInput = document.getElementById("ficha").value.trim();
+            if (fichaInput !== "" && fichaInput.length >= 7) {
+                // Redirige a calendarioAprendiz.php si la ficha es válida
+                window.location.href = 'calendarioAprendiz.php';
             }
         }
     </script>
@@ -46,12 +39,12 @@
         </div>
         <div class="secciones">
             <div class="seccion-central">
-            <div class="contenedor-imagen">
+                <div class="contenedor-imagen">
                     <img class="imagen-central img-centralAprendiz" />
                 </div>
                 <h1 class="titulo-Sesion titulo-sesAprendiz">Bienvenido Aprendiz</h1>
                 <p id="error-ficha" class="error error-aprendiz"></p>
-                <form class="contenedor-sesion Contenedor-sesionAprendiz" onsubmit="handleLogin(event)">
+                <form class="contenedor-sesion Contenedor-sesionAprendiz" onsubmit="validarFicha(event); handleSubmit(event);">
                     <p class="texto-Sesion texto-SesionAprendiz">Digitar número de ficha:</p>
                     <div class="inputs-Sesion">
                         <input
@@ -63,7 +56,7 @@
                         />
                     </div>
                     <div class="botones-Sesion">
-                        <button class="boton-Sesion boton-SesionAprendiz" type="submit">Ingresar</button>
+                        <button type="submit" class="boton-Sesion boton-SesionAprendiz">Ingresar</button>
                     </div>
                 </form>
             </div>
