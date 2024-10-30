@@ -472,7 +472,7 @@ body {
   
   .boton-atrasInstructor {
     position: relative;
-    left: 61vh; /* Posición al lado izquierdo */
+    left: 67vh; /* Posición al lado izquierdo */
     top: 18vh;
     transform: translateY(-50%);
   }

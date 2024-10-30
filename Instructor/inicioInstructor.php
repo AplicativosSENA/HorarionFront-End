@@ -1,8 +1,3 @@
-<?php
-
-
-
-?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -20,22 +15,30 @@
             let emailError = '';
             let passwordError = '';
 
-            // Validación de email
-            if (!email.includes('@')) {
-                emailError = 'El correo debe contener una "@"';
+            // Validación de email (debe contener "@" y un dominio)
+            if (!email.includes('@') || !/\.\w{2,}$/.test(email)) {
+                emailError = 'Correo no valido. Debe contener "@" y un dominio.';
             }
 
-            // Validación de contraseña
+            // Validación de contraseña (mínimo 6 caracteres)
             if (password.length < 6) {
-                passwordError = 'La contraseña debe tener al menos 6 caracteres';
+                passwordError = 'La contraseña debe tener al menos 6 caracteres.';
             }
 
-            document.getElementById('error-email').innerText = emailError;
-            document.getElementById('error-password').innerText = passwordError;
+            // Mostrar los mensajes de error
+            const emailErrorElement = document.getElementById('error-email');
+            const passwordErrorElement = document.getElementById('error-password');
+
+            emailErrorElement.innerText = emailError;
+            passwordErrorElement.innerText = passwordError;
+
+            // Agregar clase para mostrar el mensaje de error si hay errores
+            emailErrorElement.classList.toggle('show', !!emailError);
+            passwordErrorElement.classList.toggle('show', !!passwordError);
 
             if (!emailError && !passwordError) {
                 // Redirigir a la página de calendario si no hay errores
-                window.location.href = '/calendario-instructor';
+                window.location.href = 'calendarioInstructor.php';
             } else {
                 console.log('Errores en la validación');
             }
@@ -45,11 +48,7 @@
 <body>
     <div class="contenedor-principal">
         <div class="franja-verde">
-            <img
-                src="https://img.freepik.com/premium-photo/artistic-blurry-colorful-plain-green-gradient-abstract-wallpaper-background_1120306-3676.jpg"
-                alt="Degradado verde a blanco"
-                class="imagen-degradado"
-            />
+            <img src="..\resources\img\DegradadoVerde.jpg" class="imagen-degradado" />
         </div>
         <div class="secciones">
             <div class="seccion-lateral"></div>

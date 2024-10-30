@@ -15,7 +15,7 @@
                 alert('Por favor, seleccione una sede y un programa.');
                 return;
             }
-            window.location.href = '/calendario-coordinador'; // Navegar al calendario
+            window.location.href = 'calendarioCoordinador.php'; // Navegar al calendario
         }
 
         function actualizarSede(value) {
