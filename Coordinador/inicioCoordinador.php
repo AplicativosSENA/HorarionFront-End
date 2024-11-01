@@ -63,7 +63,7 @@
                     <div class="inputs-Sesion">
                         <input
                             id="email"
-                            class="input-Sesion"
+                            class="input-Sesion input-SesionCorTruc"
                             type="email"
                             placeholder="Correo"
                             required
@@ -71,7 +71,7 @@
                     </div>
                     <input
                         id="password"
-                        class="input-Sesion"
+                        class="input-Sesion input-SesionCorTruc"
                         type="password"
                         placeholder="Contraseña"
                         required

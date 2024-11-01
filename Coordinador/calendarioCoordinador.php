@@ -19,15 +19,24 @@
     nombreMesElement.textContent = `Horario de Programa - ${nombreMes[mesActual]}`;
 
     const diasDelMes = obtenerDiasDelMes(mesActual, añoActual);
+    const primerDiaDelMes = new Date(añoActual, mesActual, 1).getDay(); // Obtener el primer día del mes (0=Domingo, 1=Lunes, ..., 6=Sábado)
     const tablaDias = document.getElementById("tablaDias");
     tablaDias.innerHTML = "";
 
     let dia = 1;
-    for (let i = 0; i < Math.ceil(diasDelMes / 7); i++) {
+
+    // Crear filas para el calendario
+    for (let i = 0; i < 6; i++) { // Crear hasta 6 filas para cubrir todos los días
         const fila = document.createElement("tr");
+        
+        // Rellenar celdas vacías para los días antes del primer día del mes
         for (let j = 0; j < 7; j++) {
             const celda = document.createElement("td");
-            if (dia <= diasDelMes) {
+
+            // Solo llenar celdas vacías si estamos en la primera fila y antes del primer día del mes
+            if (i === 0 && j < primerDiaDelMes) {
+                celda.textContent = ""; // Celdas vacías
+            } else if (dia <= diasDelMes) {
                 const boton = document.createElement("button");
                 boton.textContent = dia;
                 boton.classList.add("boton-calendario", "boton-calCoordinador");
@@ -40,8 +49,13 @@
                 })(dia);
 
                 celda.appendChild(boton);
-                dia++;
+                fila.appendChild(celda);
+                dia++; // Incrementar día solo si se está agregando un botón
+            } else {
+                // Rellenar celdas vacías después de que se han agregado todos los días del mes
+                celda.textContent = "";
             }
+
             fila.appendChild(celda);
         }
         tablaDias.appendChild(fila);
@@ -65,7 +79,10 @@
         // Función para imprimir el día, mes y año seleccionados
         function seleccionarDia(dia, mes, año) {
             console.log(`Día seleccionado: ${dia}/${mes}/${año}`);
+            // Redirige a la nueva página con los detalles del día seleccionado
+            window.location.href = `pantallaCoordinador2.php?dia=${dia}&mes=${mes}&año=${año}`;
         }
+
 
         function irAPaginaInicio() {
             window.location.href = 'inicioCoordinador.php';
@@ -80,12 +97,8 @@
 </head>
 <body>
     <div class="contenedor-principal">
-        <div class="franja-verde">
-            <img
-                src="https://img.freepik.com/premium-photo/artistic-blurry-colorful-plain-green-gradient-abstract-wallpaper-background_1120306-3676.jpg"
-                alt="Degradado verde a blanco"
-                class="imagen-degradado"
-            />
+    <div class="franja-verde">
+            <img src="..\resources\img\DegradadoVerde.jpg" class="imagen-degradado" />
         </div>
         <div class="secciones">
             <div class="seccion-central">
@@ -100,13 +113,13 @@
                 <table class="tabla-calendario tabla-calCoordinador">
                     <thead>
                         <tr class="texto-calendario texto-calCoordinador">
+                            <th>Domingo</th>
                             <th>Lunes</th>
                             <th>Martes</th>
                             <th>Miércoles</th>
                             <th>Jueves</th>
                             <th>Viernes</th>
                             <th>Sábado</th>
-                            <th>Domingo</th>
                         </tr>
                     </thead>
                     <tbody id="tablaDias">

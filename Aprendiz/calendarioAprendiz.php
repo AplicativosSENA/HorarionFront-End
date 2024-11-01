@@ -29,7 +29,7 @@
                 </div>
                 <div class="degradado-gris degradado-grisCalendario"></div>
                 <button class="boton-flecha boton-adelanteAprendiz">➡</button>
-                <h1 class="titulo-calendario">Horario de ficha</h1>
+                <h1 class="titulo-calendario titulo-calAprendiz">Horario de ficha</h1>
                 <p class="numero-ficha">2365465456</p>
                 <table class="tabla-calendario">
                     <thead>

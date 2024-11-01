@@ -35,23 +35,23 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 30px; /* Ocupa el 15% de la altura del contenedor */
+    height: 50px; /* Ocupa el 15% de la altura del contenedor */
     background-color: green; /* Franja verde */
     border-top-left-radius: 30px; /* Redondea la esquina superior izquierda */
     border-top-right-radius: 30px; /* Redondea la esquina superior derecha */
 }
 
     .contenedor-sesionCorTruc {
-      top: -2vh;
+      top: 0vh;
       margin-top: 25px;
-      height: 40vh;
+      height: 35vh;
       width: auto;
     }
 
     .Contenedor-sesionAprendiz {
-      top: -8vh;
+      top: -5vh;
       margin-top: 25px;
-      height: 40vh;
+      height: 32vh;
       width: auto;
     }
 
@@ -153,7 +153,7 @@ body {
   }
 
   .tabla-calendario {
-    width: 77%;
+    width: 75%;
     border-collapse: collapse;
     text-align: center;
     z-index: 10;
@@ -167,9 +167,9 @@ body {
   /* Título */
   .titulo-Sesion {
     position: relative;
-    font-size: 1.7rem;
+    font-size: 1.9rem;
     font-weight: bold;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
     
   }
 
@@ -179,7 +179,7 @@ body {
   }
 
   .titulo-SesionCorTruc {
-    top: 4vh;
+    top: 3vh;
   }
 
   .titulo-calendario {
@@ -208,22 +208,24 @@ body {
   }
   
   .texto-Sesion {
-    font-size: 1.2rem;
     margin-bottom: 1rem;
     position: relative;
   }
 
   .texto-SesionAprendiz {
-    top: 4vh; 
+    font-size: 1.5rem;
+    top: 5vh; 
   }
 
   .texto-SesionCorTruc {
-    top: 2.5vh;
+    top: 5vh;
+    font-size: 1.8rem;
   }
 
-  .numero-ficha {
+  .numero-ficha, .horario-fecha {
+    font-size: 1.2rem;
     position: relative;
-    top: 1vh;
+    top: -2vh;
     z-index: 10;
   }
   
@@ -269,7 +271,7 @@ body {
   .boton {
     background: linear-gradient(90deg, #00a86b, #8bc34a);
     width: 30vh;
-    height: 5vh;
+    height: 4.5vh;
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -321,7 +323,7 @@ body {
         }
 
   .boton-SesionCorTruc {
-    top: 2vh; /* Separación desde el borde superior */
+    top: 5vh; /* Separación desde el borde superior */
   }
   
   .boton-SesionAprendiz {
@@ -336,6 +338,7 @@ body {
       border: none;
       cursor: pointer;
       padding: 3.5vh;
+      font-size: 1.2rem;
     }
     
     .boton-calendario:hover {
@@ -376,7 +379,7 @@ body {
     }
 
     .input-SesionCorTruc {
-      top: 2vh;
+      top: 5vh;
     }
 
     .input-SesionAprendiz {
@@ -406,7 +409,7 @@ body {
     }
 
     .error-CoordinadorTruc {
-      font-size: 0.8rem;
+      font-size: 1rem;
       margin: 3px;
       top: 0vh;
     }
@@ -436,7 +439,7 @@ body {
     top: -8vh;
 }
 
-.titulo-calCoordinador {
+.titulo-calCoordinador, .titulo-calAprendiz, .titulo-calInstructor {
   font-size: 1.7rem;
   margin: 50px;
   top: 2vh;
@@ -451,7 +454,7 @@ body {
         }
 
   .boton-volver {
-     top: 83vh;
+     top: 85vh;
   }
 
   .boton-flecha {
@@ -459,7 +462,7 @@ body {
     color: white; /* Color del texto */
     border: none; /* Sin borde */
     padding: 10px 20px; /* Espaciado dentro del botón */
-    font-size: 13px; /* Tamaño del texto */
+    font-size: 22px; /* Tamaño del texto */
     font-weight: bold; /* Negrita */
     border-radius: 20%; /* Botón circular */
     cursor: pointer; /* Manita al pasar el mouse */
@@ -472,42 +475,114 @@ body {
   
   .boton-atrasInstructor {
     position: relative;
-    left: 67vh; /* Posición al lado izquierdo */
-    top: 18vh;
+    left: 61vh; /* Posición al lado izquierdo */
+    top: 20.5vh;
     transform: translateY(-50%);
   }
 
   .boton-atrasCoordinador {
     position: relative;
     left: 60vh; /* Posición al lado izquierdo */
-    top: 20vh;
+    top: 14vh;
     transform: translateY(-50%);
   }
   
   .boton-adelanteAprendiz, .boton-adelanteInstructor {
     position: relative;
-    left: 36.5%; /* Posición al lado derecho */
-    top: 16.9vh;
+    left: 36%; /* Posición al lado derecho */
+    top: 21vh;
     transform: translateY(-50%);
   }
 
   .boton-adelanteCoordinador {
     position: relative;
     left: 71vh; /* Posición al lado derecho */
-    top: 19vh;
+    top: 14.7vh;
     transform: translateY(-50%);
   }
 
+/* Contenedor de la tabla */
+.contenedor-tabla {
+  position: relative;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 100;
+  top: 15vh;
+}
+
+/* Estilo de la tabla de horas */
+.tabla-horas {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  z-index: 100;
+}
+
+.tabla-horas th {
+  background-color: #007f3e;
+  color: white;
+  padding: 10px;
+  font-size: 18px;
+  z-index: 100;
+}
+
+.tabla-horas td {
+  padding: 15px;
+  border: 1px solid #ccc;
+  z-index: 100;
+}
+
+/* Estilo de los botones dentro de la tabla */
+.hora-boton {
+  width: 30vh;
+  padding: 12px;
+  background-color: #e6f5e6;
+  border: 1px solid #007f3e;
+  color: #007f3e;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.hora-boton:hover {
+  background-color: #cce5cc;
+}
+
+
+
  
   /* Responsividad */
+  @media (max-width: 1080px) {
+    .boton-Sesion {
+        width: 80%; 
+        margin: 10px 0; 
+    }
 
-  @media (max-width: 1080px) {}
+    .boton-volver {
+        top: 81vh; 
+    }
+
+    .contenedor-tabla {
+        padding: 10px; 
+    }
+
+    .input-Sesion {
+        width: 50%; 
+        font-size: 0.9rem; 
+    }
+
+    .titulo-Seleccion {
+        font-size: 1.5rem; 
+        margin-top: 5vh; 
+    }
+
+  
+}
 
 @media (max-width: 980px) {
-    /* Ocultar las secciones laterales en pantallas pequeñas */
-    .seccion-lateral {
-      display: none;
-    }
   
     /* Ajustar la sección central para ocupar todo el espacio */
     .seccion-central {

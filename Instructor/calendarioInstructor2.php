@@ -47,8 +47,8 @@
                 >
                     ⬅
                 </button>
-                <h1 class="titulo-calendario">Bienvenido</h1>
-                <p class="numero-ficha">Horario del 7 octubre al 12</p>
+                <h1 class="titulo-calendario titulo-calInstructor">Bienvenido</h1>
+                <p class="horario-fecha">Horario del 7 octubre al 12</p>
                 <table class="tabla-calendario">
                     <thead>
                         <tr class="texto-calendario">
