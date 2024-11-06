@@ -25,13 +25,13 @@
                 <div class="contenedor-imagen">
                     <img class="imagen-central img-centralCalAprendiz" />
                 </div>
-                <div class="degradado-gris degradado-grisCalendario"></div>
+                <div class="degradado-gris degradado-grisCalAprendiz"></div>
                 <button class="boton-flecha boton-adelanteAprendiz">➡</button>
                 <h1 class="titulo-calendario titulo-calAprendiz">Horario de ficha</h1>
                 <p class="numero-ficha">2365465456</p>
                 <table class="tabla-calendario">
                     <thead>
-                        <tr class="texto-calendario">
+                        <tr class="texto-calendario texto-calAprendiz">
                             <th>Hora</th>
                             <th>Lunes</th>
                             <th>Martes</th>
@@ -54,7 +54,7 @@
                         ];
 
                         foreach ($horas as $rowIndex => $hora) {
-                            echo "<tr class='texto-calendario'><td>$hora</td>";
+                            echo "<tr class='texto-calendario texto-calAprendiz'><td>$hora</td>";
                             foreach ($dias as $colIndex => $dia) {
                                 $key = "$rowIndex-$colIndex";
                                 $ambienteInfo = isset($infoAmbientes[$key]) ? $infoAmbientes[$key] : null;
@@ -83,7 +83,7 @@
                         ?>
                     </tbody>
                 </table>
-                <button class="boton-salida" onclick="window.location.href='inicioAprendiz.php'">Salir</button>
+                <button class="boton-salida boton-salidaAprendiz" onclick="window.location.href='inicioAprendiz.php'">Salir</button>
             </div>
         </div>
     </div>

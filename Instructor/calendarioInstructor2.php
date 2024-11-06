@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../resources/css/app.css">
+    <link rel="stylesheet" href="../resources/css/Instructor.css">
     <title>Calendario Semanal Instructor</title>
     <script>
         // Estado para manejar la visibilidad de cada menú desplegable
@@ -34,11 +35,9 @@
                 <div class="contenedor-imagen">
                     <img class="imagen-central img-centralTruc" />
                 </div>
-                <div class="degradado-gris degradado-grisCalendario"></div>
+                <div class="degradado-gris degradado-grisCalInstructor"></div>
                 <button
-                    class="boton-flecha boton-adelanteInstructor"
-                    onclick="window.location.href='/'"
-                >
+                    class="boton-flecha boton-adelanteInstructor">
                     ➡
                 </button>
                 <button
@@ -51,7 +50,7 @@
                 <p class="horario-fecha">Horario del 7 octubre al 12</p>
                 <table class="tabla-calendario">
                     <thead>
-                        <tr class="texto-calendario">
+                        <tr class="texto-calendario texto-calInstructor">
                             <th>Hora</th>
                             <th>Lunes</th>
                             <th>Martes</th>
@@ -73,11 +72,11 @@
                         ];
 
                         foreach ($horas as $rowIndex => $hora) {
-                            echo "<tr class='texto-calendario'><td>$hora</td>";
+                            echo "<tr class='texto-calendario texto-calInstructor'><td>$hora</td>";
                             foreach ($dias as $colIndex => $dia) {
                                 $key = "$rowIndex-$colIndex";
                                 echo "<td>
-                                    <button class='boton-calendario'
+                                    <button class='boton-calendario boton-calInstructor'
                                         onmouseenter='showMenu($rowIndex, $colIndex)'
                                         onmouseleave='hideMenu($rowIndex, $colIndex)'>Ambiente
                                     </button>";
@@ -100,7 +99,7 @@
                         ?>
                     </tbody>
                 </table>
-                <button class="boton-salida" onclick="window.location.href='inicioInstructor.php'">Salir</button>
+                <button class="boton-salida boton-salidaIns" onclick="window.location.href='inicioInstructor.php'">Salir</button>
             </div>
         </div>
     </div>

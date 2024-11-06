@@ -84,10 +84,7 @@ body {
     flex-direction: column;
     align-items: center;
     position: fixed;
-  }
-
-  .degradado-grisCalendario {
-    width: 90%;
+    
   }
 
   .degradado-grisPanCoordinador {
@@ -119,13 +116,13 @@ body {
     width: 100%;
 }
 
-  .img-centralTruc, .img-centralCalCor {
+ .img-centralCalCor {
     top: 4vh;
     left: 0;
     height: 18.5vh; /* Mantén la altura para pantallas más grandes */
   }
 
-  .img-centralSesionTruc, .img-centralSesionCor{
+  .img-centralSesionCor{
     top: 4vh;
     left: 0;
     height: 24vh; /* Mantén la altura para pantallas más grandes */
@@ -180,10 +177,6 @@ body {
     top: 3vh;
   }
 
-  .titulo-calendario {
-    position: relative;
-    z-index: 10;
-  }  
 
   .titulo-asignar {
     position: relative;
@@ -194,22 +187,12 @@ body {
 
   
   .texto-Sesion {
-    margin-bottom: 1rem;
     position: relative;
   }
-
- 
 
   .texto-SesionCorTruc {
     top: 5vh;
     font-size: 1.8rem;
-  }
-
-  .horario-fecha {
-    font-size: 1.2rem;
-    position: relative;
-    top: -2vh;
-    z-index: 10;
   }
   
      /* Botones */
@@ -398,7 +381,7 @@ body {
     top: -8vh;
 }
 
-.titulo-calCoordinador, .titulo-calInstructor {
+.titulo-calCoordinador {
   font-size: 1.7rem;
   margin: 45px;
   top: 2vh;
@@ -432,23 +415,10 @@ body {
         background: linear-gradient(90deg, #8bc34a, #00a86b);
       }
   
-  .boton-atrasInstructor {
-    left: 61vh; /* Posición al lado izquierdo */
-    top: 20.5vh;
-    margin: -22px;
-    transform: translateY(-50%);
-  }
-
+  
   .boton-atrasCoordinador {
     left: 60vh; /* Posición al lado izquierdo */
     top: 14vh;
-    margin: -22px;
-    transform: translateY(-50%);
-  }
-  
-  .boton-adelanteInstructor {
-    left: 36%; /* Posición al lado derecho */
-    top: 21vh;
     margin: -22px;
     transform: translateY(-50%);
   }
@@ -561,44 +531,13 @@ body {
       margin: 0;
       padding: 10px; /* Añadir un poco de espacio alrededor */
     }
-
-    .degradado-gris {
-      flex: 1;
-      margin: 0;
-      width: 90%; /* Hacer que la sección central ocupe todo el ancho */
-      margin: 0;
-      padding: 10px; /* Añadir un poco de espacio alrededor */
-    }
-  
-  
-
-   
-
-    .imagen-centralSesion, .imagen-calendario {
-      width: 100%; /* Reduce el tamaño de la imagen */
-      top: 5vh; /* Ajusta la posición para que no suba demasiado */
-      height: auto; 
-    }
-
-    .imagen-centralSesion2, .imagen-calendario2 {
-      height: 1vh;
-      margin-bottom: 0vh;
-    }
-
     
   
     /* Botones en columna */
-    .botones {
-      flex-direction: column;
-      align-items: center;
-    }
-
-
     .boton-salida, .boton-volver {
       position: absolute; /* Cambia de fixed a absolute en pantallas pequeñas */
       transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
       right: auto; /* Elimina el margen derecho */
-      width: 50%; /* El botón será más ancho en pantallas pequeñas */
     }
 
     .boton-Selector, .boton-salidaCoordinador {
@@ -609,22 +548,9 @@ body {
       top: 8vh;
     }
 
-    .boton-salida{
-      top: 90vh; /* Ajusta la posición vertical */
-      left: 50%; /* Centra el botón horizontalmente */
-    }
-
     .boton-volver {    
       top: 84vh; /* Ajusta la posición vertical */
       left: 50%; /* Centra el botón horizontalmente */
-    }
-
-    .boton-atrasInstructor {
-      position: absolute; /* Cambia de fixed a absolute en pantallas pequeñas */
-      top: 33.5vh; /* Ajusta la posición vertical */
-      left: 87%; /* Centra el botón horizontalmente */
-      transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
-      right: auto;
     }
 
     .boton-atrasCoordinador {
@@ -632,15 +558,6 @@ body {
       top: 29vh; /* Ajusta la posición vertical */
       left: 88%; /* Centra el botón horizontalmente */
       transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
-      right: auto;
-    }
-    
-    .boton-adelanteAprendiz, .boton-adelanteInstructor {
-      position: absolute;
-      top: 33.5vh; /* Ajusta la posición vertical */
-      left: 96%; /* Centra el botón horizontalmente */
-      transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
-      right: auto;
     }
 
     .boton-adelanteCoordinador {
@@ -650,56 +567,19 @@ body {
       transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
       right: auto;
     }
-
-    .boton-calendario {
-      font-size: 0.6rem;
-    }
-
-    .input-Sesion {
-      width: 80%; /* Hacer el input más amplio en pantallas pequeñas */
-    }
-
-    .error {
-      font-size: 0.9rem;
-    }
-
-    .texto-calendario {
-      font-size: 0.9rem;
-    }
-
-    .titulo-calendario {
-      font-size: 1.6rem;
-    }
     
   }
   
   @media (max-width: 640px) {
-    .boton-calendario {
-      padding: 18px;
-      height: 9vh;
-    }
 
   .boton-atrasCoordinador {
     top: 22.5vh;
     left: 96%;
    }
-   
-   .boton-atrasInstructor {
-    top: 25.5vh;
-    left: 96%;
-   }
-
-   .boton-adelanteAprendiz, .boton-adelanteInstructor {
-    top: 31vh;
-   }
 
    .boton-adelanteCoordinador {
     top: 28vh;
-   }
-
-    .titulo-calendario {
-      font-size: 1.8rem;
-    }
+   } 
 
     .titulo-calCoordinador {
       font-size: 1.5rem;
@@ -713,96 +593,21 @@ body {
   /* Responsividad para pantallas muy pequeñas (por ejemplo, móviles) */
   @media (max-width: 500px) {
 
-    .contenedor-sesion {
-      height: 36vh;
-      width: 32vh;
-    }
-
-  
-    .imagen-centralSesion, .imagen-calendario  {
-      width: 100%; /* Reduce aún más el tamaño de la imagen */
-      height: auto;
-      top: 5vh;
-      margin-bottom: -15vh;
-    }
-
-    .imagen-centralSesion2 {
-      margin-top: -15vh;
-    }
-
-    .imagen-calenCoordinador {
-      margin-top: -2vh;
-    }
-
-    .titulo-Secion {
-      position: relative;
-      font-size: 1rem; /* Reduce el tamaño del título */
-      top: -60px;
-    }
-
     .titulo-calCoordinador {
       font-size: 1.3rem;
     }
-  
-    .texto-explicativo {
-      font-size: 1.2rem; /* Ajusta el tamaño del texto explicativo */
-    }
-
-    .texto-calendario {
-      font-size: 0.7rem;
-    }
-
-    .texto-Sesion {
-      font-size: 1rem;
-    }
-
-    .error {
-      font-size: 0.8rem;
-    }
-
-    .input-Sesion {
-      width: 70%; /* Hacer el input más amplio en pantallas pequeñas */
-      margin: 4px;
-      top: 2vh;
-    }
-
-    .boton-salida {
-      top: 90vh; /* Ajuste adicional para móviles */
-      width: 50%; /* Aumenta el ancho en pantallas muy pequeñas */
-    }
-
     .boton-Selector, .boton-salidaCoordinador {
       width: 30vh;
-    }
-
-    .boton-Sesion {
-      top: 3vh;
-    }
-
-    .boton-calendario {
-      padding: 14px;
-      height: 9vh;
     }
 
     .boton-calCoordinador {
       padding: 20px;
       height: 6vh;
     }
-  
-     .boton-flecha {
-      font-size: 0.8rem;
-     }
-
-
      
   }
   
   @media (max-width: 420px) {
-    .boton-calendario {
-      padding: 2px;
-      height: 8vh;
-    }
-
     .boton-calCoordinador {
       padding: 15px;
       height: 6vh;
@@ -812,25 +617,7 @@ body {
       margin-top: -4vh;
     }
 
-    .texto-calendario {
-      font-size: 0.5rem;
-    }
-
-    .texto-Sesion, .texto-Sesion2, .titulo-calCoordinador, .selector-coordinador {
+    .texto-Sesion2, .titulo-calCoordinador, .selector-coordinador {
       font-size: 1rem;
-    }
-
-    .error {
-      font-size: 0.75rem;
-    }
-
-    h1, .titulo-Secion, .titulo-Seleccion {
-      font-size: 1.5rem;
-    }
-
-    .contenedor-sesion {
-      width: 30vh;
-      height: 35vh;
-      
     }
   }

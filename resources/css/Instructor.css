@@ -1,0 +1,350 @@
+
+/* Inicio */
+.img-centralSesionTruc {
+    top: 4vh;
+    left: 0;
+    height: 24vh; /* Mantén la altura para pantallas más grandes */
+  }
+
+  .titulo-SesionTruc {
+    top: 3vh;
+  }
+
+  .error-instructor {
+    font-size: 1rem;
+    margin: 3px;
+    top: 1vh;
+  }
+
+  .contenedor-sesionTruc {
+    top: 0vh;
+    margin-top: 25px;
+    height: 35vh;
+    width: 40vh;
+  }
+
+  .texto-SesionTruc {
+    top: 5vh;
+    font-size: 1.8rem;
+  }
+
+  
+  .input-SesionTruc {
+    top: 4vh;
+    padding: 10px;
+    width: 60%;
+    font-size: 1rem;
+  }
+
+  .boton-SesionTruc {
+    top: 6vh; /* Separación desde el borde superior */
+    width: 30vh; /* Ajusta este valor para hacer los botones más largos */
+  }
+
+
+  /* Calendario */
+
+  .img-centralTruc {
+    top: 4vh;
+    left: 0;
+    height: 18.5vh; /* Mantén la altura para pantallas más grandes */
+  }
+
+  .degradado-grisCalInstructor{
+    width: 90%;
+  }
+
+  .boton-atrasInstructor {
+    left: 61vh; /* Posición al lado izquierdo */
+    top: 19.7vh;
+    margin: -25px;
+    transform: translateY(-50%);
+  }
+
+  .boton-adelanteInstructor {
+    left: 36%; /* Posición al lado derecho */
+    top: 20vh;
+    margin: -22px;
+    transform: translateY(-50%);
+  }
+
+
+  .titulo-calInstructor {
+    position: relative;
+    font-size: 1.7rem;
+    margin: 45px;
+    top: 2vh;
+  }
+
+  .horario-fecha {
+    font-size: 1.2rem;
+    position: relative;
+    top: -2vh;
+    z-index: 10;
+  }
+
+
+  @media (max-width: 1086px) {
+
+    .img-centralSesionTruc{
+        height: 20vh;
+    }
+
+    .titulo-SesionTruc{
+        font-size: 1.4rem;
+        top: 1vh;
+    }
+
+    .error-instructor{
+        font-size: 0.5rem;
+        top: -3vh;
+    }
+
+    .contenedor-sesionTruc{
+        top: -4vh;
+        margin-top: 10px;
+        height: 40vh;
+        width: 40vh;
+    }
+
+    .contenedor-sesion::before {
+        height: 40px;
+      }
+
+    .texto-SesionTruc{
+        font-size: 1rem;
+    }
+
+    .input-SesionTruc{
+      width: 60%;
+      height: 10px;
+      top: 4vh;
+      font-size: 0.7rem;
+      padding: 9px;
+    }
+
+    .boton-SesionTruc{
+        font-size: 0.8rem;
+        padding: 7px;
+        top: 7vh;
+    }
+
+    /* Calendario */
+
+    .img-centralTruc {
+        height: 17vh; /* Mantén la altura para pantallas más grandes */
+      }
+
+      .boton-adelanteInstructor{
+        top: 14vh;
+        padding: 3px 13px;
+        left: 35%;
+      }
+
+      .boton-atrasInstructor{
+        top: 14.4vh;
+        padding: 3px 13px;
+        left: 28%;
+        margin: -16.5px;
+      }
+
+      .titulo-calInstructor{
+        font-size: 1.3rem;
+        top: -4vh;
+      }
+
+      .horario-fecha{
+        font-size: 0.8rem;
+        top: -7vh;
+        margin: -4vh;
+      }
+
+      .texto-calInstructor {
+        font-size: 0.8rem;
+      }
+  
+      .boton-calInstructor{
+        padding: 3.5vh;
+        font-size: 0.8rem;
+      }
+
+      .boton-salidaSesionIns, .boton-salidaIns{
+        padding: 7px;
+      font-size: 0.9rem;
+      }
+
+  }
+
+  @media (max-width: 980px) {
+
+    .titulo-calInstructor{
+        font-size: 1.2rem;
+    }
+
+    .horario-fecha{
+      font-size: 0.7rem;
+    }
+
+    .boton-adelanteInstructor {
+        left: 37.4%;
+        top:8vh; /* Ajusta la posición vertical */
+        transform: translateX(-50%);
+        font-size: 20px;
+      }
+
+    .boton-atrasInstructor {
+        top: 10vh; /* Ajusta la posición vertical */
+        left: 31%; /* Centra el botón horizontalmente */
+        transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
+        font-size: 20px;
+        margin: -22.5px;
+      }
+
+      .boton-calInstructor{
+        font-size: 0.7rem;
+      }
+
+      .texto-calInstructor{
+        font-size: 0.6rem;
+      }
+
+    .boton-salidaIns, .boton-salidaSesionIns {
+      width: 40%; /* El botón será más ancho en pantallas pequeñas */
+      top: 91vh; /* Ajusta la posición vertical */
+      left: 50%; /* Centra el botón horizontalmente */
+      height: 5.5vh;
+      font-size: 1rem;
+    }
+
+  }
+
+  @media (max-width: 640px) {
+
+
+    .degradado-grisCalInstructor{
+        width: 85%;
+      }
+    
+      .boton-atrasInstructor {
+        left: 28%;
+       }
+    
+      .boton-adelanteInstructor {
+        left: 38%;
+       }
+
+       .titulo-calInstructor{
+        top: -5vh;
+       }
+
+       .boton-calInstructor {
+        padding: 16px;
+        height: 8vh;
+        font-size: 0.6rem;
+      }
+  
+       .texto-calInstructor{
+        font-size: 0.6rem;
+       }
+
+  }
+
+  @media (max-width: 500px) {
+
+    .degradado-grisCalInstructor{
+        width: 83%;
+    }
+
+    .img-centralSesionTruc, .img-centralTruc{
+        height: 16.5vh;
+      }
+
+      .boton-adelanteInstructor{
+        font-size: 1rem;
+        top: 8.8vh;
+        left: 42%;
+      }
+
+      .boton-adelanteInstructor2{
+        top: 6.5ch;
+      }
+      
+      .boton-atrasInstructor{
+        font-size: 1rem;
+        top: 6vh;
+        left: 42%;
+        margin: -18px;
+      }
+
+      .boton-calInstructor {
+        padding: 16px;
+        height: 9vh;
+      }
+
+      /* Calendario */
+
+      .titulo-SesionTruc {
+        font-size: 1.2rem;
+        top: -3vh;
+      }
+
+      .error-instructor{
+        top: -5.5vh;
+        font-size: 0.5rem;
+      }
+
+      .contenedor-sesionTruc {
+        top: -7vh;
+      }
+
+      .boton-salidaSesionIns{
+        top: 85vh;
+        font-size: 0.8rem;
+      }
+
+  }
+
+  @media (max-width: 420px) {
+
+    .img-centralSesionTruc, .img-centralTruc{
+        height: 13.5vh;
+    }
+
+    .boton-calInstructor{
+        padding: 10px;
+        height: 9.5vh;
+    }
+
+    /* Inicio */
+
+    .titulo-SesionTruc{
+      top: -6vh;
+      font-size: 1.2rem;
+    }
+
+    .error-instructor{
+        top: -9vh;
+        font-size: 0.55rem;
+    }
+
+    .contenedor-sesionTruc {
+      width: 35vh;
+      height: 38vh;
+      top: -9vh;
+    }
+
+    .texto-SesionTruc{
+        font-size: 0.9rem;
+        top: 6vh;
+    }
+
+    .boton-SesionTruc{
+        font-size: 0.6rem;
+        width: 20vh;
+    }
+
+    .boton-salidaSesionIns{
+        top: 80vh;
+    }
+
+  }

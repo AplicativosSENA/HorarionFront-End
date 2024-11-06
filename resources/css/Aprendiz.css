@@ -53,18 +53,24 @@
     height: 18.5vh; /* Mantén la altura para pantallas más grandes */
   }
 
+  .degradado-grisCalAprendiz{
+    width: 90%;
+  }
+
   .boton-adelanteAprendiz{
     left: 36%; /* Posición al lado derecho */
-    top: 21vh;
+    top: 20vh;
     margin: -22px;
     transform: translateY(-50%);
   }
 
 
   .titulo-calAprendiz {
+    position: relative;
     font-size: 1.7rem;
     margin: 45px;
     top: 2vh;
+    z-index: 10;
   }
 
   .numero-ficha {
@@ -87,8 +93,6 @@
     /* Calendario */
 
     .img-centralCalAprendiz {
-      top: 3vh;
-      left: 0;
       height: 17vh; /* Mantén la altura para pantallas más grandes */
     }
 
@@ -110,7 +114,7 @@
       margin: 20px;
     }
 
-    .texto-calendario {
+    .texto-calAprendiz {
       font-size: 0.8rem;
     }
 
@@ -131,14 +135,15 @@
     }
 
     .error-aprendiz {
-      font-size: 0.5rem;
+      font-size: 0.9rem;
       top: -12vh;
     }
 
     .Contenedor-sesionAprendiz {
-      margin-top: -40px;
-      height: 42vh;
-      width: 45vh;
+      top: -10vh;
+      margin-top: 10px;
+      height: 40vh;
+      width: 40vh;
     }
 
     .contenedor-sesion::before {
@@ -154,12 +159,177 @@
       width: 60%;
       top: 8vh;
       font-size: 0.8rem;
+      padding: 10px;
     }
 
     .boton-SesionAprendiz{
       font-size: 0.8rem;
       width: 25vh;
       top: 13vh;
+      padding: 7px;
     }
+
+    .boton-salidaAprendiz, .boton-salSecionAprendiz{
+      padding: 7px;
+      font-size: 0.9rem;
+    }
+
+  }
+
+  @media (max-width: 980px) {
+
+    .titulo-calAprendiz {
+      font-size: 1.2rem;
+      top: -1vh;
+    }
+
+    .numero-ficha{
+      top: -2vh;
+      font-size: 0.8rem;
+      margin: 10px;
+    }
+
+    .boton-adelanteAprendiz {
+      position: absolute;
+      top: 31.5vh; /* Ajusta la posición vertical */
+      left: 86.5%; /* Centra el botón horizontalmente */
+      transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
+      padding: 3px 13px;
+      font-size: 20px;
+    }
+
+    .boton-calAprendiz {
+      font-size: 0.7rem;
+    }
+
+    .texto-calAprendiz{
+      font-size: 0.6rem;
+    }
+
+    .boton-salidaAprendiz, .boton-salSecionAprendiz{
+      width: 40%; /* El botón será más ancho en pantallas pequeñas */
+      top: 91vh; /* Ajusta la posición vertical */
+      left: 50%; /* Centra el botón horizontalmente */
+      height: 5.5vh;
+      font-size: 1rem;
+    }
+    /* Inicio */
+
+    .error-aprendiz {
+      font-size: 0.7rem;
+    }
+
+  }
+
+  @media (max-width: 640px) {
+
+    .degradado-grisCalAprendiz{
+      width: 85%;
+    }
+
+    .boton-calAprendiz {
+      padding: 16px;
+      height: 8vh;
+      font-size: 0.6rem;
+    }
+
+    .boton-adelanteAprendiz {
+      top: 31vh;
+     }
+
+     .texto-calAprendiz{
+      font-size: 0.6rem;
+     }
+
+  }
+
+  @media (max-width: 500px) {
+
+    .degradado-grisCalAprendiz {
+      width: 83%;
+    }
+
+    .img-centralAprendiz, .img-centralCalAprendiz{
+      height: 16.5vh;
+    }
+
+    .boton-adelanteAprendiz{
+      font-size: 1rem;
+      top: 31.5vh;
+      left: 91%;
+    }
+
+    .boton-calAprendiz {
+      padding: 16px;
+      height: 9vh;
+    }
+
+    /* Inicio */
+
+    .titulo-sesAprendiz {
+      font-size: 1.2rem;
+      top: -10vh;
+    }
+
+    .error-aprendiz{
+      top: -17vh;
+      font-size: 0.6rem;
+    }
+
+    .Contenedor-sesionAprendiz {
+      top: -15vh;
+    }
+
+    .boton-salSecionAprendiz{
+      top: 85vh;
+      font-size: 0.8rem;
+    }
+
+  }
+
+  @media (max-width: 420px) {
+
+    .img-centralAprendiz, .img-centralCalAprendiz{
+      height: 13.5vh;
+    }
+    
+    /* calenadrio */
+    .boton-calAprendiz {
+      padding: 10px;
+      height: 9.5vh;
+    }
+
+
+    /* Inicio */
+
+    .titulo-sesAprendiz{
+      top: -15vh;
+      font-size: 1.2rem;
+    }
+
+    .error-aprendiz{
+      top: -18vh;
+      font-size: 0.55rem;
+    }
+
+    .Contenedor-sesionAprendiz {
+      width: 35vh;
+      height: 38vh;
+      top: -15vh;
+    }
+
+    .texto-SesionAprendiz {
+      font-size: 0.8rem;
+    }
+
+    .boton-SesionAprendiz {
+      font-size: 0.6rem;
+      width: 20vh;
+    }
+
+    .boton-salSecionAprendiz{
+      top: 80vh;
+    }
+    
 
   }

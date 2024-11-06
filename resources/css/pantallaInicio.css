@@ -35,7 +35,7 @@
   .boton-inicio {
     align-items: center;
     text-align: center; /* Centrar el texto dentro del botón */
-    margin: 10px 0;
+    margin: 20px 0;
   }
 
 /* Responsividad */
@@ -49,6 +49,7 @@
   }
 
    .boton-inicio{
+    font-size: 0.8rem;
     height: 6.5vh;
   } 
 
@@ -66,7 +67,7 @@
         flex-direction: column;
         align-items: center;
         gap: 0px;
-        top: 15vh;
+        top: 10vh;
       }
 
 
