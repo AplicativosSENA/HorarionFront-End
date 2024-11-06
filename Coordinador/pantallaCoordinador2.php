@@ -6,12 +6,12 @@
     <link rel="stylesheet" href="../resources/css/app.css">
     <title>Pantalla Coordinador 2</title>
     <script>
-        function imprimirHora(hora) {
-            console.log("Hora seleccionada: " + hora);
+        function redirigirAAsignacion(hora) {
+            // Redirecciona a la página asignacion.php con la hora en el URL
+            window.location.href = 'asignacionesCoordinador.php?hora=' + encodeURIComponent(hora);
         }
         
         function salir() {
-            // Aquí puedes agregar lógica para salir, como redireccionar a la página de inicio de sesión
             console.log("Saliendo de la aplicación");
         }
 
@@ -26,17 +26,17 @@
 </head>
 <body>
     <div class="contenedor-principal">
-    <div class="franja-verde">
-            <img src="..\resources\img\DegradadoVerde.jpg" class="imagen-degradado" />
+        <div class="franja-verde">
+            <img src="../resources/img/DegradadoVerde.jpg" class="imagen-degradado" />
         </div>
-            <div class="secciones">
-                <div class="seccion-central">
-                    <div class="contenedor-imagen">
-                        <img class="imagen-central img-central" />
-                    </div>
-                    <div class="degradado-gris degradado-grisPanCoordinador"></div>
+        <div class="secciones">
+            <div class="seccion-central">
+                <div class="contenedor-imagen">
+                    <img class="imagen-central img-central" />
+                </div>
+                <div class="degradado-gris degradado-grisPanCoordinador"></div>
 
-                    <div class="contenedor-tabla">
+                <div class="contenedor-tabla">
                     <table class="tabla-horas">
                         <thead>
                             <tr>
@@ -62,7 +62,7 @@
 
                                 // Mostrar el intervalo de tiempo en formato "6:00am - 8:00am"
                                 $intervaloTexto = "$horaInicialTexto$ampmInicial - $horaFinalTexto$ampmFinal";
-                                echo "<tr><td><button class='hora-boton' onclick='imprimirHora(\"$intervaloTexto\")'>$intervaloTexto</button></td></tr>";
+                                echo "<tr><td><button class='hora-boton' onclick='redirigirAAsignacion(\"$intervaloTexto\")'>$intervaloTexto</button></td></tr>";
                             }
                         ?>
                         </tbody>

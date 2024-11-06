@@ -1,5 +1,137 @@
+
+
+/* imagenes */
 .img-centralPanInicio {
     top: 3.5vh;
     left: 0;
     height: 24vh; /* Mantén la altura para pantallas más grandes */
+}
+
+
+  /* Título */
+.titulo {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    position: relative;
+    top: -7vh;
+
+  }
+
+   /* Texto explicativo */
+   .texto-explicativo {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    position: relative;
+    top: -7vh;
+  }
+
+  /* Botones */
+  .botones-inicio {
+    top: 5vh;
+    gap: 60px;
+  }
+
+  .boton-inicio {
+    align-items: center;
+    text-align: center; /* Centrar el texto dentro del botón */
+    margin: 10px 0;
+  }
+
+/* Responsividad */
+@media (max-width: 1086px) {
+  .titulo {
+    font-size: 1.8rem;
+  }
+
+  .texto-explicativo {
+    font-size: 1rem;
+  }
+
+   .boton-inicio{
+    height: 6.5vh;
+  } 
+
+}
+
+@media (max-width: 980px) {
+
+    .img-centralPanInicio {
+        height: 20vh;
+       
+    }
+    
+     /* Botones en columna */
+     .botones-inicio {
+        flex-direction: column;
+        align-items: center;
+        gap: 0px;
+        top: 15vh;
+      }
+
+
+    .boton-inicio{
+        width: 40vh;
+    }
+
+    .texto-explicativo {
+        top: 5vh;
+        font-size: 1rem;
+    }
+
+    .titulo {
+        top: 2vh;
+        font-size: 2rem;
+    }
+    
+}
+
+@media (max-width: 640px) {
+
+    .titulo {
+      top: -2vh;
+      font-size: 1.7rem;
+    }
+
+    .texto-explicativo {
+      top: -2vh;
+      font-size: 0.8rem;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+  .img-centralPanInicio {
+    height: 15vh;
+  }
+
+  .titulo {
+    top: -6vh;
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  .img-centralPanInicio {
+    height: 14vh;
+  }
+
+}
+
+@media (max-width: 320px) { 
+
+  .boton-inicio {
+    width: 30vh;
+  }
+  
+  .botones-inicio {
+    gap: 30px;
+    top: 8vh;
+  }
+
+  .img-centralPanInicio{
+    height: 7vh;
+  }
 }

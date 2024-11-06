@@ -62,7 +62,7 @@
                 </form>
             </div>
         </div>
-        <button class="boton-salida" onclick="window.location.href='../pantallaInicio.php'">Salir</button>
+        <button class="boton-salida boton-salidaSecion" onclick="window.location.href='../pantallaInicio.php'">Salir</button>
     </div>
 </body>
 </html>

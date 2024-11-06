@@ -32,7 +32,7 @@
         <div class="secciones">
             <div class="seccion-central">
                 <div class="contenedor-imagen">
-                    <img class="imagen-central img-centralCalAprendiz" />
+                    <img class="imagen-central img-centralTruc" />
                 </div>
                 <div class="degradado-gris degradado-grisCalendario"></div>
                 <button

@@ -45,15 +45,10 @@ body {
       top: 0vh;
       margin-top: 25px;
       height: 35vh;
-      width: auto;
+      width: 40vh;
     }
 
-    .Contenedor-sesionAprendiz {
-      top: -5vh;
-      margin-top: 25px;
-      height: 32vh;
-      width: auto;
-    }
+  
 
 .menu-desplegable {
   background-color: white;
@@ -72,6 +67,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
   }
   
   .imagen-degradado {
@@ -83,8 +79,7 @@ body {
   .degradado-gris {
     background-color: #d1d1d1;
     padding: 30px;
-    width: 85vh;
-    height: 85vh;
+    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,6 +92,10 @@ body {
 
   .degradado-grisPanCoordinador {
     width: 50%;
+  }
+
+  .degradado-grisAsignacionCord {
+    width: 70%;
   }
 
   .contenedor-imagen {
@@ -120,10 +119,16 @@ body {
     width: 100%;
 }
 
-   .img-centralCalAprendiz, .img-centralCorTruc, .img-centralCalCor {
+  .img-centralTruc, .img-centralCalCor {
     top: 4vh;
     left: 0;
     height: 18.5vh; /* Mantén la altura para pantallas más grandes */
+  }
+
+  .img-centralSesionTruc, .img-centralSesionCor{
+    top: 4vh;
+    left: 0;
+    height: 24vh; /* Mantén la altura para pantallas más grandes */
   }
 
   .img-central { 
@@ -167,15 +172,8 @@ body {
   /* Título */
   .titulo-Sesion {
     position: relative;
-    font-size: 1.9rem;
     font-weight: bold;
-    margin-bottom: 2rem;
     
-  }
-
-  .titulo-sesAprendiz {
-    margin-top: 15vh;
-    top: 1vh;
   }
 
   .titulo-SesionCorTruc {
@@ -184,45 +182,30 @@ body {
 
   .titulo-calendario {
     position: relative;
-    font-size: 1.5rem;
-    top: 6vh;
     z-index: 10;
   }  
 
-  .titulo {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 1rem;
+  .titulo-asignar {
     position: relative;
-    top: -40px;
-    
+    top: -1vh;
   }
-
   
   /* Texto explicativo */
-  .texto-explicativo {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    position: relative;
-    top: -20px;
-  }
+
   
   .texto-Sesion {
     margin-bottom: 1rem;
     position: relative;
   }
 
-  .texto-SesionAprendiz {
-    font-size: 1.5rem;
-    top: 5vh; 
-  }
+ 
 
   .texto-SesionCorTruc {
     top: 5vh;
     font-size: 1.8rem;
   }
 
-  .numero-ficha, .horario-fecha {
+  .horario-fecha {
     font-size: 1.2rem;
     position: relative;
     top: -2vh;
@@ -258,13 +241,6 @@ body {
     display: flex;
     position: relative;
     justify-content: space-around;
-    gap: 60px;
-  }
-
-  .boton-inicio {
-    gap: 80px; /* Espaciado entre los botones */
-    top: 8vh;
-    align-items: center;
   }
   
  
@@ -286,12 +262,6 @@ body {
     background: linear-gradient(90deg, #8bc34a, #00a86b);
   }
 
-  .boton-inicio {
-    text-align: center; /* Centrar el texto dentro del botón */
-    margin: 10px 0;
-    
-  }
-
   .botones-Siguiente1 {
     top: 5vh;
     right: 34vh;
@@ -309,9 +279,7 @@ body {
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   font-weight: 700;
   transition: background-color 0.3s ease;
-  width: 30vh; /* Ajusta este valor para hacer los botones más largos */
   text-align: center; /* Centrar el texto dentro del botón */
-  margin: 15px 75px;
 }
       .boton-Sesion:hover {
       background: linear-gradient(90deg, #8bc34a, #00a86b);
@@ -324,11 +292,10 @@ body {
 
   .boton-SesionCorTruc {
     top: 5vh; /* Separación desde el borde superior */
+    width: 30vh; /* Ajusta este valor para hacer los botones más largos */
   }
   
-  .boton-SesionAprendiz {
-    top: 9vh;
-  }
+
   
   
     .boton-calendario {
@@ -357,14 +324,11 @@ body {
   background: #43bd57;
   border: none;
   border-radius: 5px;
-  padding: 10px;
   color: black;
   font-weight: bold;
-  font-size: 1rem;
   text-align: center; /* Centra el texto ingresado por el usuario */
   position: relative;
   margin: 5px 0;
-  width: 70%;
 }
 
     .input-Sesion::placeholder {
@@ -380,10 +344,9 @@ body {
 
     .input-SesionCorTruc {
       top: 5vh;
-    }
-
-    .input-SesionAprendiz {
-      top: 6vh;
+      padding: 10px;
+      width: 60%;
+      font-size: 1rem;
     }
 
     .error {
@@ -402,10 +365,6 @@ body {
     .error.show {
       opacity: 1; /* Hacerlo visible */
       visibility: visible; /* Asegurarse de que sea visible */
-    }
-
-    .error-aprendiz {
-        top: -3vh;
     }
 
     .error-CoordinadorTruc {
@@ -439,9 +398,9 @@ body {
     top: -8vh;
 }
 
-.titulo-calCoordinador, .titulo-calAprendiz, .titulo-calInstructor {
+.titulo-calCoordinador, .titulo-calInstructor {
   font-size: 1.7rem;
-  margin: 50px;
+  margin: 45px;
   top: 2vh;
 }
 
@@ -458,6 +417,7 @@ body {
   }
 
   .boton-flecha {
+    position: relative;
     background: linear-gradient(90deg, #00a86b, #8bc34a);
     color: white; /* Color del texto */
     border: none; /* Sin borde */
@@ -467,37 +427,36 @@ body {
     border-radius: 20%; /* Botón circular */
     cursor: pointer; /* Manita al pasar el mouse */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra sutil */
-    margin: -22px;
   }
       .boton-flecha:hover {
         background: linear-gradient(90deg, #8bc34a, #00a86b);
       }
   
   .boton-atrasInstructor {
-    position: relative;
     left: 61vh; /* Posición al lado izquierdo */
     top: 20.5vh;
+    margin: -22px;
     transform: translateY(-50%);
   }
 
   .boton-atrasCoordinador {
-    position: relative;
     left: 60vh; /* Posición al lado izquierdo */
     top: 14vh;
+    margin: -22px;
     transform: translateY(-50%);
   }
   
-  .boton-adelanteAprendiz, .boton-adelanteInstructor {
-    position: relative;
+  .boton-adelanteInstructor {
     left: 36%; /* Posición al lado derecho */
     top: 21vh;
+    margin: -22px;
     transform: translateY(-50%);
   }
 
   .boton-adelanteCoordinador {
-    position: relative;
     left: 71vh; /* Posición al lado derecho */
     top: 14.7vh;
+    margin: -22px;
     transform: translateY(-50%);
   }
 
@@ -551,35 +510,45 @@ body {
   background-color: #cce5cc;
 }
 
+.boton-agregar {
+  width: 100px;               /* Ancho del botón */
+  height: 100px;              /* Alto del botón */
+  background-color: #00CC00; /* Color de fondo verde */
+  color: black;              /* Color del símbolo "+" */
+  font-size: 70px;           /* Tamaño del símbolo "+" */
+  border: 3px solid black;   /* Borde negro */
+  border-radius: 50%;        /* Forma circular */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+  transition: transform 0.2s ease; /* Efecto de animación al hacer hover */
+  z-index: 10;
+}
+
+.boton-agregar:hover {
+  transform: scale(1.1); /* Agranda ligeramente el botón al pasar el cursor */
+}
+
+.contenedor-botonAgregar {
+  position: relative;
+  top: -12vh;
+  right: 55vh;
+}
 
 
  
   /* Responsividad */
-  @media (max-width: 1080px) {
-    .boton-Sesion {
-        width: 80%; 
-        margin: 10px 0; 
+  @media (max-width: 1086px) {
+   
+
+    .boton-flecha{
+      padding: 5px 15px;
     }
 
-    .boton-volver {
-        top: 81vh; 
-    }
+    
 
-    .contenedor-tabla {
-        padding: 10px; 
-    }
-
-    .input-Sesion {
-        width: 50%; 
-        font-size: 0.9rem; 
-    }
-
-    .titulo-Seleccion {
-        font-size: 1.5rem; 
-        margin-top: 5vh; 
-    }
-
-  
 }
 
 @media (max-width: 980px) {
@@ -603,13 +572,7 @@ body {
   
   
 
-    /* Ajustar la imagen central en pantallas pequeñas */
-    .imagen-central {
-      width: 100%; /* Reduce el tamaño de la imagen */
-      top: -17vh; /* Ajusta la posición para que no suba demasiado */
-      height: auto;
-      
-    }
+   
 
     .imagen-centralSesion, .imagen-calendario {
       width: 100%; /* Reduce el tamaño de la imagen */
@@ -628,15 +591,8 @@ body {
     .botones {
       flex-direction: column;
       align-items: center;
-      width: 100%;
-      gap: 10px;
     }
-  
-    .boton {
-      margin-bottom: 10px;
-      width: 80%; /* Los botones ocupan más espacio horizontal */
 
-    }
 
     .boton-salida, .boton-volver {
       position: absolute; /* Cambia de fixed a absolute en pantallas pequeñas */
@@ -762,11 +718,6 @@ body {
       width: 32vh;
     }
 
-    .imagen-central {
-      width: 100%; /* Reduce aún más el tamaño de la imagen */
-      height: auto;
-      top: -17vh /* Ajusta la posición */
-    }
   
     .imagen-centralSesion, .imagen-calendario  {
       width: 100%; /* Reduce aún más el tamaño de la imagen */
@@ -781,13 +732,6 @@ body {
 
     .imagen-calenCoordinador {
       margin-top: -2vh;
-    }
-
-    .titulo {
-      position: relative;
-      font-size: 2rem; /* Reduce el tamaño del título */
-      top: -80px;
-      
     }
 
     .titulo-Secion {

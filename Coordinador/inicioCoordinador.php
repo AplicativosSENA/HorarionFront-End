@@ -53,7 +53,7 @@
         <div class="secciones">
             <div class="seccion-central">
                 <div class="contenedor-imagen">
-                    <img class="imagen-central img-centralCorTruc" />
+                    <img class="imagen-central img-centralSesionCor" />
                 </div>
                 <h1 class="titulo-Sesion titulo-SesionCorTruc">Bienvenido Coordinador</h1>
                 <p id="error-email" class="error error-CoordinadorTruc"></p>

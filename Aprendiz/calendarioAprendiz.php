@@ -17,10 +17,8 @@
 </head>
 <body>
     <div class="contenedor-principal">
-        <div class="franja-verde">
-            <img src="https://img.freepik.com/premium-photo/artistic-blurry-colorful-plain-green-gradient-abstract-wallpaper-background_1120306-3676.jpg" 
-                 alt="Degradado verde a blanco" 
-                 class="imagen-degradado">
+    <div class="franja-verde">
+            <img src="..\resources\img\DegradadoVerde.jpg" class="imagen-degradado" />
         </div>
         <div class="secciones">
             <div class="seccion-central">
@@ -62,7 +60,7 @@
                                 $ambienteInfo = isset($infoAmbientes[$key]) ? $infoAmbientes[$key] : null;
                                 
                                 echo "<td>";
-                                echo "<button class='boton-calendario' 
+                                echo "<button class='boton-calendario boton-calAprendiz' 
                                            onmouseenter='showMenu($rowIndex, $colIndex)' 
                                            onmouseleave='hideMenu($rowIndex, $colIndex)'>
                                          Ambiente

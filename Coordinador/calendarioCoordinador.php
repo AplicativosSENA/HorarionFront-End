@@ -103,7 +103,7 @@
         <div class="secciones">
             <div class="seccion-central">
             <div class="contenedor-imagen">
-                    <img class="imagen-central img-centralCorTruc" />
+                    <img class="imagen-central img-centralCalCor" />
                 </div>
                 <button class="boton-flecha boton-adelanteCoordinador" onclick="siguienteMes()">➡</button>
                 <button class="boton-flecha boton-atrasCoordinador" onclick="mesAnterior()">⬅</button>
