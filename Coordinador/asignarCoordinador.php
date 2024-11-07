@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../resources/css/app.css">
+    <link rel="stylesheet" href="../resources/css/Coordinador.css">
     <title>Asignación de Ficha</title>
     <script>
         // Funciones para actualizar los valores seleccionados
@@ -43,7 +44,7 @@
         <div class="secciones">
             <div class="seccion-central">
                 <div class="contenedor-imagen">
-                    <img src="../resources/img/CentralImage.jpg" class="imagen-central img-central" />
+                    <img class="imagen-central img-centralAsignarCor" />
                 </div>
                 <div class="degradado-gris degradado-grisPanCoordinador"></div>
                 <h1 class="titulo-asignar">Asignación de ficha</h1>

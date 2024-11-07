@@ -1,0 +1,381 @@
+
+/* Inicio */
+  .imagen-central {
+    top: 4vh;
+    left: 0;
+    height: 24vh; /* Mantén la altura para pantallas más grandes */
+  }
+
+  
+  .titulo-SesionCor {
+    font-size: 2rem;
+    margin-bottom: 2rem; 
+    margin-top: 15vh;
+    top: 3vh;
+  }
+
+  .error-Coordinador {
+    font-size: 1rem;
+    margin: 3px;
+    top: 1vh;
+  }
+
+.contenedor-sesionCor {
+    top: 0vh;
+    margin-top: 25px;
+    height: 35vh;
+    width: 40vh;
+  }
+
+  .texto-SesionCor {
+    top: 5vh;
+    font-size: 1.8rem;
+  }
+
+  .input-SesionCor {
+    top: 4vh;
+    padding: 10px;
+    width: 60%;
+    font-size: 1rem;
+  }
+
+  .boton-SesionCor {
+    top: 6vh; /* Separación desde el borde superior */
+    width: 30vh; /* Ajusta este valor para hacer los botones más largos */
+  }
+
+
+   /* Pantalla 1 */
+
+   .degradado-grisPanCoordinador {
+    width: 50%;
+  }
+
+  .titulo-Seleccion {
+    position: relative;
+}
+
+  .selector-coordinador {
+    height: 8vh;
+    border: none;
+    padding: 10px;
+    color: black;
+    font-weight: bold;
+    font-size: 1rem;
+    position: relative;
+    margin: 10px 0;
+  }
+
+  .selector-Pan1Coordinador {
+    top: -1vh;
+    width: 50%;
+  }
+
+  .botones-Siguiente1 {
+    top: 5vh;
+    right: 34vh;
+  }
+  
+    .boton-volver {
+       top: 85vh;
+    }
+
+
+
+
+  /* Calendario */
+  .img-centralCalCor {
+    top: 4vh;
+    left: 0;
+    height: 21vh; /* Mantén la altura para pantallas más grandes */
+  }
+
+  .boton-atrasCoordinador {
+    left: 60vh; /* Posición al lado izquierdo */
+    top: 14vh;
+    margin: -22px;
+    transform: translateY(-50%);
+  }
+
+  .boton-adelanteCoordinador {
+    left: 71vh; /* Posición al lado derecho */
+    top: 14.7vh;
+    margin: -22px;
+    transform: translateY(-50%);
+  }
+
+  .titulo-calCoordinador {
+    font-size: 1.7rem;
+    margin: 45px;
+    top: 2vh;
+  }
+  
+
+  .boton-calCoordinador{
+    width: 100%;
+    height: 100%;
+    padding: 3vh;
+    font-size: 1.2rem;
+  }
+
+  /* Pantalla hora 2 */
+  .contenedor-tabla {
+    position: relative;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 100;
+    top: 10.5vh;
+  }
+
+.tabla-horas {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    z-index: 100;
+  }
+  
+  .tabla-horas th {
+    background-color: #007f3e;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+    z-index: 100;
+  }
+  
+  .tabla-horas td {
+    padding: 15px;
+    border: 1px solid #ccc;
+    z-index: 100;
+  }
+
+  .hora-boton {
+    width: 30vh;
+    padding: 12px;
+    background-color: #e6f5e6;
+    border: 1px solid #007f3e;
+    color: #007f3e;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .hora-boton:hover {
+    background-color: #cce5cc;
+  }
+
+
+  /* Asignaciones */
+  
+.boton-agregar {
+    width: 100px;               /* Ancho del botón */
+    height: 100px;              /* Alto del botón */
+    background-color: #00CC00; /* Color de fondo verde */
+    color: black;              /* Color del símbolo "+" */
+    font-size: 70px;           /* Tamaño del símbolo "+" */
+    border: 3px solid black;   /* Borde negro */
+    border-radius: 50%;        /* Forma circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.2s ease; /* Efecto de animación al hacer hover */
+    z-index: 10;
+  }
+  
+  .boton-agregar:hover {
+    transform: scale(1.1); /* Agranda ligeramente el botón al pasar el cursor */
+  }
+  
+  .contenedor-botonAgregar {
+    position: relative;
+    top: -12vh;
+    right: 55vh;
+  }
+
+
+  /* Asignaciar */
+
+  .degradado-grisAsignacionCord {
+    width: 70%;
+  }
+
+  .titulo-asignar {
+    position: relative;
+    top: -1vh;
+  }
+
+
+
+
+  @media (max-width: 1086px) {
+
+    /* Inicio */
+    .img-centralSesionCor{
+        height: 20vh;
+    }
+
+    .titulo-SesionCor{
+        font-size:  1.4rem;
+        top: -4vh;
+    }
+
+    .error-Coordinador{
+        font-size: 0.5rem;
+        top: -10vh;
+    }
+
+    .contenedor-sesionCor{
+        top: -10vh;
+        margin-top: 10px;
+        height: 40vh;
+        width: 40vh;
+    }
+
+    .contenedor-sesion::before {
+        height: 40px;
+    }
+
+    .texto-SesionCor{
+
+        font-size: 1rem;
+    }
+
+    .input-SesionCor{
+        width: 60%;
+        height: 10px;
+        top: 4;
+        font-size: 0.7rem;
+        padding: 9px;
+    }
+
+    .boton-SesionCor {
+        font-size: 0.8rem;
+        padding: 7px;
+        top: 7vh;
+    }
+
+    .boton-salidaSesionCor{
+        padding: 7px;
+        font-size: 0.9rem;
+    }
+
+
+  }
+
+
+
+
+
+
+
+
+
+  @media (max-width: 980px) {
+
+    /* Inicio */
+
+    .boton-salidaSesionCor{
+        width: 40%;
+        top: 91vh;
+        left: 50%;
+        height: 5.5vh;
+        font-size: 1rem;
+    }
+
+
+
+  }
+
+
+
+  @media (max-width: 640px) {
+
+
+
+  }
+
+
+  @media (max-width: 500px) {
+
+    /* Inicio */
+    .img-centralSesionCor{
+        height: 16.5vh;
+    }
+
+    .titulo-SesionCor{
+        font-size: 1.2rem;
+        top: -8vh;
+    }
+
+    .error-Coordinador{
+        top: -14vh;
+        font-size: 0.5rem;
+    }
+
+    .contenedor-sesionCor{
+        top: -15vh;
+    }
+
+    .boton-salidaSesionCor{
+        top: 85vh;
+        font-size: 0.8rem;
+    }
+
+  }
+
+  @media (max-width: 420px) {
+
+    /* Inicio */
+    .img-centralSesionCor{
+        height: 13.5vh;
+    }
+
+    .titulo-SesionCor{
+        top: -12vh;
+        font-size: 1.2rem;
+    }
+
+    .error-Coordinador{
+        top: -18vh;
+        font-size: 0.55rem;
+    }
+
+    .contenedor-sesionCor{
+        width: 35vh;
+        height: 38vh;
+        top: -16vh;
+    }
+
+    .texto-SesionCor{
+        font-size: 0.8rem;
+        top: 6vh;
+    }
+
+    .boton-SesionCor{
+        font-size: 0.6rem;
+        width: 20vh;
+    }
+
+    .boton-salidaSesionCor{
+        top: 80vh;
+    }
+
+
+
+  }
+
+
+  @media (max-width: 370px) {
+
+    /* Inicio */
+    .img-centralSesionCor{
+        height: 10vh;
+    }
+
+
+
+  }

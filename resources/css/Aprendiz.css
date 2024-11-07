@@ -55,11 +55,12 @@
 
   .degradado-grisCalAprendiz{
     width: 90%;
+    height: 105%;
   }
 
   .boton-adelanteAprendiz{
     left: 36%; /* Posición al lado derecho */
-    top: 20vh;
+    top: 22vh;
     margin: -22px;
     transform: translateY(-50%);
   }
@@ -69,21 +70,22 @@
     position: relative;
     font-size: 1.7rem;
     margin: 45px;
-    top: 2vh;
+    top: 8vh;
     z-index: 10;
   }
 
   .numero-ficha {
     font-size: 1.2rem;
     position: relative;
-    top: -2vh;
+    top: 1vh;
+    margin: 30px;
     z-index: 10;
   }
 
   .boton-calAprendiz{
       width: 100%;
       height: 100%;
-      padding: 3.5vh;
+      padding: 2.5vh;
       font-size: 1.2rem;
   }
 
@@ -97,21 +99,21 @@
     }
 
     .boton-adelanteAprendiz{
-        top: 14vh;
+        top: 23vh;
         padding: 3px 13px;
         left: 35%;
     }
 
     .titulo-calAprendiz {
       margin: 0;
-      top: 5vh;
+      top: 14vh;
       font-size: 1.4rem;  
     }
 
     .numero-ficha{
-      top: 2vh;
+      top: 6vh;
       font-size: 0.9rem;
-      margin: 20px;
+      margin: 45px;
     }
 
     .texto-calAprendiz {
@@ -119,8 +121,11 @@
     }
 
     .boton-calAprendiz{
-      padding: 3.5vh;
       font-size: 0.8rem;
+    }
+
+    .boton-salidaAprendiz{
+      right: 5.5vh;
     }
 
 
@@ -178,23 +183,26 @@
 
   @media (max-width: 980px) {
 
-    .titulo-calAprendiz {
-      font-size: 1.2rem;
-      top: -1vh;
+    .seccion-centralCalApre{
+      height: 105%;
     }
 
+    .titulo-calAprendiz {
+      font-size: 1.2rem;
+      top: 4vh;
+    } 
+
     .numero-ficha{
-      top: -2vh;
+      top: 1vh;
       font-size: 0.8rem;
-      margin: 10px;
+      margin: 20px;
     }
 
     .boton-adelanteAprendiz {
       position: absolute;
       top: 31.5vh; /* Ajusta la posición vertical */
       left: 86.5%; /* Centra el botón horizontalmente */
-      transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
-      padding: 3px 13px;
+      transform: translateX(-50%);
       font-size: 20px;
     }
 
@@ -206,6 +214,12 @@
       font-size: 0.6rem;
     }
 
+    
+    /* Inicio */
+
+    .error-aprendiz {
+      font-size: 0.7rem;
+    }
     .boton-salidaAprendiz, .boton-salSecionAprendiz{
       width: 40%; /* El botón será más ancho en pantallas pequeñas */
       top: 91vh; /* Ajusta la posición vertical */
@@ -213,18 +227,25 @@
       height: 5.5vh;
       font-size: 1rem;
     }
-    /* Inicio */
-
-    .error-aprendiz {
-      font-size: 0.7rem;
+    
+    .boton-salidaAprendiz{
+      top: 100vh; /* Ajusta la posición vertical */
     }
 
   }
 
   @media (max-width: 640px) {
 
+    .seccion-centralCalApre{
+      height: 108%;
+    }
+
     .degradado-grisCalAprendiz{
       width: 85%;
+    }
+
+    .boton-adelanteAprendiz {
+      top: 31vh;
     }
 
     .boton-calAprendiz {
@@ -233,12 +254,21 @@
       font-size: 0.6rem;
     }
 
-    .boton-adelanteAprendiz {
-      top: 31vh;
+     .titulo-calAprendiz{
+      top: 7vh;
+     }
+
+     .numero-ficha{
+      top: 3vh;
+      margin: 26px;
      }
 
      .texto-calAprendiz{
-      font-size: 0.6rem;
+      font-size: 0.7rem;
+     }
+
+     .boton-salidaAprendiz{
+      top: 106.8vh;
      }
 
   }
@@ -260,8 +290,16 @@
     }
 
     .boton-calAprendiz {
-      padding: 16px;
-      height: 9vh;
+      padding: 13px;
+      height: 8vh;
+    }
+
+    .texto-calAprendiz{
+      font-size: 0.6rem;
+    }
+
+    .boton-salidaAprendiz{
+      top: 106.2vh;
     }
 
     /* Inicio */
@@ -285,25 +323,56 @@
       font-size: 0.8rem;
     }
 
+    
+
   }
 
   @media (max-width: 420px) {
+
+
 
     .img-centralAprendiz, .img-centralCalAprendiz{
       height: 13.5vh;
     }
     
     /* calenadrio */
+
+    .seccion-centralCalApre{
+      height: 109%;
+    }
+
+    .degradado-grisCalAprendiz{
+      height: 130%;
+    }
+
+    .boton-adelanteAprendiz{
+      top: 29vh;
+    }
+
+    .titulo-calAprendiz{
+      top: 2vh;
+    }
+
+    .numero-ficha{
+      top: 1vh;
+      margin: 17px;
+    }
+    
     .boton-calAprendiz {
-      padding: 10px;
+      padding: 8px;
       height: 9.5vh;
+    }
+
+    .boton-salidaAprendiz{
+      top: 117vh;
+      width: 50%;
     }
 
 
     /* Inicio */
 
     .titulo-sesAprendiz{
-      top: -15vh;
+      top: -14vh;
       font-size: 1.2rem;
     }
 
@@ -331,5 +400,34 @@
       top: 80vh;
     }
     
+
+  }
+  
+  @media (max-width: 370px) {
+
+    .img-centralAprendiz, .img-centralCalAprendiz{
+      height: 10vh;
+    }
+
+    .degradado-grisCalAprendiz{
+      width: 78%;
+    }
+
+    .boton-adelanteAprendiz{
+      left: 90%;
+    }
+
+    .boton-calAprendiz{
+      font-size: 0.45rem;
+      height: 9vh;
+    }
+
+    .texto-calAprendiz{
+      font-size: 0.5rem;
+    }
+
+    .boton-salidaAprendiz{
+      top: 112vh;
+    }
 
   }

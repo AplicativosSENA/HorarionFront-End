@@ -31,7 +31,7 @@
             <img src="..\resources\img\DegradadoVerde.jpg" class="imagen-degradado" />
         </div>
         <div class="secciones">
-            <div class="seccion-central">
+            <div class="seccion-central seccion-centralCalTruc">
                 <div class="contenedor-imagen">
                     <img class="imagen-central img-centralTruc" />
                 </div>
@@ -57,7 +57,7 @@
                     </thead>
                     <tbody>
                         <?php
-                        $horas = ["6:00 am 8:00 am", "10:00 am 12:00 pm", "12:00 pm 2:00 pm", "2:00 pm 4:00 pm", "4:00 pm 6:00 pm"];
+                        $horas = ["6:00am 8:00am","8:00am 10:00am", "10:00am 12:00pm", "12:00pm 2:00pm", "2:00pm 4:00pm", "4:00pm 6:00pm","6:00pm 8:00pm","8:00pm 10:00pm"];
                         $dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
                         $infoAmbientes = [
                             "0-0" => ["Ficha" => "2845614", "fecha" => "01/10/2024", "hora" => "6:00 am - 8:00 am", "Ambiente" => "Tecnologia1"],

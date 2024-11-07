@@ -7,6 +7,9 @@
   }
 
   .titulo-SesionTruc {
+    font-size: 2rem;
+    margin-bottom: 2rem; 
+    margin-top: 15vh;
     top: 3vh;
   }
 
@@ -52,19 +55,20 @@
 
   .degradado-grisCalInstructor{
     width: 90%;
-  }
-
-  .boton-atrasInstructor {
-    left: 61vh; /* Posición al lado izquierdo */
-    top: 19.7vh;
-    margin: -25px;
-    transform: translateY(-50%);
+    height: 105%;
   }
 
   .boton-adelanteInstructor {
     left: 36%; /* Posición al lado derecho */
-    top: 20vh;
+    top: 22vh;
     margin: -22px;
+    transform: translateY(-50%);
+  }
+  
+  .boton-atrasInstructor {
+    left: 61vh; /* Posición al lado izquierdo */
+    top: 21.65vh;
+    margin: -25px;
     transform: translateY(-50%);
   }
 
@@ -73,14 +77,22 @@
     position: relative;
     font-size: 1.7rem;
     margin: 45px;
-    top: 2vh;
+    top: 8vh;
   }
 
   .horario-fecha {
     font-size: 1.2rem;
     position: relative;
-    top: -2vh;
+    top: 1vh;
+    margin: 30px;
     z-index: 10;
+  }
+
+  .boton-calInstructor{
+    width: 100%;
+    height: 100%;
+    padding: 2.5vh;
+    font-size: 1.2rem;
   }
 
 
@@ -92,16 +104,16 @@
 
     .titulo-SesionTruc{
         font-size: 1.4rem;
-        top: 1vh;
+        top: -4vh;
     }
 
     .error-instructor{
         font-size: 0.5rem;
-        top: -3vh;
+        top: -10vh;
     }
 
     .contenedor-sesionTruc{
-        top: -4vh;
+        top: -10vh;
         margin-top: 10px;
         height: 40vh;
         width: 40vh;
@@ -129,6 +141,11 @@
         top: 7vh;
     }
 
+    .boton-salidaSesionIns {
+      padding: 7px;
+    font-size: 0.9rem;
+    }
+
     /* Calendario */
 
     .img-centralTruc {
@@ -136,27 +153,28 @@
       }
 
       .boton-adelanteInstructor{
-        top: 14vh;
+        top: 23vh;
         padding: 3px 13px;
         left: 35%;
       }
 
       .boton-atrasInstructor{
-        top: 14.4vh;
+        top: 23.5vh;
         padding: 3px 13px;
         left: 28%;
         margin: -16.5px;
       }
 
       .titulo-calInstructor{
+        margin: 0;
         font-size: 1.3rem;
-        top: -4vh;
+        top: 14vh;
       }
 
       .horario-fecha{
-        font-size: 0.8rem;
-        top: -7vh;
-        margin: -4vh;
+        top: 6vh;
+       font-size: 0.8rem;
+       margin: 48px;
       }
 
       .texto-calInstructor {
@@ -164,37 +182,46 @@
       }
   
       .boton-calInstructor{
-        padding: 3.5vh;
         font-size: 0.8rem;
       }
 
-      .boton-salidaSesionIns, .boton-salidaIns{
+     .boton-salidaIns{
         padding: 7px;
-      font-size: 0.9rem;
+        font-size: 0.9rem;
+        right: 5.5vh;
       }
 
   }
 
   @media (max-width: 980px) {
 
+    .seccion-centralCalTruc{
+      height: 105%;
+    }
+
     .titulo-calInstructor{
         font-size: 1.2rem;
+        top: 4vh;
     }
 
     .horario-fecha{
+      top: 1vh;
       font-size: 0.7rem;
+      margin: 20px;
     }
 
     .boton-adelanteInstructor {
-        left: 37.4%;
-        top:8vh; /* Ajusta la posición vertical */
-        transform: translateX(-50%);
-        font-size: 20px;
-      }
+      position: absolute;
+      top: 31.5vh; 
+      left: 86.5%; 
+      transform: translateX(-50%);
+      font-size: 20px;
+    }
 
     .boton-atrasInstructor {
-        top: 10vh; /* Ajusta la posición vertical */
-        left: 31%; /* Centra el botón horizontalmente */
+        position: absolute;
+        top: 31.5vh; /* Ajusta la posición vertical */
+        left: 80%; /* Centra el botón horizontalmente */
         transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
         font-size: 20px;
         margin: -22.5px;
@@ -215,37 +242,58 @@
       height: 5.5vh;
       font-size: 1rem;
     }
+    
+    .boton-salidaIns{
+      top: 100vh; /* Ajusta la posición vertical */
+    }
+
 
   }
 
   @media (max-width: 640px) {
 
 
+    .seccion-centralCalTruc{
+      height: 108%;
+    }
+
     .degradado-grisCalInstructor{
         width: 85%;
       }
     
       .boton-atrasInstructor {
-        left: 28%;
+        top: 31vh;
+        left: 77%;
        }
     
       .boton-adelanteInstructor {
-        left: 38%;
+        top: 31vh;
        }
 
        .titulo-calInstructor{
-        top: -5vh;
+        top: 7vh;
        }
 
+       .horario-fecha{
+        top: 3vh;
+        margin: 26.5px;
+       }
+       
        .boton-calInstructor {
         padding: 16px;
         height: 8vh;
         font-size: 0.6rem;
       }
-  
+       
        .texto-calInstructor{
-        font-size: 0.6rem;
+        font-size: 0.7rem;
        }
+
+       .boton-salidaIns{
+        top: 106.8vh;
+       }
+  
+       
 
   }
 
@@ -261,40 +309,48 @@
 
       .boton-adelanteInstructor{
         font-size: 1rem;
-        top: 8.8vh;
-        left: 42%;
+        top: 31.5vh;
+        left: 91%;
       }
 
       .boton-adelanteInstructor2{
-        top: 6.5ch;
+        top: 31.5vh;
       }
       
       .boton-atrasInstructor{
         font-size: 1rem;
-        top: 6vh;
-        left: 42%;
+        top: 30.9vh;
+        left: 80%;
         margin: -18px;
       }
 
       .boton-calInstructor {
-        padding: 16px;
-        height: 9vh;
+        padding: 13px;
+        height: 8vh;
       }
 
-      /* Calendario */
+      .texto-calInstructor{
+        font-size: 0.6rem;
+      }
+
+      .boton-salidaIns{
+        top: 106.2vh;
+      }
+
+      /* Inicio */
 
       .titulo-SesionTruc {
         font-size: 1.2rem;
-        top: -3vh;
+        top: -8vh;
       }
 
       .error-instructor{
-        top: -5.5vh;
+        top: -14vh;
         font-size: 0.5rem;
       }
 
       .contenedor-sesionTruc {
-        top: -7vh;
+        top: -15vh;
       }
 
       .boton-salidaSesionIns{
@@ -310,31 +366,62 @@
         height: 13.5vh;
     }
 
+    .seccion-centralCalTruc{
+      height: 109%;
+    }
+
+    .degradado-grisCalInstructor{
+      height: 130%;
+    }
+    
+    .boton-adelanteInstructor{
+      top: 29vh;
+    }
+
+    .boton-atrasInstructor{
+      top: 23vh;
+      left: 90%;
+    }
+
+    .titulo-calInstructor{
+      top: 2vh;
+    }
+
+    .horario-fecha{
+      top: 1vh;
+      margin: 17.5px;
+    }
+
     .boton-calInstructor{
-        padding: 10px;
+        padding: 8px;
         height: 9.5vh;
+    }
+
+    .boton-salidaIns{
+      top: 117vh;
+      width: 50%;
     }
 
     /* Inicio */
 
     .titulo-SesionTruc{
-      top: -6vh;
+      top: -12vh;
       font-size: 1.2rem;
     }
 
     .error-instructor{
-        top: -9vh;
+        top: -18vh;
         font-size: 0.55rem;
     }
 
     .contenedor-sesionTruc {
       width: 35vh;
       height: 38vh;
-      top: -9vh;
+      top: -16vh;
     }
 
     .texto-SesionTruc{
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         top: 6vh;
     }
 
@@ -345,6 +432,39 @@
 
     .boton-salidaSesionIns{
         top: 80vh;
+    }
+
+  }
+
+  @media (max-width: 370px) {
+
+    .img-centralSesionTruc, .img-centralTruc{
+      height: 10vh;
+    }
+
+    .degradado-grisCalInstructor{
+      width: 78%;
+    }
+
+    .boton-adelanteInstructor {
+      left: 90%;
+    }
+
+    .boton-atrasInstructor{
+      left: 89%;
+    }
+
+    .boton-calInstructor{
+      font-size: 0.45rem;
+      height: 9vh;
+    }
+
+    .texto-calInstructor{
+      font-size:  0.5rem;
+    }
+
+    .boton-salidaIns{
+      top: 112vh;
     }
 
   }

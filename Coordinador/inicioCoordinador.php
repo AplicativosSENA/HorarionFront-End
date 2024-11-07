@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../resources/css/app.css">
+    <link rel="stylesheet" href="../resources/css/Coordinador.css">
     <title>Inicio Coordinador</title>
     <script>
         function handleLogin(event) {
@@ -55,15 +56,15 @@
                 <div class="contenedor-imagen">
                     <img class="imagen-central img-centralSesionCor" />
                 </div>
-                <h1 class="titulo-Sesion titulo-SesionCorTruc">Bienvenido Coordinador</h1>
-                <p id="error-email" class="error error-CoordinadorTruc"></p>
-                <p id="error-password" class="error error-CoordinadorTruc"></p>
-                <form class="contenedor-sesion contenedor-sesionCorTruc" onsubmit="handleLogin(event)">
-                    <p class="texto-Sesion texto-SesionCorTruc">Inicio Sesión</p>
+                <h1 class="titulo-Sesion titulo-SesionCor">Bienvenido Coordinador</h1>
+                <p id="error-email" class="error error-Coordinador"></p>
+                <p id="error-password" class="error error-Coordinador"></p>
+                <form class="contenedor-sesion contenedor-sesionCor" onsubmit="handleLogin(event)">
+                    <p class="texto-Sesion texto-SesionCor">Inicio Sesión</p>
                     <div class="inputs-Sesion">
                         <input
                             id="email"
-                            class="input-Sesion input-SesionCorTruc"
+                            class="input-Sesion input-SesionCor"
                             type="email"
                             placeholder="Correo"
                             required
@@ -71,18 +72,18 @@
                     </div>
                     <input
                         id="password"
-                        class="input-Sesion input-SesionCorTruc"
+                        class="input-Sesion input-SesionCor"
                         type="password"
                         placeholder="Contraseña"
                         required
                     />
                     <div class="botones-Sesion">
-                        <button class="boton-Sesion boton-SesionCorTruc" type="submit">Ingresar</button>
+                        <button class="boton-Sesion boton-SesionCor" type="submit">Ingresar</button>
                     </div>
                 </form>
             </div>
         </div>
-        <button class="boton-salida" onclick="window.location.href='../pantallaInicio.php'">Salir</button>
+        <button class="boton-salida boton-salidaSesionCor" onclick="window.location.href='../pantallaInicio.php'">Salir</button>
     </div>
 </body>
 </html>

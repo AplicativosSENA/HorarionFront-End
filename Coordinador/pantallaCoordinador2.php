@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../resources/css/app.css">
+    <link rel="stylesheet" href="../resources/css/Coordinador.css">
     <title>Pantalla Coordinador 2</title>
     <script>
         function redirigirAAsignacion(hora) {
@@ -32,7 +33,7 @@
         <div class="secciones">
             <div class="seccion-central">
                 <div class="contenedor-imagen">
-                    <img class="imagen-central img-central" />
+                    <img class="imagen-central img-centralPan2Cor" />
                 </div>
                 <div class="degradado-gris degradado-grisPanCoordinador"></div>
 
@@ -46,7 +47,7 @@
                         <tbody>
                         <?php
                             $horaInicio = 6;
-                            $horaFin = 18;
+                            $horaFin = 22;
                             $intervalo = 2;
                             for ($i = $horaInicio; $i < $horaFin; $i += $intervalo) {
                                 $horaInicial = $i;

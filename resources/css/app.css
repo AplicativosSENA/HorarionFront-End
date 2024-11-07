@@ -41,15 +41,6 @@ body {
     border-top-right-radius: 30px; /* Redondea la esquina superior derecha */
 }
 
-    .contenedor-sesionCorTruc {
-      top: 0vh;
-      margin-top: 25px;
-      height: 35vh;
-      width: 40vh;
-    }
-
-  
-
 .menu-desplegable {
   background-color: white;
   border: 1px solid #ccc;
@@ -87,13 +78,6 @@ body {
     
   }
 
-  .degradado-grisPanCoordinador {
-    width: 50%;
-  }
-
-  .degradado-grisAsignacionCord {
-    width: 70%;
-  }
 
   .contenedor-imagen {
     display: flex;
@@ -111,31 +95,11 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     z-index: 10;
-    border-bottom: 2px solid #000000;
+    border-bottom: 3px solid #000000;
     align-items: center;
     width: 100%;
 }
 
- .img-centralCalCor {
-    top: 4vh;
-    left: 0;
-    height: 18.5vh; /* Mantén la altura para pantallas más grandes */
-  }
-
-  .img-centralSesionCor{
-    top: 4vh;
-    left: 0;
-    height: 24vh; /* Mantén la altura para pantallas más grandes */
-  }
-
-  .img-central { 
-    top: 3.5vh;
-    left: 0;
-    height: 24vh; /* Mantén la altura para pantallas más grandes */
-  }
-
-  
-  
   /* Secciones con contenido principal */
   .secciones {
     display: flex;
@@ -171,28 +135,11 @@ body {
     position: relative;
     font-weight: bold;
     
-  }
+  }  
 
-  .titulo-SesionCorTruc {
-    top: 3vh;
-  }
-
-
-  .titulo-asignar {
-    position: relative;
-    top: -1vh;
-  }
-  
   /* Texto explicativo */
-
-  
   .texto-Sesion {
     position: relative;
-  }
-
-  .texto-SesionCorTruc {
-    top: 5vh;
-    font-size: 1.8rem;
   }
   
      /* Botones */
@@ -245,11 +192,6 @@ body {
     background: linear-gradient(90deg, #8bc34a, #00a86b);
   }
 
-  .botones-Siguiente1 {
-    top: 5vh;
-    right: 34vh;
-  }
-
   .boton-Sesion {
   position: relative; /* Fijar el botón respecto a la ventana del navegador */
   padding: 10px 20px;
@@ -273,22 +215,10 @@ body {
           align-items: center;
         }
 
-  .boton-SesionCorTruc {
-    top: 5vh; /* Separación desde el borde superior */
-    width: 30vh; /* Ajusta este valor para hacer los botones más largos */
-  }
-  
-
-  
-  
     .boton-calendario {
-      width: 100%;
-      height: 100%;
       background-color: transparent;
       border: none;
       cursor: pointer;
-      padding: 3.5vh;
-      font-size: 1.2rem;
     }
     
     .boton-calendario:hover {
@@ -325,13 +255,6 @@ body {
       outline: none;
     }
 
-    .input-SesionCorTruc {
-      top: 5vh;
-      padding: 10px;
-      width: 60%;
-      font-size: 1rem;
-    }
-
     .error {
       position: relative;
       color: #ff4d4d; /* Color de texto rojo claro para el mensaje de error */
@@ -350,55 +273,6 @@ body {
       visibility: visible; /* Asegurarse de que sea visible */
     }
 
-    .error-CoordinadorTruc {
-      font-size: 1rem;
-      margin: 3px;
-      top: 0vh;
-    }
-
-    .selector-coordinador {
-      height: 8vh;
-      border: none;
-      padding: 10px;
-      color: black;
-      font-weight: bold;
-      font-size: 1rem;
-      position: relative;
-      margin: 10px 0;
-}
-
-.selector-Pan1Coordinador {
-  top: -1vh;
-  width: 50%;
-}
-    
-.titulo-Seleccion {
-    position: relative;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-    margin-top: 7vh;
-    top: -8vh;
-}
-
-.titulo-calCoordinador {
-  font-size: 1.7rem;
-  margin: 45px;
-  top: 2vh;
-}
-
-.boton-Selector {
-  top: 8vh; /* Separación desde el borde superior */
-  right: 23vh; /* Separación desde el borde derecho */
-}
-        .botones-Selector {
-          transform: translateX(0%); /* Ajuste para que esté perfectamente centrado */
-        }
-
-  .boton-volver {
-     top: 85vh;
-  }
-
   .boton-flecha {
     position: relative;
     background: linear-gradient(90deg, #00a86b, #8bc34a);
@@ -414,100 +288,6 @@ body {
       .boton-flecha:hover {
         background: linear-gradient(90deg, #8bc34a, #00a86b);
       }
-  
-  
-  .boton-atrasCoordinador {
-    left: 60vh; /* Posición al lado izquierdo */
-    top: 14vh;
-    margin: -22px;
-    transform: translateY(-50%);
-  }
-
-  .boton-adelanteCoordinador {
-    left: 71vh; /* Posición al lado derecho */
-    top: 14.7vh;
-    margin: -22px;
-    transform: translateY(-50%);
-  }
-
-/* Contenedor de la tabla */
-.contenedor-tabla {
-  position: relative;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 10px;
-  z-index: 100;
-  top: 15vh;
-}
-
-/* Estilo de la tabla de horas */
-.tabla-horas {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: center;
-  z-index: 100;
-}
-
-.tabla-horas th {
-  background-color: #007f3e;
-  color: white;
-  padding: 10px;
-  font-size: 18px;
-  z-index: 100;
-}
-
-.tabla-horas td {
-  padding: 15px;
-  border: 1px solid #ccc;
-  z-index: 100;
-}
-
-/* Estilo de los botones dentro de la tabla */
-.hora-boton {
-  width: 30vh;
-  padding: 12px;
-  background-color: #e6f5e6;
-  border: 1px solid #007f3e;
-  color: #007f3e;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
-
-.hora-boton:hover {
-  background-color: #cce5cc;
-}
-
-.boton-agregar {
-  width: 100px;               /* Ancho del botón */
-  height: 100px;              /* Alto del botón */
-  background-color: #00CC00; /* Color de fondo verde */
-  color: black;              /* Color del símbolo "+" */
-  font-size: 70px;           /* Tamaño del símbolo "+" */
-  border: 3px solid black;   /* Borde negro */
-  border-radius: 50%;        /* Forma circular */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
-  transition: transform 0.2s ease; /* Efecto de animación al hacer hover */
-  z-index: 10;
-}
-
-.boton-agregar:hover {
-  transform: scale(1.1); /* Agranda ligeramente el botón al pasar el cursor */
-}
-
-.contenedor-botonAgregar {
-  position: relative;
-  top: -12vh;
-  right: 55vh;
-}
-
-
  
   /* Responsividad */
   @media (max-width: 1086px) {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../resources/css/app.css">
+    <link rel="stylesheet" href="../resources/css/Coordinador.css">
     <title>Asignación Coordinador</title>
     <script>
         window.onload = function() {
@@ -38,7 +39,7 @@
         <div class="secciones">
             <div class="seccion-central">
                 <div class="contenedor-imagen">
-                    <img class="imagen-central img-central" />
+                    <img class="imagen-central img-centralAsigCor" />
                 </div>
                 <div class="degradado-gris degradado-grisAsignacionCord"></div>
                   
