@@ -102,10 +102,11 @@
             <img src="..\resources\img\DegradadoVerde.jpg" class="imagen-degradado" />
         </div>
         <div class="secciones">
-            <div class="seccion-central">
+            <div class="seccion-central seccion-cantralCalCor">
             <div class="contenedor-imagen">
                     <img class="imagen-central img-centralCalCor" />
                 </div>
+                <div class="degradado-gris degradado-grisCalCoordindor"></div>
                 <button class="boton-flecha boton-adelanteCoordinador" onclick="siguienteMes()">➡</button>
                 <button class="boton-flecha boton-atrasCoordinador" onclick="mesAnterior()">⬅</button>
                 <h1 class="titulo-calendario titulo-calCoordinador" id="nombreMes">
@@ -127,8 +128,8 @@
                         <!-- Los días del mes se generarán aquí mediante JavaScript -->
                     </tbody>
                 </table>
-                <button class="boton-volver" onclick="irAPaginaAnterior()">Volver</button>
-                <button class="boton-salida" onclick="irAPaginaInicio()">Salir</button>
+                <button class="boton-volver boton-volCalCoordinador" onclick="irAPaginaAnterior()">Volver</button>
+                <button class="boton-salida boton-salCalCoordinador" onclick="irAPaginaInicio()">Salir</button>
             </div>
         </div>
     </div>

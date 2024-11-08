@@ -31,7 +31,7 @@
             <img src="..\resources\img\DegradadoVerde.jpg" class="imagen-degradado" />
         </div>
         <div class="secciones">
-            <div class="seccion-central seccion-centralCalTruc">
+            <div class="seccion-central seccion-centralTruc">
                 <div class="contenedor-imagen">
                     <img class="imagen-central img-centralTruc" />
                 </div>

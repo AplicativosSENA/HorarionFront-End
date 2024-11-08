@@ -53,15 +53,16 @@
 
   .titulo-Seleccion {
     position: relative;
+    top: -5vh;
 }
 
   .selector-coordinador {
-    height: 8vh;
+    height: 7vh;
     border: none;
     padding: 10px;
     color: black;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.1rem;
     position: relative;
     margin: 10px 0;
   }
@@ -71,17 +72,12 @@
     width: 50%;
   }
 
-  .botones-Siguiente1 {
-    top: 5vh;
-    right: 34vh;
+  .boton-Siguiente1{
+    position: absolute;
+    top: 70vh;
+    right: 118.9vh;
+    z-index: 10;
   }
-  
-    .boton-volver {
-       top: 85vh;
-    }
-
-
-
 
   /* Calendario */
   .img-centralCalCor {
@@ -90,24 +86,30 @@
     height: 21vh; /* Mantén la altura para pantallas más grandes */
   }
 
-  .boton-atrasCoordinador {
-    left: 60vh; /* Posición al lado izquierdo */
-    top: 14vh;
-    margin: -22px;
-    transform: translateY(-50%);
+  .degradado-grisCalCoordindor{
+    width: 90%;
+    height: 105%;
   }
 
   .boton-adelanteCoordinador {
-    left: 71vh; /* Posición al lado derecho */
-    top: 14.7vh;
+    left: 36%; /* Posición al lado derecho */
+    top: 13vh;
     margin: -22px;
+    transform: translateY(-50%);
+  } 
+  
+  .boton-atrasCoordinador {
+    left: 61vh; /* Posición al lado izquierdo */
+    top: 12.65vh;
+    margin: -25px;
     transform: translateY(-50%);
   }
 
   .titulo-calCoordinador {
+    position: relative;
     font-size: 1.7rem;
     margin: 45px;
-    top: 2vh;
+    top: 3vh;
   }
   
 
@@ -117,6 +119,10 @@
     padding: 3vh;
     font-size: 1.2rem;
   }
+
+  .boton-volver {
+    top: 84vh;
+ }
 
   /* Pantalla hora 2 */
   .contenedor-tabla {
@@ -211,10 +217,10 @@
 
 
 
-  @media (max-width: 1086px) {
+  @media (max-width: 1300px) {
 
     /* Inicio */
-    .img-centralSesionCor{
+    .img-centralSesionCor, .img-centralPan1{
         height: 20vh;
     }
 
@@ -264,13 +270,75 @@
     }
 
 
+    /* Selector*/
+
+    .titulo-Seleccion{
+      font-size: 1.3rem;
+    }
+
+    .selector-Pan1Coordinador{
+      top: -4vh;
+      height: 8.5vh;
+      font-size: 0.9rem;
+      margin: 7px 0;
+    }
+
+    .boton-Siguiente1{
+      font-size: 0.8rem;
+      padding: 6px;
+      right: 106vh;
+    }
+
+    .boton-salidaPan1Cor{
+      font-size: 0.9rem;
+      height: 5vh;
+      padding: 7px;
+    }
+
+    /* Calendario */
+
+    .img-centralCalCor{
+      height: 17vh;
+    }
+
+    .boton-adelanteCoordinador{
+      top: 17.3vh;
+      padding: 3px 13px;
+      left: 35%;
+    }
+
+    .boton-atrasCoordinador{
+     top: 17.7vh;
+     padding: 3px 13px;
+     left: 28%;
+     margin: -16.5px; 
+    }
+
+    .titulo-calCoordinador{
+      margin: 40px;
+      font-size: 1.3rem;
+      top: 2vh;
+    }
+
+    .texto-calCoordinador{
+      font-size: 0.8rem;
+    }
+
+    .boton-calCoordinador{
+      font-size: 0.8rem;
+    }
+
+    .boton-volCalCoordinador{
+      top: 83vh;
+    }
+
+    .boton-salCalCoordinador, .boton-volCalCoordinador{
+      padding: 7px;
+      font-size: 0.9rem;
+      right: 5.5vh;
+    }
+
   }
-
-
-
-
-
-
 
 
 
@@ -278,22 +346,130 @@
 
     /* Inicio */
 
-    .boton-salidaSesionCor{
+    .boton-salida, .boton-Siguiente1, .boton-volver{
         width: 40%;
-        top: 91vh;
+        top: 85vh;
         left: 50%;
         height: 5.5vh;
         font-size: 1rem;
     }
 
+    /* Selector */
+    .boton-Siguiente1{
+      top: 75vh;
+      left: 30%;
+    }
+
+    /* Calendario*/
+
+    .seccion-cantralCalCor{
+      height: 101%;
+    }
+
+    .degradado-grisCalCoordindor{
+      width: 88%;
+    }
+
+    .titulo-calCoordinador{
+      font-size: 1.1rem;
+      top: -1vh;
+      margin: 13px;
+    }
+
+    
+    .boton-adelanteCoordinador {
+      position: absolute;
+      top: 31.5vh; 
+      left: 88%; 
+      transform: translateX(-50%); 
+      font-size: 20px;
+    }
+
+    .boton-atrasCoordinador {
+      position: absolute; 
+      top: 31.5vh; 
+      left: 81%; 
+      transform: translateX(-50%);
+      font-size: 20px;
+      margin: -22.5px;
+    }
+
+    .texto-calCoordinador{
+      font-size: 0.7rem;
+    }
+
+    .boton-calCoordinador{
+      font-size: 0.7rem;
+      padding: 0 36px;
+      height: 8vh;
+    }
+
+    .boton-volCalCoordinador{
+      top: 90vh;
+    }
+
+    .boton-salCalCoordinador{
+      top: 97.5vh;
+    }
+
+    
 
 
   }
 
+  
+
 
 
   @media (max-width: 640px) {
+    /* Selector */
+    .degradado-grisPanCoordinador{
+      width: 75%;
+    }
 
+    .titulo-Seleccion{
+      top: -10vh;
+    }
+
+    .selector-Pan1Coordinador{
+      width: 70%;
+      top: -6vh;
+    }
+
+    /* Calendario */
+    .degradado-grisCalCoordindor{
+      width: 85%;
+    }   
+    
+    .boton-adelanteCoordinador{
+      left: 90%;
+      top: 33vh;
+      padding: 2px 12px;
+    }
+
+    .boton-atrasCoordinador{
+      top: 27vh;
+      left: 90%;
+      padding: 2px 12px;
+    }
+
+    .titulo-calCoordinador{
+      margin: 15px;
+    }
+
+    .boton-calCoordinador{
+      padding: 0 26px;
+      height: 7.5vh;
+      
+    }
+
+    .boton-volCalCoordinador{
+        top: 89vh;
+    }
+
+    .boton-salCalCoordinador{
+      top: 95.5vh;
+    }
 
 
   }
@@ -302,7 +478,7 @@
   @media (max-width: 500px) {
 
     /* Inicio */
-    .img-centralSesionCor{
+    .imagen-central{
         height: 16.5vh;
     }
 
@@ -325,12 +501,49 @@
         font-size: 0.8rem;
     }
 
+    /* Calendario */
+    .degradado-grisCalCoordindor{
+      width: 83%;
+    }
+
+    .boton-adelanteCoordinador {
+      font-size: 1rem;
+      left: 94%;
+    }
+
+    .boton-atrasCoordinador{
+      font-size: 1rem;
+      left: 94%;
+      top: 28vh;
+    }
+
+    .titulo-calCoordinador{
+      font-size: 1rem;
+    }
+
+    .boton-calCoordinador{
+      padding: 0 21px;
+      height: 8vh;
+    }
+
+    .texto-calCoordinador{
+      font-size: 0.6rem;
+    }
+
+    .boton-volCalCoordinador{
+      top: 90vh;
+    }
+
+    .boton-salCalCoordinador{
+      top: 97.5vh;
+    }
+    
   }
 
   @media (max-width: 420px) {
 
     /* Inicio */
-    .img-centralSesionCor{
+    .imagen-central {
         height: 13.5vh;
     }
 
@@ -364,6 +577,64 @@
         top: 80vh;
     }
 
+     /* Selector */
+     .titulo-Seleccion{
+       top: -18vh;
+       font-size: 1.2rem;
+     }
+
+     .selector-Pan1Coordinador{
+      top: -15vh;
+      margin: 10px;
+      width: 80%;
+     }
+
+     .boton-Siguiente1{
+      top: 65vh;
+     }
+
+     .boton-salidaPan1Cor{
+      top: 75vh;
+     }
+
+       /* Calendario */
+       .seccion-cantralCalCor{
+        height: 90%;
+      }
+
+       .degradado-grisCalCoordindor{
+        width: 80%; 
+       }
+
+       .boton-adelanteCoordinador{
+        top: 28vh;
+        left: 96%;
+       }
+
+       .boton-atrasCoordinador{
+        top: 23vh;
+        left: 96%;
+       }
+
+       .titulo-calCoordinador{
+        top: -3vh;
+        font-size: 0.85rem;
+        margin: 20px;
+       }
+
+       .boton-calCoordinador{
+        padding: 0 17px;
+       }
+
+       .boton-volCalCoordinador{
+        top: 85vh;
+       }
+
+       .boton-salCalCoordinador{
+        top: 92.5vh;
+       }
+       
+
 
 
   }
@@ -372,8 +643,13 @@
   @media (max-width: 370px) {
 
     /* Inicio */
-    .img-centralSesionCor{
+    .imagen-central{
         height: 10vh;
+    }
+
+    /* Calendario */
+    .boton-calCoordinador{
+      padding: 0 14px;
     }
 
 

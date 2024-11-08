@@ -195,7 +195,7 @@
 
   @media (max-width: 980px) {
 
-    .seccion-centralCalTruc{
+    .seccion-centralTruc{
       height: 105%;
     }
 
@@ -253,7 +253,7 @@
   @media (max-width: 640px) {
 
 
-    .seccion-centralCalTruc{
+    .seccion-centralTruc{
       height: 108%;
     }
 
@@ -366,7 +366,7 @@
         height: 13.5vh;
     }
 
-    .seccion-centralCalTruc{
+    .seccion-centralTruc{
       height: 109%;
     }
 

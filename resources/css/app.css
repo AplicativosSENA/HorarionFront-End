@@ -311,93 +311,11 @@ body {
       margin: 0;
       padding: 10px; /* Añadir un poco de espacio alrededor */
     }
-    
-  
     /* Botones en columna */
     .boton-salida, .boton-volver {
       position: absolute; /* Cambia de fixed a absolute en pantallas pequeñas */
       transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
       right: auto; /* Elimina el margen derecho */
     }
-
-    .boton-Selector, .boton-salidaCoordinador {
-      position: absolute;
-      transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
-      right: auto;
-      width: 50vh;
-      top: 8vh;
-    }
-
-    .boton-volver {    
-      top: 84vh; /* Ajusta la posición vertical */
-      left: 50%; /* Centra el botón horizontalmente */
-    }
-
-    .boton-atrasCoordinador {
-      position: absolute; /* Cambia de fixed a absolute en pantallas pequeñas */
-      top: 29vh; /* Ajusta la posición vertical */
-      left: 88%; /* Centra el botón horizontalmente */
-      transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
-    }
-
-    .boton-adelanteCoordinador {
-      position: absolute;
-      top: 29vh; /* Ajusta la posición vertical */
-      left: 96%; /* Centra el botón horizontalmente */
-      transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
-      right: auto;
-    }
     
-  }
-  
-  @media (max-width: 640px) {
-
-  .boton-atrasCoordinador {
-    top: 22.5vh;
-    left: 96%;
-   }
-
-   .boton-adelanteCoordinador {
-    top: 28vh;
-   } 
-
-    .titulo-calCoordinador {
-      font-size: 1.5rem;
-    }
-
-    .texto-calCoordinador {
-      font-size: 0.6rem;
-    }
-  }
-
-  /* Responsividad para pantallas muy pequeñas (por ejemplo, móviles) */
-  @media (max-width: 500px) {
-
-    .titulo-calCoordinador {
-      font-size: 1.3rem;
-    }
-    .boton-Selector, .boton-salidaCoordinador {
-      width: 30vh;
-    }
-
-    .boton-calCoordinador {
-      padding: 20px;
-      height: 6vh;
-    }
-     
-  }
-  
-  @media (max-width: 420px) {
-    .boton-calCoordinador {
-      padding: 15px;
-      height: 6vh;
-    }
-
-    .boton-atrasCoordinador, .boton-volver {
-      margin-top: -4vh;
-    }
-
-    .texto-Sesion2, .titulo-calCoordinador, .selector-coordinador {
-      font-size: 1rem;
-    }
   }

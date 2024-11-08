@@ -57,18 +57,16 @@
                     <option value="programa1">Programa 1</option>
                     <option value="programa2">Programa 2</option>
                 </select>
-                <div class="botones botones-Siguiente1">
                     <button
                         class="boton boton-Siguiente1"
                         onclick="irCalendarioCoordinador()"
                     >
                         Siguiente
                     </button>
-                </div>
             </div>
         </div>
         <button
-            class="boton-salida boton-salidaCoordinador" onclick="window.location.href = 'inicioCoordinador.php'"> Salir
+            class="boton-salida boton-salidaPan1Cor" onclick="window.location.href = 'inicioCoordinador.php'"> Salir
         </button>
     </div>
 </body>
