@@ -7,27 +7,31 @@
     <link rel="stylesheet" href="../resources/css/Instructor.css">
     <title>Calendario Semanal Instructor</title>
     <script>
-        // Estado para manejar la visibilidad de cada menú desplegable
-        const menuVisible = {};
-
-        // Función para mostrar el menú
-        function showMenu(rowIndex, colIndex) {
-            const key = `${rowIndex}-${colIndex}`;
-            menuVisible[key] = true;
-            document.getElementById(`menu-${key}`).style.display = "block";
+        // Función para alternar la visibilidad del menú desplegable con animación
+        function toggleMenu(row, col) {
+            const menu = document.getElementById(`menu-${row}-${col}`);
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+                menu.classList.remove('show');
+            } else {
+                menu.style.display = 'block';
+                setTimeout(() => menu.classList.add('show'), 10); // Añade animación tras mostrarse
+            }
         }
 
-        // Función para esconder el menú
-        function hideMenu(rowIndex, colIndex) {
-            const key = `${rowIndex}-${colIndex}`;
-            menuVisible[key] = false;
-            document.getElementById(`menu-${key}`).style.display = "none";
+        // Función para cerrar el menú con animación
+        function closeMenu(row, col) {
+            const menu = document.getElementById(`menu-${row}-${col}`);
+            menu.classList.remove('show');
+            setTimeout(() => {
+                menu.style.display = 'none';
+            }, 300); // Espera la animación antes de ocultar
         }
     </script>
 </head>
 <body>
     <div class="contenedor-principal">
-    <div class="franja-verde">
+        <div class="franja-verde">
             <img src="..\resources\img\DegradadoVerde.jpg" class="imagen-degradado" />
         </div>
         <div class="secciones">
@@ -36,12 +40,7 @@
                     <img class="imagen-central img-centralTruc" />
                 </div>
                 <div class="degradado-gris degradado-grisCalInstructor"></div>
-                <button
-                    class="boton-flecha boton-adelanteInstructor boton-adelanteInstructor2"
-                    onclick="window.location.href='calendarioInstructor2.php'"
-                >
-                    ➡
-                </button>
+                <button class="boton-flecha boton-adelanteInstructor boton-adelanteInstructor2" onclick="window.location.href='calendarioInstructor2.php'">➡</button>
                 <h1 class="titulo-calendario titulo-calInstructor">Bienvenido</h1>
                 <p class="horario-fecha">Horario del 1 octubre al 4</p>
                 <table class="tabla-calendario">
@@ -72,15 +71,11 @@
                             foreach ($dias as $colIndex => $dia) {
                                 $key = "$rowIndex-$colIndex";
                                 echo "<td>
-                                    <button class='boton-calendario boton-calInstructor'
-                                        onmouseenter='showMenu($rowIndex, $colIndex)'
-                                        onmouseleave='hideMenu($rowIndex, $colIndex)'>Ambiente
-                                    </button>";
+                                    <button class='boton-calendario boton-calInstructor' onclick='toggleMenu($rowIndex, $colIndex)'>Ambiente</button>";
                                 if (isset($infoAmbientes[$key])) {
                                     $ambiente = $infoAmbientes[$key];
-                                    echo "<div id='menu-$key' class='menu-desplegable' style='display: none;'
-                                        onmouseenter='showMenu($rowIndex, $colIndex)'
-                                        onmouseleave='hideMenu($rowIndex, $colIndex)'>
+                                    echo "<div id='menu-$key' class='menu-desplegable' style='display: none;'>
+                                        <button onclick='closeMenu($rowIndex, $colIndex)' class='boton-minimizar'>Minimizar</button>
                                         <p>Detalles del ambiente para $dia</p>
                                         <p>Ficha: {$ambiente['Ficha']}</p>
                                         <p>Fecha: {$ambiente['fecha']}</p>
@@ -95,7 +90,7 @@
                         ?>
                     </tbody>
                 </table>
-                <button class="boton-salida boton-salidaIns" onclick="window.location.href='inicioInstructor.php'">Salir</button>     
+                <button class="boton-salida boton-salidaIns" onclick="window.location.href='inicioInstructor.php'">Salir</button>
             </div>
         </div>
     </div>

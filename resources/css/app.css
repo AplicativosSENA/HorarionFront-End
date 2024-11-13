@@ -7,6 +7,7 @@ body {
     color: #333333; /* Cambia el color del texto a tu preferencia */
     margin: 0;
     padding: 0;
+    cursor: url("/resources/img/cursor.png"),auto;
   }
   
 /* Estilo para el contenedor principal */
@@ -42,15 +43,53 @@ body {
 }
 
 .menu-desplegable {
-  background-color: white;
-  border: 1px solid #ccc;
-  padding: 10px;
-  position: absolute; /* Asegúrate de que el menú esté posicionado correctamente */
-  z-index: 100; /* Para asegurarte de que esté encima de otros elementos */
-  
+  position: absolute;
+  top: 37vh;
+  left: 52vh;
+  width: 59%;
+  height: 56%;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: none;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 100;
 }
 
-  
+.menu-desplegable.show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.boton-minimizar {
+  position: absolute;
+  top: 54vh;
+  right: 10px;
+  background-color: #ff5c5c;
+  border: none;
+  color: #fff;
+  padding: 15px 45px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.boton-minimizar:hover {
+  background-color: #e60000;
+}
+
+.boton-calendario {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.boton-calendario:hover {
+  background-color: rgba(0, 255, 0, 0.1); /* Efecto al pasar el mouse */
+} 
   /* Franja verde con el degradado */
   .franja-verde {
     height: 4vh;
@@ -215,16 +254,6 @@ body {
           align-items: center;
         }
 
-    .boton-calendario {
-      background-color: transparent;
-      border: none;
-      cursor: pointer;
-    }
-    
-    .boton-calendario:hover {
-      background-color: rgba(0, 255, 0, 0.1); /* Efecto al pasar el mouse */
-    }
-
   /* Inputs */
 .inputs-Sesion {
   display: flex;
@@ -296,6 +325,9 @@ body {
     .boton-flecha{
       padding: 5px 15px;
     }
+
+    /* Calendario Aprendiz */
+
 
     
 

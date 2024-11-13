@@ -46,9 +46,9 @@
                    <div class="contenedor-botonAgregar"><button class="boton-agregar" onclick="irANuevaAsignacion()">+</button></div>
                 
 
+                <button class="boton-volver boton-volAsigCoordinador" onclick="irAPaginaAnterior()">Volver</button>
+                <button class="boton-salida boton-salAsigCoordinador" onclick="irAPaginaInicio()">Salir</button>
                 
-                <button class="boton-salida" onclick="irAPaginaInicio()">Salir</button>
-                <button class="boton-volver" onclick="irAPaginaAnterior()">Volver</button>
             </div>
         </div>
     </div>

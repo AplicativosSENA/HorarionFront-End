@@ -125,6 +125,11 @@
  }
 
   /* Pantalla hora 2 */
+  
+ .degradado-grisPan2Coordinador{
+  width: 50%;
+ }
+
   .contenedor-tabla {
     position: relative;
     background-color: #ffffff;
@@ -174,6 +179,10 @@
 
 
   /* Asignaciones */
+
+  .degradado-grisAsignacionCord{
+    width: 70%;
+  }
   
 .boton-agregar {
     width: 100px;               /* Ancho del botón */
@@ -204,14 +213,25 @@
 
 
   /* Asignaciar */
-
-  .degradado-grisAsignacionCord {
-    width: 70%;
+  .degradado-grisAsignarCoordinador {
+    width: 50%;
   }
 
   .titulo-asignar {
     position: relative;
     top: -1vh;
+  }
+
+  .selector-AsignarCoordinador{
+    top: -1vh;
+    width: 50%;
+  }
+
+  .boton-Asignar{
+    position: absolute;
+    top: 75vh;
+    right: 118.9vh;
+    z-index: 10;
   }
 
 
@@ -220,7 +240,7 @@
   @media (max-width: 1300px) {
 
     /* Inicio */
-    .img-centralSesionCor, .img-centralPan1{
+    .imagen-central{
         height: 20vh;
     }
 
@@ -328,15 +348,75 @@
       font-size: 0.8rem;
     }
 
-    .boton-volCalCoordinador{
+    .boton-volver{
       top: 83vh;
     }
 
-    .boton-salCalCoordinador, .boton-volCalCoordinador{
+    .boton-salida,.boton-volver{
       padding: 7px;
       font-size: 0.9rem;
       right: 5.5vh;
     }
+
+    /* Pantalla 2 hora */
+
+    .seccion-centralPan2{
+      height: 120%;
+    }
+
+    .degradado-grisPan2Coordinador{
+      height: 135%;
+    }
+
+    .img-centralPan2Cor{
+      height: 20vh;
+    }
+
+    .contenedor-tabla{
+      top: 6vh;
+      padding: 12px;
+    }
+
+    .tabla-horas td{
+      padding: 11px;
+    }
+
+    .tabla-horas th{
+      font-size: 1rem;
+    }
+
+    .hora-boton{
+      font-size: 12px;
+    }
+
+    /* Asignaciones Cor */
+    .contenedor-botonAgregar{
+      right: 45vh;
+    }
+
+    .boton-salAsigCoordinador, .boton-volAsigCoordinador{
+      right: 3.8vh;
+    }
+
+    /* Asignar Cor */
+    .titulo-asignar{
+      font-size: 1.3rem;
+      top: -5vh;
+    }
+
+    .selector-AsignarCoordinador{
+      top: -4vh;
+      height: 8.5vh;
+      font-size: 0.9rem;
+      margin: 7px 0;
+    }
+
+    .boton-Asignar{
+      font-size: 0.8rem;
+      padding: 6px;
+      right: 108vh;
+    }
+    
 
   }
 
@@ -346,7 +426,7 @@
 
     /* Inicio */
 
-    .boton-salida, .boton-Siguiente1, .boton-volver{
+    .boton-salida, .boton-Siguiente1, .boton-volver, .boton-Asignar{
         width: 40%;
         top: 85vh;
         left: 50%;
@@ -413,6 +493,42 @@
     }
 
     
+    /* Pantalla 2 hora*/
+    .seccion-centralPan2{
+      height: 124%;
+    }
+
+    .contenedor-tabla{
+      top: 0vh;
+    }
+
+    .boton-volPan2Coordinador{
+      top: 125.5vh;
+    }
+
+    .boton-salPan2Coordinador{
+      top: 133vh;
+    }
+
+     /* Asignaciones Cor */
+    .contenedor-botonAgregar{
+      right: 35vh;
+    }
+
+     .boton-salAsigCoordinador{
+      top: 93vh;
+     }
+
+     /* Asignar Cor */
+
+     .boton-Asignar{
+      top: 75vh;
+      left: 30%;
+     }
+
+     .boton-salAsignarCor{
+      top: 93vh;
+     }
 
 
   }
@@ -470,6 +586,36 @@
     .boton-salCalCoordinador{
       top: 95.5vh;
     }
+
+    /* Pantalla 2 hora */
+
+    .degradado-grisPan2Coordinador{
+      width: 70%;
+    }
+
+     /* Asignaciones Cor */
+    .degradado-grisAsignacionCord{
+      width: 85%;
+    }
+
+     .contenedor-botonAgregar{
+      right: 30vh;
+    }
+
+     /* Asignar Cor */
+     .degradado-grisAsignarCoordinador{
+      width: 75%;
+    }
+
+    .titulo-asignar{
+      top: -10vh;
+    }
+
+    .selector-AsignarCoordinador{
+      width: 70%;
+      top: -6vh;
+    }
+
 
 
   }
@@ -537,6 +683,12 @@
     .boton-salCalCoordinador{
       top: 97.5vh;
     }
+
+    /* Asignaciones Cor */
+     .contenedor-botonAgregar{
+      right: 25vh;
+      top: -18vh;
+    }
     
   }
 
@@ -560,7 +712,7 @@
     .contenedor-sesionCor{
         width: 35vh;
         height: 38vh;
-        top: -16vh;
+        top: -19vh;
     }
 
     .texto-SesionCor{
@@ -635,6 +787,55 @@
        }
        
 
+       /* Pantalla 2 HOra */
+       .seccion-centralPan2{
+        height: 118%;
+       }
+
+       .contenedor-tabla{
+        top: -3vh;
+       }
+
+       .boton-volPan2Coordinador{
+        top: 120vh;
+       }
+
+       .boton-salPan2Coordinador{
+        top: 127vh;
+       }
+
+       /* Asignaciones Cor */
+    .degradado-grisAsignacionCord{
+      width: 80%;
+    }
+
+     .contenedor-botonAgregar{
+      right: 20vh;
+    }
+
+    /* Asignar Cor */
+    .titulo-asignar{
+      top: -14vh;
+      font-size: 1.2rem;
+    }
+
+    .selector-AsignarCoordinador{
+     top: -15vh;
+     margin: 10px;
+     width: 80%;
+    }
+
+    .boton-Asignar{
+     top: 65vh;
+    }
+
+    .boton-volAsignarCor {
+     top: 75vh;
+    }
+
+    .boton-salAsignarCor{
+      top: 82vh;
+    }
 
 
   }
@@ -650,6 +851,16 @@
     /* Calendario */
     .boton-calCoordinador{
       padding: 0 14px;
+    }
+
+     /* Asignaciones Cor */
+     .degradado-grisAsignacionCord{
+      width: 75%;
+    }
+
+     .contenedor-botonAgregar{
+      top: -22vh;
+      right: 0vh;
     }
 
 

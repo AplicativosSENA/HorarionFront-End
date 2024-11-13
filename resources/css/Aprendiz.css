@@ -89,6 +89,14 @@
       font-size: 1.2rem;
   }
 
+  .menu-desplegable{
+    font-size: 2.5rem;
+  }
+
+  .boton-salidaAprendiz{
+    right: 5vh;
+  }
+
 
 
   @media (max-width: 1086px) {
@@ -178,6 +186,19 @@
       padding: 7px;
       font-size: 0.9rem;
     }
+    
+
+    .menu-desplegable{
+      font-size: 1.5rem;
+      width: 55%;
+      height: 57%;
+    }
+    
+    .boton-minimizar{
+      padding: 7px 35px;
+      font-size: 0.9rem;
+      top: 57vh;
+    }
 
   }
 
@@ -212,6 +233,17 @@
 
     .texto-calAprendiz{
       font-size: 0.6rem;
+    }
+
+    .menu-desplegable{
+      top: 37.5vh;
+      left: 45vh;
+      width: 56%;
+      height: 54%;
+    }
+
+    .boton-minimizar{
+      top: 54.5vh;
     }
 
     
@@ -267,6 +299,18 @@
       font-size: 0.7rem;
      }
 
+     .menu-desplegable{
+      left: 29vh;
+      font-size: 1.2rem;
+      width: 54%;
+      height: 61%;
+     }
+
+     .boton-minimizar{
+      right: 35%;
+     }
+
+
      .boton-salidaAprendiz{
       top: 106.8vh;
      }
@@ -300,6 +344,12 @@
 
     .boton-salidaAprendiz{
       top: 106.2vh;
+    }
+
+    .menu-desplegable{
+      left: 17vh;
+      top: 37vh;
+      width: 61.2%;
     }
 
     /* Inicio */
@@ -368,6 +418,16 @@
       width: 50%;
     }
 
+    .menu-desplegable{
+      left: 14.25vh;
+      top: 35vh;
+      height: 73%;
+    }
+
+    .boton-minimizar{
+      right: 26%;
+    }
+
 
     /* Inicio */
 
@@ -428,6 +488,17 @@
 
     .boton-salidaAprendiz{
       top: 112vh;
+    }
+
+    .menu-desplegable{
+      font-size: 1rem;
+      width: 55%;
+      height: 55%;
+    }
+
+    .boton-minimizar{
+      top: 50vh;
+      right: 23%;
     }
 
   }

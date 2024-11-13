@@ -46,10 +46,10 @@
                 <div class="contenedor-imagen">
                     <img class="imagen-central img-centralAsignarCor" />
                 </div>
-                <div class="degradado-gris degradado-grisPanCoordinador"></div>
-                <h1 class="titulo-asignar">Asignación de ficha</h1>
+                <div class="degradado-gris degradado-grisAsignarCoordinador"></div>
+                <h1 class="titulo-asignar">Asignación de Ambiente</h1>
 
-                <select id="selectorFicha" onchange="actualizarFicha(this.value)" class="selector-coordinador selector-Pan1Coordinador">
+                <select id="selectorFicha" onchange="actualizarFicha(this.value)" class="selector-coordinador selector-AsignarCoordinador">
                     <option value="">Seleccione ficha</option>
                     <option value="ficha1">Ficha 1</option>
                     <option value="ficha2">Ficha 2</option>
@@ -57,7 +57,7 @@
                     <!-- Agrega más opciones según sea necesario -->
                 </select>
 
-                <select id="selectorInstructor" onchange="actualizarInstructor(this.value)" class="selector-coordinador selector-Pan1Coordinador">
+                <select id="selectorInstructor" onchange="actualizarInstructor(this.value)" class="selector-coordinador selector-AsignarCoordinador">
                     <option value="">Seleccionar instructor</option>
                     <option value="instructor1">Instructor 1</option>
                     <option value="instructor2">Instructor 2</option>
@@ -65,22 +65,19 @@
                     <!-- Agrega más opciones según sea necesario -->
                 </select>
 
-                <select id="selectorAmbiente" onchange="actualizarAmbiente(this.value)" class="selector-coordinador selector-Pan1Coordinador">
+                <select id="selectorAmbiente" onchange="actualizarAmbiente(this.value)" class="selector-coordinador selector-AsignarCoordinador">
                     <option value="">Seleccione el ambiente</option>
                     <option value="ambiente1">Ambiente 1</option>
                     <option value="ambiente2">Ambiente 2</option>
                     <option value="ambiente3">Ambiente 3</option>
                     <!-- Agrega más opciones según sea necesario -->
                 </select>
-
-                <div class="botones botones-Siguiente1">
-                    <button class="boton boton-Siguiente1" onclick="asignarFicha()">Asignar</button>
-                </div>
+                    <button class="boton boton-Asignar" onclick="asignarFicha()">Asignar</button>
             </div>
         </div>
 
-        <button class="boton-volver" onclick="window.location.href = 'asignacionesCoordinador.php'">Volver</button>
-        <button class="boton-salida" onclick="window.location.href = 'inicioCoordinador.php'">Salir</button>
+        <button class="boton-volver boton-volAsignarCor" onclick="window.location.href = 'asignacionesCoordinador.php'">Volver</button>
+        <button class="boton-salida boton-salAsignarCor" onclick="window.location.href = 'inicioCoordinador.php'">Salir</button>
     </div>
 </body>
 </html>

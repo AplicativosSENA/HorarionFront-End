@@ -7,17 +7,29 @@
     <link rel="stylesheet" href="../resources/css/app.css">
     <link rel="stylesheet" href="../resources/css/Aprendiz.css">
     <script>
-        function showMenu(row, col) {
-            document.getElementById(`menu-${row}-${col}`).style.display = 'block';
+        function toggleMenu(row, col) {
+            const menu = document.getElementById(`menu-${row}-${col}`);
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+                menu.classList.remove('show');
+            } else {
+                menu.style.display = 'block';
+                setTimeout(() => menu.classList.add('show'), 10); // Añade animación tras mostrarse
+            }
         }
-        function hideMenu(row, col) {
-            document.getElementById(`menu-${row}-${col}`).style.display = 'none';
+
+        function closeMenu(row, col) {
+            const menu = document.getElementById(`menu-${row}-${col}`);
+            menu.classList.remove('show');
+            setTimeout(() => {
+                menu.style.display = 'none';
+            }, 300); // Espera la animación antes de ocultar
         }
     </script>
 </head>
 <body>
     <div class="contenedor-principal">
-    <div class="franja-verde">
+        <div class="franja-verde">
             <img src="..\resources\img\DegradadoVerde.jpg" class="imagen-degradado" />
         </div>
         <div class="secciones">
@@ -60,16 +72,13 @@
                                 $ambienteInfo = isset($infoAmbientes[$key]) ? $infoAmbientes[$key] : null;
                                 
                                 echo "<td>";
-                                echo "<button class='boton-calendario boton-calAprendiz' 
-                                           onmouseenter='showMenu($rowIndex, $colIndex)' 
-                                           onmouseleave='hideMenu($rowIndex, $colIndex)'>
+                                echo "<button class='boton-calendario boton-calAprendiz' onclick='toggleMenu($rowIndex, $colIndex)'>
                                          Ambiente
                                       </button>";
                                 
                                 if ($ambienteInfo) {
-                                    echo "<div id='menu-$rowIndex-$colIndex' class='menu-desplegable' style='display: none;' 
-                                                onmouseenter='showMenu($rowIndex, $colIndex)' 
-                                                onmouseleave='hideMenu($rowIndex, $colIndex)'>
+                                    echo "<div id='menu-$rowIndex-$colIndex' class='menu-desplegable' style='display: none;'>
+                                                <button onclick='closeMenu($rowIndex, $colIndex)' class='boton-minimizar'>Minimizar</button>
                                                 <p>Detalles del ambiente para $dia</p>
                                                 <p>Instructor: {$ambienteInfo['instructor']}</p>
                                                 <p>Fecha: {$ambienteInfo['fecha']}</p>

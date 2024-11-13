@@ -31,17 +31,17 @@
             <img src="../resources/img/DegradadoVerde.jpg" class="imagen-degradado" />
         </div>
         <div class="secciones">
-            <div class="seccion-central">
+            <div class="seccion-central seccion-centralPan2">
                 <div class="contenedor-imagen">
                     <img class="imagen-central img-centralPan2Cor" />
                 </div>
-                <div class="degradado-gris degradado-grisPanCoordinador"></div>
+                <div class="degradado-gris degradado-grisPan2Coordinador"></div>
 
                 <div class="contenedor-tabla">
                     <table class="tabla-horas">
                         <thead>
                             <tr>
-                                <th>Hora</th>
+                                <th class="texto-hora">Hora</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -70,8 +70,8 @@
                     </table>
                 </div>
 
-                <button class="boton-volver" onclick="irAPaginaAnterior()">Volver</button>
-                <button class="boton-salida" onclick="irAPaginaInicio()">Salir</button>
+                <button class="boton-volver boton-volPan2Coordinador" onclick="irAPaginaAnterior()">Volver</button>
+                <button class="boton-salida boton-salPan2Coordinador" onclick="irAPaginaInicio()">Salir</button>
             </div>
         </div>
     </div>
