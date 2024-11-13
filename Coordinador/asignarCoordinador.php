@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../resources/css/Coordinador.css">
     <title>Asignación de Ficha</title>
     <script>
-        // Funciones para actualizar los valores seleccionados
         let ficha = '';
         let instructor = '';
         let ambiente = '';
@@ -29,11 +28,16 @@
                 alert('Por favor, seleccione una ficha, un instructor y un ambiente.');
                 return;
             }
-            // Lógica de asignación aquí (puedes reemplazarlo con la funcionalidad que desees)
-            console.log("Ficha asignada:", ficha, instructor, ambiente);
+
+            // Guardar en localStorage
+            let asignacion = { ficha, instructor, ambiente };
+            let asignaciones = JSON.parse(localStorage.getItem("asignaciones")) || [];
+            asignaciones.push(asignacion);
+            localStorage.setItem("asignaciones", JSON.stringify(asignaciones));
+
+            // Lógica de redirección
+            window.location.href = 'asignacionesCoordinador.php'; // Redirigir a asignaciones
         }
-
-
     </script>
 </head>
 <body>
@@ -72,7 +76,8 @@
                     <option value="ambiente3">Ambiente 3</option>
                     <!-- Agrega más opciones según sea necesario -->
                 </select>
-                    <button class="boton boton-Asignar" onclick="asignarFicha()">Asignar</button>
+
+                <button class="boton boton-Asignar" onclick="asignarFicha()">Asignar</button>
             </div>
         </div>
 

@@ -42,7 +42,30 @@
                 <div class="degradado-gris degradado-grisCalInstructor"></div>
                 <button class="boton-flecha boton-adelanteInstructor boton-adelanteInstructor2" onclick="window.location.href='calendarioInstructor2.php'">➡</button>
                 <h1 class="titulo-calendario titulo-calInstructor">Bienvenido</h1>
-                <p class="horario-fecha">Horario del 1 octubre al 4</p>
+
+                <?php
+                    // Obtener el día actual y calcular el inicio y fin de la semana
+                    $diaActual = new DateTime();
+                    $inicioSemana = clone $diaActual;
+                    $finSemana = clone $diaActual;
+
+                    // Ajustar al lunes de la semana actual
+                    $inicioSemana->modify('this week')->modify('+0 day'); // Comienza en Lunes
+                    $finSemana->modify('this week +4 days'); // Termina en Viernes
+
+                    // Verificar si los meses son diferentes
+                    if ($inicioSemana->format('F') !== $finSemana->format('F')) {
+                        $fechaInicio = $inicioSemana->format('d') . ' de ' . $inicioSemana->format('F');
+                        $fechaFin = $finSemana->format('d') . ' de ' . $finSemana->format('F');
+                    } else {
+                        $fechaInicio = $inicioSemana->format('d') . ' de ' . $inicioSemana->format('F');
+                        $fechaFin = $finSemana->format('d');
+                    }
+
+                    // Mostrar el resultado
+                    echo "<p class='horario-fecha'>Horario del $fechaInicio al $fechaFin</p>";
+                ?>
+
                 <table class="tabla-calendario">
                     <thead>
                         <tr class="texto-calendario texto-calInstructor">

@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="../resources/css/Instructor.css">
     <title>Calendario Semanal Instructor</title>
     <script>
-        // Función para alternar la visibilidad del menú desplegable con animación
         function toggleMenu(row, col) {
             const menu = document.getElementById(`menu-${row}-${col}`);
             if (menu.style.display === 'block') {
@@ -15,17 +14,16 @@
                 menu.classList.remove('show');
             } else {
                 menu.style.display = 'block';
-                setTimeout(() => menu.classList.add('show'), 10); // Añade animación tras mostrarse
+                setTimeout(() => menu.classList.add('show'), 10);
             }
         }
 
-        // Función para cerrar el menú con animación
         function closeMenu(row, col) {
             const menu = document.getElementById(`menu-${row}-${col}`);
             menu.classList.remove('show');
             setTimeout(() => {
                 menu.style.display = 'none';
-            }, 300); // Espera la animación antes de ocultar
+            }, 300);
         }
     </script>
 </head>
@@ -40,10 +38,31 @@
                     <img class="imagen-central img-centralTruc" />
                 </div>
                 <div class="degradado-gris degradado-grisCalInstructor"></div>
-                <button class="boton-flecha boton-adelanteInstructor">➡</button>
                 <button class="boton-flecha boton-atrasInstructor" onclick="window.location.href='calendarioInstructor.php'">⬅</button>
                 <h1 class="titulo-calendario titulo-calInstructor">Bienvenido</h1>
-                <p class="horario-fecha">Horario del 7 octubre al 12</p>
+
+                <?php
+                    $inicioSemanaSiguiente = new DateTime();
+                    $inicioSemanaSiguiente->setISODate((int)date('o'), (int)date('W') + 1, 1); // Lunes de la próxima semana
+
+                    $finSemanaSiguiente = clone $inicioSemanaSiguiente;
+                    $finSemanaSiguiente->modify('+4 days'); // Viernes de la próxima semana
+
+                    // Verificar si los meses son diferentes
+                    if ($inicioSemanaSiguiente->format('F') !== $finSemanaSiguiente->format('F')) {
+                        $fechaInicio = $inicioSemanaSiguiente->format('d') . ' de ' . $inicioSemanaSiguiente->format('F');
+                        $fechaFin = $finSemanaSiguiente->format('d') . ' de ' . $finSemanaSiguiente->format('F');
+                    } else {
+                        $fechaInicio = $inicioSemanaSiguiente->format('d') . ' de ' . $inicioSemanaSiguiente->format('F');
+                        $fechaFin = $finSemanaSiguiente->format('d');
+                    }
+
+                    // Mostrar el resultado
+                    echo "<p class='horario-fecha'>Horario del $fechaInicio al $fechaFin</p>";
+                ?>
+
+
+
                 <table class="tabla-calendario">
                     <thead>
                         <tr class="texto-calendario texto-calInstructor">
@@ -60,11 +79,11 @@
                         $horas = ["6:00am 8:00am","8:00am 10:00am", "10:00am 12:00pm", "12:00pm 2:00pm", "2:00pm 4:00pm", "4:00pm 6:00pm","6:00pm 8:00pm","8:00pm 10:00pm"];
                         $dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
                         $infoAmbientes = [
-                            "0-0" => ["Ficha" => "267903", "fecha" => "01/10/2024", "hora" => "6:00 am - 8:00 am", "Ambiente" => "Tecnologia1"],
-                            "0-1" => ["Ficha" => "267903",  "fecha" => "02/10/2024", "hora" => "6:00 am - 8:00 am", "Ambiente" => "Tecnologia2"],
-                            "1-0" => ["Ficha" => "267903",  "fecha" => "03/10/2024", "hora" => "10:00 am - 12:00 pm", "Ambiente" => "Biologia"],
-                            "1-1" => ["Ficha" => "267903",  "fecha" => "04/10/2024", "hora" => "10:00 am - 12:00 pm", "Ambiente" => "Gimnasio"],
-                            "2-0" => ["Ficha" => "267903",  "fecha" => "05/10/2024", "hora" => "12:00 pm - 2:00 pm", "Ambiente" => "patio"]
+                            "0-0" => ["Ficha" => "2845614", "fecha" => "01/10/2024", "hora" => "6:00 am - 8:00 am", "Ambiente" => "Tecnologia1"],
+                            "0-1" => ["Ficha" => "2845615",  "fecha" => "02/10/2024", "hora" => "6:00 am - 8:00 am", "Ambiente" => "Tecnologia2"],
+                            "1-0" => ["Ficha" => "2845616",  "fecha" => "03/10/2024", "hora" => "10:00 am - 12:00 pm", "Ambiente" => "Biologia"],
+                            "1-1" => ["Ficha" => "2845617",  "fecha" => "04/10/2024", "hora" => "10:00 am - 12:00 pm", "Ambiente" => "Gimnasio"],
+                            "2-0" => ["Ficha" => "2845618",  "fecha" => "05/10/2024", "hora" => "12:00 pm - 2:00 pm", "Ambiente" => "patio"]
                         ];
 
                         foreach ($horas as $rowIndex => $hora) {
@@ -97,3 +116,4 @@
     </div>
 </body>
 </html>
+

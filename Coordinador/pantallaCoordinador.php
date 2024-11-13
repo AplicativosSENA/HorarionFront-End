@@ -16,7 +16,10 @@
                 alert('Por favor, seleccione una sede y un programa.');
                 return;
             }
-            window.location.href = 'calendarioCoordinador.php'; // Navegar al calendario
+            // Guardar en sesión y redirigir a calendarioCoordinador.php
+            sessionStorage.setItem('sede', sede);  // Guardar sede en sessionStorage
+            sessionStorage.setItem('programa', programa);  // Guardar programa en sessionStorage
+            window.location.href = 'calendarioCoordinador.php'; // Navegar a calendarioCoordinador.php
         }
 
         function actualizarSede(value) {
@@ -30,7 +33,7 @@
 </head>
 <body>
     <div class="contenedor-principal">
-    <div class="franja-verde">
+        <div class="franja-verde">
             <img src="..\resources\img\DegradadoVerde.jpg" class="imagen-degradado" />
         </div>
         <div class="secciones">
@@ -57,12 +60,12 @@
                     <option value="programa1">Programa 1</option>
                     <option value="programa2">Programa 2</option>
                 </select>
-                    <button
-                        class="boton boton-Siguiente1"
-                        onclick="irCalendarioCoordinador()"
-                    >
-                        Siguiente
-                    </button>
+                <button
+                    class="boton boton-Siguiente1"
+                    onclick="irCalendarioCoordinador()"
+                >
+                    Siguiente
+                </button>
             </div>
         </div>
         <button
