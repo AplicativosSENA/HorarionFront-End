@@ -10,6 +10,8 @@
         let ficha = '';
         let instructor = '';
         let ambiente = '';
+        let programaSeleccionado = sessionStorage.getItem("programa");
+        let sedeSeleccionada = sessionStorage.getItem("sede");
 
         function actualizarFicha(value) {
             ficha = value;
@@ -29,15 +31,20 @@
                 return;
             }
 
-            // Guardar en localStorage
-            let asignacion = { ficha, instructor, ambiente };
+            let asignacion = { 
+                ficha, 
+                instructor, 
+                ambiente, 
+                programa: programaSeleccionado, // Guardar el programa seleccionado
+                sede: sedeSeleccionada // Guardar la sede
+            };
             let asignaciones = JSON.parse(localStorage.getItem("asignaciones")) || [];
             asignaciones.push(asignacion);
             localStorage.setItem("asignaciones", JSON.stringify(asignaciones));
 
-            // Lógica de redirección
-            window.location.href = 'asignacionesCoordinador.php'; // Redirigir a asignaciones
+            window.location.href = 'asignacionesCoordinador.php';
         }
+
     </script>
 </head>
 <body>

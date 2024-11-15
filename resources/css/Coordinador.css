@@ -211,6 +211,70 @@
     right: 130vh;
   }
 
+  .contenedor-asignaciones {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: flex-start;
+    width: 112vh;
+    max-height: 67vh; /* Limita la altura del contenedor */
+    overflow-y: auto; /* Activa el desplazamiento vertical */
+    border-bottom: 2px solid #000; /* Línea negra de separación entre los datos */
+    padding: 10px; /* Espacio interno */
+    z-index: 10;
+    background-color: auto; /* Fondo blanco para el contenedor */
+    top: 30vh;
+    left: 55vh;
+    
+}
+
+.asignacion-cuadro {
+    width: 220px;
+    height: auto;
+    padding: 15px;
+    border: 2px solid #000; /* Línea negra alrededor de cada recuadro */
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+.texto-asignacio{
+    margin: 5px 0; /* Espaciado entre los párrafos */
+    border-bottom: 1px solid #000; /* Línea negra de separación entre los datos */
+    padding-bottom: 5px; /* Espaciado debajo de la línea */
+}
+
+.acciones {
+    display: flex;
+    gap: 10px;
+}
+
+.boton-editar, .boton-eliminar {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.boton-editar {
+    background-color: #ffa500;
+    color: white;
+}
+
+.boton-eliminar {
+    background-color: red;
+    color: white;
+}
+
+.contenedor-botonAgregar {
+    position: fixed;
+    top: 35vh;
+    right: 150vh;
+}
+
 
   /* Asignaciar */
   .degradado-grisAsignarCoordinador {

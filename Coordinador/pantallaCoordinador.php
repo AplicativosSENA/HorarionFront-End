@@ -11,23 +11,32 @@
         let programa = '';
 
         function irCalendarioCoordinador() {
-            // Validar que se haya seleccionado una sede y un programa
-            if (!sede || !programa) {
-                alert('Por favor, seleccione una sede y un programa.');
-                return;
-            }
-            // Guardar en sesión y redirigir a calendarioCoordinador.php
-            sessionStorage.setItem('sede', sede);  // Guardar sede en sessionStorage
-            sessionStorage.setItem('programa', programa);  // Guardar programa en sessionStorage
-            window.location.href = 'calendarioCoordinador.php'; // Navegar a calendarioCoordinador.php
+        if (!sede || !programa) {
+            alert('Por favor, seleccione una sede y un programa.');
+            return;
         }
+        // Confirmar que `sede` y `programa` se guardan correctamente
+            sessionStorage.setItem('sede', sede);
+            sessionStorage.setItem('programa', programa);
+            console.log("Sede guardada en sessionStorage:", sede);  // Registro para confirmar
+            window.location.href = 'calendarioCoordinador.php';
+        }
+
+        function seleccionarPrograma(programa) {
+            sessionStorage.setItem('programaSeleccionado', programa);
+            // Redirigir a asignacionesCoordinador.php o cualquier otra acción necesaria
+        }
+
 
         function actualizarSede(value) {
             sede = value;
+            sessionStorage.setItem('sede', sede); // Guarda inmediatamente en sessionStorage
+            console.log("Sede actualizada en sessionStorage:", sede);  // Registro para confirmar
         }
 
         function actualizarPrograma(value) {
             programa = value;
+            sessionStorage.setItem('programa', programa); // Guarda inmediatamente en sessionStorage
         }
     </script>
 </head>

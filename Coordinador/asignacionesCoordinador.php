@@ -8,13 +8,21 @@
     <title>Asignación Coordinador</title>
     <script>
         window.onload = function() {
-            let sedeSeleccionada = sessionStorage.getItem('sede'); // Recuperar sede desde sessionStorage
+            let sedeSeleccionada = sessionStorage.getItem('sede'); // Recupera la sede
+            let programaSeleccionado = sessionStorage.getItem("programa"); // Recupera el programa
+
+            console.log("Programa seleccionado: ", programaSeleccionado);
+
             let asignaciones = JSON.parse(localStorage.getItem("asignaciones")) || [];
 
-            // Mostrar asignaciones guardadas
+            // Filtrar asignaciones por el programa seleccionado
+            if (programaSeleccionado) {
+                asignaciones = asignaciones.filter(asignacion => asignacion.programa === programaSeleccionado);
+            }
+
             function mostrarAsignaciones() {
                 let contenedor = document.getElementById("contenedorAsignaciones");
-                contenedor.innerHTML = ''; // Limpiar contenido previo
+                contenedor.innerHTML = ''; 
 
                 asignaciones.forEach((asignacion, index) => {
                     let div = document.createElement("div");
@@ -23,7 +31,8 @@
                         <p class="texto-asignacio"><strong>Ficha:</strong> ${asignacion.ficha}</p>
                         <p class="texto-asignacio"><strong>Instructor:</strong> ${asignacion.instructor}</p>
                         <p class="texto-asignacio"><strong>Ambiente:</strong> ${asignacion.ambiente}</p>
-                        <p class="texto-asignacio"><strong>Sede:</strong> ${asignacion.sede}</p> <!-- Mostrar sede de la asignación -->
+                        <p class="texto-asignacio"><strong>Sede:</strong> ${asignacion.sede || "No definida"}</p>
+                        <!--<p class="texto-asignacio"><strong>Programa:</strong> ${asignacion.programa || "No definida"}</p>-->
                         <div class="acciones">
                             <button class="boton-editar">Editar</button>
                             <button class="boton-eliminar" onclick="eliminarAsignacion(${index})">Eliminar</button>
@@ -32,25 +41,9 @@
                     contenedor.appendChild(div);
                 });
             }
-
             mostrarAsignaciones();
-
-            // Guardar asignación nueva
-            function agregarAsignacion(ficha, instructor, ambiente, sede) {
-                let nuevaAsignacion = {
-                    ficha: ficha,
-                    instructor: instructor,
-                    ambiente: ambiente,
-                    sede: sede
-                };
-
-                asignaciones.push(nuevaAsignacion);
-                localStorage.setItem("asignaciones", JSON.stringify(asignaciones)); // Guardar asignaciones
-                mostrarAsignaciones(); // Volver a mostrar las asignaciones
-            }
+            //agregarAsignacion("Ficha 1", "Instructor 1", "Ambiente 1");
         };
-
-
 
         function eliminarAsignacion(index) {
             let asignaciones = JSON.parse(localStorage.getItem("asignaciones")) || [];
@@ -96,62 +89,5 @@
             </div>
         </div>
     </div>
-
-    <style>
-        .contenedor-asignaciones {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            justify-content: flex-start;
-            z-index: 10;
-            border-bottom: 1px solid #000; /* Línea negra de separación entre los datos */
-        }
-
-        .asignacion-cuadro {
-            width: 220px;
-            height: auto;
-            padding: 15px;
-            border: 2px solid #000; /* Línea negra alrededor de cada recuadro */
-            border-radius: 8px;
-            background-color: #f9f9f9;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            margin-bottom: 10px; /* Espacio inferior */
-        }
-
-        .texto-asignacio{
-            margin: 5px 0; /* Espaciado entre los párrafos */
-            border-bottom: 1px solid #000; /* Línea negra de separación entre los datos */
-            padding-bottom: 5px; /* Espaciado debajo de la línea */
-        }
-
-        .acciones {
-            display: flex;
-            gap: 10px;
-        }
-
-        .boton-editar, .boton-eliminar {
-            padding: 5px 10px;
-            border: none;
-            cursor: pointer;
-        }
-
-        .boton-editar {
-            background-color: #ffa500;
-            color: white;
-        }
-
-        .boton-eliminar {
-            background-color: red;
-            color: white;
-        }
-
-        .contenedor-botonAgregar {
-            position: fixed;
-            top: 35vh;
-            right: 150vh;
-        }
-    </style>
 </body>
 </html>
