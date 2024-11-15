@@ -217,15 +217,13 @@
     flex-wrap: wrap;
     gap: 15px;
     justify-content: flex-start;
-    width: 112vh;
+    width: 71%;
     max-height: 67vh; /* Limita la altura del contenedor */
     overflow-y: auto; /* Activa el desplazamiento vertical */
-    border-bottom: 2px solid #000; /* Línea negra de separación entre los datos */
     padding: 10px; /* Espacio interno */
     z-index: 10;
-    background-color: auto; /* Fondo blanco para el contenedor */
     top: 30vh;
-    left: 55vh;
+    right: 13.5%;
     
 }
 
@@ -269,11 +267,14 @@
     color: white;
 }
 
-.contenedor-botonAgregar {
-    position: fixed;
-    top: 35vh;
-    right: 150vh;
+#botonAgregarContainer {
+  display: flex;
+  justify-content: center; /* Centra el botón horizontalmente */
+  align-items: center; /* Centra el botón verticalmente */
+  margin-bottom: 15px; /* Espacio entre el botón y las asignaciones */
+  margin: 0 5.8%;
 }
+
 
 
   /* Asignaciar */
@@ -455,12 +456,26 @@
 
     /* Asignaciones Cor */
     .contenedor-botonAgregar{
-      right: 45vh;
+      right: 137vh;
     }
 
     .boton-salAsigCoordinador, .boton-volAsigCoordinador{
       right: 3.8vh;
     }
+
+    .contenedor-asignaciones{
+      width: 73%;
+      right: 12.5%;
+      gap: 10px;
+      top: 25vh;
+      max-height: 71vh;
+    }
+
+    #botonAgregarContainer{
+      margin: 0 9.8%;
+    }
+
+
 
     /* Asignar Cor */
     .titulo-asignar{
@@ -576,12 +591,32 @@
 
      /* Asignaciones Cor */
     .contenedor-botonAgregar{
-      right: 35vh;
+      left: 18%;
     }
+
+    .contenedor-asignaciones{
+      left: 14%; 
+      width: 68%;
+      max-height: 56vh;
+     }
+ 
+     .asignacion-cuadro{
+       width: 180px;
+     }
+ 
+     .texto-asignacio{
+       font-size: 0.8rem;
+     }
+ 
+     #botonAgregarContainer{
+       margin: 0 8.5%;
+      }
 
      .boton-salAsigCoordinador{
       top: 93vh;
      }
+
+
 
      /* Asignar Cor */
 
@@ -662,9 +697,20 @@
       width: 85%;
     }
 
-     .contenedor-botonAgregar{
-      right: 30vh;
+    #botonAgregarContainer{
+      margin: 0 7.3%;
     }
+
+    .contenedor-asignaciones{
+      left: 3.5%;
+      width: 89.8%;
+    }
+
+    .asignacion-cuadro{
+      width: 150px;
+    }
+
+
 
      /* Asignar Cor */
      .degradado-grisAsignarCoordinador{
@@ -749,9 +795,18 @@
     }
 
     /* Asignaciones Cor */
-     .contenedor-botonAgregar{
-      right: 25vh;
-      top: -18vh;
+    
+    .contenedor-asignaciones{
+      width: 77%;
+      left: 10%;
+    }
+
+    .texto-asignacio, .boton-editar, .boton-eliminar{
+      font-size: 0.7rem;
+    }
+
+    #botonAgregarContainer {
+      margin: 0 10.9%;
     }
     
   }
@@ -873,9 +928,23 @@
       width: 80%;
     }
 
-     .contenedor-botonAgregar{
-      right: 20vh;
+    .contenedor-asignaciones{
+      width: 85%;
+      left: 5%;
+      top: 18vh;
+      max-height: 63vh;
+      gap: 5px;
     }
+
+    .asignacion-cuadro{
+      width: 139px;
+    }
+
+    #botonAgregarContainer{
+      margin: 0 37px;
+    }
+
+    
 
     /* Asignar Cor */
     .titulo-asignar{
@@ -922,11 +991,9 @@
       width: 75%;
     }
 
-     .contenedor-botonAgregar{
-      top: -22vh;
-      right: 0vh;
+    #botonAgregarContainer{
+      margin: 37px;
     }
-
 
 
   }

@@ -19,11 +19,17 @@
             if (programaSeleccionado) {
                 asignaciones = asignaciones.filter(asignacion => asignacion.programa === programaSeleccionado);
             }
+            
 
-            function mostrarAsignaciones() {
+             function mostrarAsignaciones() {
                 let contenedor = document.getElementById("contenedorAsignaciones");
-                contenedor.innerHTML = ''; 
 
+                // Limpia solo las asignaciones, sin eliminar el botón
+                contenedor.innerHTML = `<div id="botonAgregarContainer">
+                    <button class="boton-agregar" onclick="irANuevaAsignacion()">+</button>
+                </div>`;
+
+                // Agrega las asignaciones dinámicamente
                 asignaciones.forEach((asignacion, index) => {
                     let div = document.createElement("div");
                     div.classList.add("asignacion-cuadro");
@@ -41,8 +47,8 @@
                     contenedor.appendChild(div);
                 });
             }
+
             mostrarAsignaciones();
-            //agregarAsignacion("Ficha 1", "Instructor 1", "Ambiente 1");
         };
 
         function eliminarAsignacion(index) {
@@ -76,13 +82,15 @@
                     <img class="imagen-central img-centralAsigCor" />
                 </div>
                 <div class="degradado-gris degradado-grisAsignacionCord"></div>
-                <div class="contenedor-botonAgregar">
-                    <button class="boton-agregar" onclick="irANuevaAsignacion()">+</button>
-                </div>
 
                 <div id="contenedorAsignaciones" class="contenedor-asignaciones">
+                    <div id="botonAgregarContainer">
+                        <!-- Aquí se colocará el botón de agregar -->
+                        <button class="boton-agregar" onclick="irANuevaAsignacion()">+</button>
+                    </div>
                     <!-- Las asignaciones se insertarán dinámicamente aquí -->
                 </div>
+
 
                 <button class="boton-volver boton-volAsigCoordinador" onclick="irAPaginaAnterior()">Volver</button>
                 <button class="boton-salida boton-salAsigCoordinador" onclick="irAPaginaInicio()">Salir</button>

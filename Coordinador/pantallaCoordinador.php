@@ -57,8 +57,11 @@
                     class="selector-coordinador selector-Pan1Coordinador"
                 >
                     <option value="">Seleccione una sede</option>
-                    <option value="sede1">Sede 1</option>
-                    <option value="sede2">Sede 2</option>
+                    <option value="sede_central">Sede Central</option>
+                    <option value="sede_norte">Sede Norte</option>
+                    <option value="sede_sur">Sede Sur</option>
+                    <option value="sede_oriente">Sede Oriente</option>
+                    <option value="sede_occidente">Sede Occidente</option>
                 </select>
 
                 <select
@@ -66,8 +69,11 @@
                     class="selector-coordinador selector-Pan1Coordinador"
                 >
                     <option value="">Seleccione un programa</option>
-                    <option value="programa1">Programa 1</option>
-                    <option value="programa2">Programa 2</option>
+                    <option value="desarrollo_software">Desarrollo de Software</option>
+                    <option value="gestion_administrativa">Gestión Administrativa</option>
+                    <option value="mantenimiento_equipos">Mantenimiento de Equipos Electrónicos</option>
+                    <option value="diseño_multimedia">Diseño Multimedia</option>
+                    <option value="logistica_internacional">Logística Internacional</option>
                 </select>
                 <button
                     class="boton boton-Siguiente1"
