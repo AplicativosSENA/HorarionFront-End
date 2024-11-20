@@ -44,6 +44,9 @@
                 <h1 class="titulo-calendario titulo-calInstructor">Bienvenido</h1>
 
                 <?php
+                    // Configurar el idioma a español
+                    setlocale(LC_TIME, 'es_ES.UTF-8', 'es_ES', 'Spanish_Spain', 'Spanish');
+
                     // Obtener el día actual y calcular el inicio y fin de la semana
                     $diaActual = new DateTime();
                     $inicioSemana = clone $diaActual;
@@ -54,18 +57,19 @@
                     $finSemana->modify('this week +4 days'); // Termina en Viernes
 
                     // Verificar si los meses son diferentes
-                    if ($inicioSemana->format('F') !== $finSemana->format('F')) {
-                        $fechaInicio = $inicioSemana->format('d') . ' de ' . $inicioSemana->format('F');
-                        $fechaFin = $finSemana->format('d') . ' de ' . $finSemana->format('F');
+                    if ($inicioSemana->format('n') !== $finSemana->format('n')) {
+                        $fechaInicio = strftime('%d de %B', $inicioSemana->getTimestamp());
+                        $fechaFin = strftime('%d de %B', $finSemana->getTimestamp());
                     } else {
-                        $fechaInicio = $inicioSemana->format('d') . ' de ' . $inicioSemana->format('F');
+                        $fechaInicio = strftime('%d de %B', $inicioSemana->getTimestamp());
                         $fechaFin = $finSemana->format('d');
                     }
 
                     // Mostrar el resultado
-                    echo "<p class='horario-fecha'>Horario del $fechaInicio al $fechaFin</p>";
+                    echo "<p class='horario-fecha'>Del $fechaInicio al $fechaFin</p>";
                 ?>
 
+                <p class="Nombre-Instructor">Pedro Gaitan</p>
                 <table class="tabla-calendario">
                     <thead>
                         <tr class="texto-calendario texto-calInstructor">
@@ -82,11 +86,11 @@
                         $horas = ["6:00am 8:00am","8:00am 10:00am", "10:00am 12:00pm", "12:00pm 2:00pm", "2:00pm 4:00pm", "4:00pm 6:00pm","6:00pm 8:00pm","8:00pm 10:00pm"];
                         $dias = ["Lunes", "Martes", "Miércoles", "Jueves", "Viernes"];
                         $infoAmbientes = [
-                            "0-0" => ["Ficha" => "2845614", "fecha" => "01/10/2024", "hora" => "6:00 am - 8:00 am", "Ambiente" => "Tecnologia1"],
-                            "0-1" => ["Ficha" => "2845615",  "fecha" => "02/10/2024", "hora" => "6:00 am - 8:00 am", "Ambiente" => "Tecnologia2"],
-                            "1-0" => ["Ficha" => "2845616",  "fecha" => "03/10/2024", "hora" => "10:00 am - 12:00 pm", "Ambiente" => "Biologia"],
-                            "1-1" => ["Ficha" => "2845617",  "fecha" => "04/10/2024", "hora" => "10:00 am - 12:00 pm", "Ambiente" => "Gimnasio"],
-                            "2-0" => ["Ficha" => "2845618",  "fecha" => "05/10/2024", "hora" => "12:00 pm - 2:00 pm", "Ambiente" => "patio"]
+                            "0-0" => ["Ficha" => "2845614", "hora" => "6:00 am - 8:00 am", "Ambiente" => "Tecnologia1", "sede" => "Sede5"],
+                            "0-1" => ["Ficha" => "2845615", "hora" => "6:00 am - 8:00 am", "Ambiente" => "Tecnologia2", "sede" => "Sede4"],
+                            "1-0" => ["Ficha" => "2845616", "hora" => "10:00 am - 12:00 pm", "Ambiente" => "Biologia", "sede" => "Sede3"],
+                            "1-1" => ["Ficha" => "2845617", "hora" => "10:00 am - 12:00 pm", "Ambiente" => "Gimnasio", "sede" => "Sede2"],
+                            "2-0" => ["Ficha" => "2845618", "hora" => "12:00 pm - 2:00 pm", "Ambiente" => "patio", "sede" => "Sede1"]
                         ];
 
                         foreach ($horas as $rowIndex => $hora) {
@@ -101,9 +105,9 @@
                                         <button onclick='closeMenu($rowIndex, $colIndex)' class='boton-minimizar'>Minimizar</button>
                                         <p>Detalles del ambiente para $dia</p>
                                         <p>Ficha: {$ambiente['Ficha']}</p>
-                                        <p>Fecha: {$ambiente['fecha']}</p>
                                         <p>Hora: {$ambiente['hora']}</p>
                                         <p>Ambiente: {$ambiente['Ambiente']}</p>
+                                        <p>Sede: {$ambiente['sede']}</p>
                                     </div>";
                                 }
                                 echo "</td>";

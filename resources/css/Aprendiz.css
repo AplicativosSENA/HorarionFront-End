@@ -65,6 +65,13 @@
     transform: translateY(-50%);
   }
 
+  .boton-atrasAprendiz {
+    left: 61vh; /* Posición al lado izquierdo */
+    top: 21.65vh;
+    margin: -25px;
+    transform: translateY(-50%);
+  }
+
 
   .titulo-calAprendiz {
     position: relative;
@@ -74,10 +81,18 @@
     z-index: 10;
   }
 
+  .horario-fechaApre {
+    font-size: 1.2rem;
+    position: relative;
+    top: 4vh;
+    margin: -10px;
+    z-index: 10;
+  }
+
   .numero-ficha {
     font-size: 1.2rem;
     position: relative;
-    top: 1vh;
+    top: 2vh;
     margin: 30px;
     z-index: 10;
   }
@@ -90,13 +105,10 @@
   }
 
   .menu-desplegable{
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
-  .boton-salidaAprendiz{
-    right: 5vh;
-  }
-
+  
 
 
   @media (max-width: 1086px) {
@@ -110,30 +122,51 @@
         top: 23vh;
         padding: 3px 13px;
         left: 35%;
+        margin: -16.5px;
+    }
+
+    .boton-atrasAprendiz{
+      top: 23.5vh;
+      padding: 3px 13px;
+      left: 28%;
+      margin: -16.5px;
     }
 
     .titulo-calAprendiz {
       margin: 0;
-      top: 14vh;
+      top: 12.5vh;
       font-size: 1.4rem;  
+    } 
+    
+    .horario-fechaApre{
+      font-size: 0.9rem;
+      top: 13.5vh;
     }
 
     .numero-ficha{
-      top: 6vh;
+      top: 7.5vh;
       font-size: 0.9rem;
       margin: 45px;
     }
 
-    .texto-calAprendiz {
-      font-size: 0.8rem;
-    }
-
-    .boton-calAprendiz{
+    .texto-calAprendiz, .boton-calAprendiz {
       font-size: 0.8rem;
     }
 
     .boton-salidaAprendiz{
       right: 5.5vh;
+    }
+    
+    .menu-desplegable{
+      font-size: 1.2rem;
+      width: 55%;
+      height: 57%;
+    }
+    
+    .boton-minimizar{
+      padding: 7px 35px;
+      font-size: 0.9rem;
+      top: 57vh;
     }
 
 
@@ -186,19 +219,6 @@
       padding: 7px;
       font-size: 0.9rem;
     }
-    
-
-    .menu-desplegable{
-      font-size: 1.5rem;
-      width: 55%;
-      height: 57%;
-    }
-    
-    .boton-minimizar{
-      padding: 7px 35px;
-      font-size: 0.9rem;
-      top: 57vh;
-    }
 
   }
 
@@ -210,11 +230,17 @@
 
     .titulo-calAprendiz {
       font-size: 1.2rem;
-      top: 4vh;
+      top: 5vh;
     } 
 
+    .horario-fechaApre{
+      top: 5vh;
+      font-size: 0.8rem;
+      margin: 0;
+    }
+
     .numero-ficha{
-      top: 1vh;
+      top: 2vh;
       font-size: 0.8rem;
       margin: 20px;
     }
@@ -225,6 +251,15 @@
       left: 86.5%; /* Centra el botón horizontalmente */
       transform: translateX(-50%);
       font-size: 20px;
+    }
+
+    .boton-atrasAprendiz {
+      position: absolute;
+      top: 32vh; /* Ajusta la posición vertical */
+      left: 80%; /* Centra el botón horizontalmente */
+      transform: translateX(-50%); /* Ajuste para que esté perfectamente centrado */
+      font-size: 20px;
+      margin: -22.5px;
     }
 
     .boton-calAprendiz {
@@ -261,7 +296,7 @@
     }
     
     .boton-salidaAprendiz{
-      top: 100vh; /* Ajusta la posición vertical */
+      top: 101vh; /* Ajusta la posición vertical */
     }
 
   }
@@ -280,6 +315,11 @@
       top: 31vh;
     }
 
+    .boton-atrasAprendiz {
+      top: 31vh;
+      left: 77%;
+     }
+
     .boton-calAprendiz {
       padding: 16px;
       height: 8vh;
@@ -290,9 +330,13 @@
       top: 7vh;
      }
 
+     .horario-fechaApre{
+      top: 6.2vh;
+     }
+
      .numero-ficha{
       top: 3vh;
-      margin: 26px;
+      margin: 20px;
      }
 
      .texto-calAprendiz{
@@ -331,6 +375,13 @@
       font-size: 1rem;
       top: 31.5vh;
       left: 91%;
+    }
+
+    .boton-atrasAprendiz{
+      font-size: 1rem;
+      top: 30.9vh;
+      left: 80%;
+      margin: -18px;
     }
 
     .boton-calAprendiz {
@@ -399,13 +450,22 @@
       top: 29vh;
     }
 
+    .boton-atrasAprendiz{
+      top: 29vh;
+      left: 90%;
+    }
+
     .titulo-calAprendiz{
+      top: 2vh;
+    }
+
+    .horario-fechaApre{
       top: 2vh;
     }
 
     .numero-ficha{
       top: 1vh;
-      margin: 17px;
+      margin: 10px;
     }
     
     .boton-calAprendiz {
