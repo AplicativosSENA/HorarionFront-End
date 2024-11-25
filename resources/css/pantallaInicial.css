@@ -51,12 +51,7 @@
    .boton-inicio{
     font-size: 0.8rem;
     height: 6.5vh;
-  }
-  
-  .boton-salHorario{
-    padding: 7px;
-    font-size: 0.9rem;
-  }
+  } 
 
 }
 
@@ -78,7 +73,6 @@
 
     .boton-inicio{
         width: 40vh;
-        margin: 10px 0;
     }
 
     .texto-explicativo {
@@ -89,14 +83,6 @@
     .titulo {
         top: 2vh;
         font-size: 2rem;
-    }
-
-    .boton-salHorario{
-      width: 40vh; /* El botón será más ancho en pantallas pequeñas */
-      top: 91vh; /* Ajusta la posición vertical */
-      left: 50%; /* Centra el botón horizontalmente */
-      height: 5.5vh;
-      font-size: 1rem;
     }
     
 }
@@ -121,9 +107,7 @@
     height: 15vh;
   }
 
-  .boton-salHorario{
-    font-size: 0.8rem;
-  }
+  
 
 }
 
@@ -147,9 +131,5 @@
 
   .img-centralPanInicio{
     height: 7vh;
-  }
-
-  .boton-salHorario{
-    width: 30vh;
   }
 }

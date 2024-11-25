@@ -158,6 +158,7 @@
     }
     
     .menu-desplegable{
+      top: 39vh;
       font-size: 1.2rem;
       width: 55%;
       height: 57%;
@@ -271,8 +272,8 @@
     }
 
     .menu-desplegable{
-      top: 37.5vh;
-      left: 45vh;
+     
+      left: 44vh;
       width: 56%;
       height: 54%;
     }
@@ -351,12 +352,12 @@
      }
 
      .boton-minimizar{
-      right: 35%;
+      right: 32.5%;
      }
 
 
      .boton-salidaAprendiz{
-      top: 106.8vh;
+      top: 108vh;
      }
 
   }
@@ -394,12 +395,13 @@
     }
 
     .boton-salidaAprendiz{
-      top: 106.2vh;
+      top: 107.5vh;
     }
 
     .menu-desplegable{
+      font-size: 1rem;
       left: 17vh;
-      top: 37vh;
+      top: 38vh;
       width: 61.2%;
     }
 
@@ -481,7 +483,7 @@
     .menu-desplegable{
       left: 14.25vh;
       top: 35vh;
-      height: 73%;
+      height: 60%;
     }
 
     .boton-minimizar{
@@ -557,7 +559,7 @@
     }
 
     .boton-minimizar{
-      top: 50vh;
+      top: 52vh;
       right: 23%;
     }
 

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pantalla Principal</title>
     <link rel="stylesheet" href="resources/css/app.css">
-    <link rel="stylesheet" href="resources/css/pantallaInicio.css">
+    <link rel="stylesheet" href="resources/css/pantallaInicial.css">
 </head>
 <body>
     <div class="contenedor-principal">
@@ -27,21 +27,15 @@
                 <p class="texto-explicativo">Texto explicativo breve</p>
                 
                 <div class="botones botones-inicio">
-                    <a href="Coordinador\inicioCoordinador.php">
-                        <button class="boton boton-inicio">Coordinador</button>
+                    <a>
+                        <button class="boton boton-inicio">Encuesta</button>
                     </a>
-                    <a href="Instructor\inicioInstructor.php">
-                        <button class="boton boton-inicio">Instructor</button>
-                    </a>
-                    <a href="Aprendiz\inicioAprendiz.php">
-                        <button class="boton boton-inicio">Aprendiz</button>
+                    <a href="pantallaInicio.php">
+                        <button class="boton boton-inicio">Horario</button>
                     </a>
                 </div>
             </div>
         </div>
-    </div>
-    </div>
-        <button class="boton-salida boton-salHorario" onclick="window.location.href='../pantallaInicial.php'">Salir</button>
     </div>
 </body>
 </html>
