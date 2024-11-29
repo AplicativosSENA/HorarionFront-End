@@ -40,7 +40,7 @@
                 <div class="degradado-gris degradado-grisCalAprendiz"></div>
                 <button class="boton-flecha boton-adelanteAprendiz" onclick="window.location.href='calendarioAprendiz2.php'">➡</button>
                 <h1 class="titulo-calendario titulo-calAprendiz">Horario de ficha</h1>
-
+                <p class="numero-ficha">2365465456</p>
                 <?php
                     // Configurar el idioma a español
                     setlocale(LC_TIME, 'es_ES.UTF-8', 'es_ES', 'Spanish_Spain', 'Spanish');
@@ -67,8 +67,6 @@
                     echo "<p class='horario-fechaApre'>Del $fechaInicio al $fechaFin</p>";
                 ?>
 
-
-                <p class="numero-ficha">2365465456</p>
                 <table class="tabla-calendario">
                     <thead>
                         <tr class="texto-calendario texto-calAprendiz">
